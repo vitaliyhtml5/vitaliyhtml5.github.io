@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Купи слона</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- метатег для моб. телефонов -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> <!-- добавил фавикон слона слева от title -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="header"> <!-- обертка для "шапки" сайта -->
+		<div class="container"> <!-- контейнер, который позволит центрировать сайт по центра(см. в css) -->
+			<div class="header-wrap"> <!-- flex-контейнер для логотипа и нав. меню -->
+				<div class="header-logo">
+					<img class="header-logo__img" src="img/logo.png">
+					<h3 class="header-logo__text">Купи слона</h3>
+				</div>
+				<nav class="navbar">
+					<ul class="navbar-list">
+						<li class="navbar-item">
+							<a class="navbar__link">Главная</a> <!-- так как мы находимся на главной странице, можно Главная окрасить в другой цвет -->
+						</li>
+						<li class="navbar-item">
+							<a class="navbar__link" href="#price-link">Стоимость</a>
+						</li>
+						<li class="navbar-item">
+							<a class="navbar__link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="features-section">
+		<div class="container">
+			<h2 class="title features-title">Преимущества</h2>
+			<div class="features-wrap">
+				<div class="features">
+					<div class="features__img">
+						<img src="img/help.png" alt="Эмоциональная поддержка">
+					</div>
+					<span class="features__text">Эмоциональная поддержка</span> <!-- в span можно оборачивать строчные элементы -->
+				</div>
+				<div class="features">
+					<div class="features__img">
+						<img src="img/power.png" alt="Физическая поддержка">
+					</div>
+					<span class="features__text">Физическая помощь</span>
+				</div>
+				<div class="features">
+					<div class="features__img">
+						<img src="img/wow.png" alt="Престижность покупки слона">
+					</div>
+					<span class="features__text">Престижно</span>  
+				</div>
+			</div>
+			<button class="button features__btn" onclick="showModal()">Купить в один клик</button>
+		</div>
+	</div>
+	<div class="price-section" id="price-link">
+		<div class="container">
+			<h2 class="title">Стоимость</h2>
+			<table class="price-table">
+				<thead>
+					<tr>
+						<td>Вид</td>
+						<td>Вес</td>
+						<td>Стоимость</td>
+					</tr>
+				</thead>	
+				<tbody>
+					<tr>
+						<td>Афреканский слон</td>
+						<td>6000 кг</td>
+						<td>10000</td> <!-- знак евро для всех браузеров -->
+					</tr>
+					<tr>
+						<td>Индийский слон</td>
+						<td>5000 кг</td>
+						<td>8000</td>
+					</tr>
+					<tr>
+						<td>Лесной слон</td>
+						<td>2700 кг</td>
+						<td>5000</td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="button price__btn">Позвонить нам</a>  <!-- в дальнейшем можно добавить атрибут href, и прописать телефон, чтобы можно было позвонить с мобильного -->
+		</div>
+	</div>
+	<div class="contacts-section" id="contacts-link">
+		<div class="container">
+			<div class="contacts">
+				<h2 class="title">Контакты</h2>
+				<div class="form-wrap">
+					<img class="contacts__img" src="img/elephant.png" alt="Африканский">
+					<form class="contacts-form" method="GET"> <!-- action="file.php" можно добавить позже -->
+						<input class="contacts-text" type="text" name="name">
+						<textarea class="contacts-comment"></textarea>
+						<input type="button" class="button contacts-btn" value="Ok" onclick="showModal()"><!-- submit можно прописать позже -->
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<p class="footer-copyright">Сайт создан компанией<br> "Если заметил, молодец"</p>
+		</div>
+	</div>
+	<!-- Ниже элементы для модальных окон - можно уже не смотреть. Добавил, чтобы сделать сайт более живым  -->
+	<div class="overlay">
+		<div class="modal">
+			<p class="modal__text">Сайт на реконструкции<br>попробуйте позже</p>
+			<button class="button modal__btn">Закрыть</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

@@ -2,6 +2,10 @@
 let overlay = document.querySelector('.overlay');
 let overlayBtn = document.querySelector('.modal__btn');
 
+let btnFeatures = document.querySelector('.features__btn').onclick = showModal;
+let btnPrice = document.querySelector('.price__btn').onclick = showModal;
+let btnContacts= document.querySelector('.contacts-btn').onclick = showModal;
+
 function showModal() {
 	overlay.classList.remove('modal-overlay-out');
 	overlay.style.display = 'block';
@@ -43,4 +47,13 @@ btnForm.onclick = function() {
 		showModal();
 		modalForm.innerHTML = 'Сайт на реконструкции<br>попробуйте позже';
 	}
+}
+
+
+// ELEPHANT SOUND
+let roarElephant = document.querySelector('.contacts__img').onclick = soundElephant;
+function soundElephant() {
+	let audio = new Audio();
+	audio.src = 'elephant.mp3';
+	audio.autoplay = true;
 }

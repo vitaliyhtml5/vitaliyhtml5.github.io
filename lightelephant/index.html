@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Купи слона</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="header">
+		<img class="header__img" src="img/logo.png" alt="Logo Купи слона">
+		<h1>Купи слона</h1>
+		<ul>
+			<li>
+				<a href="../index.html">Главная</a> <!-- ссылка на полную версию сайта -->
+			</li>
+			<li>
+				<a href="#price-link">Стоимость</a>
+			</li>
+			<li>
+				<a href="#contacts-link">Контакты</a>
+			</li>
+		</ul>
+	</div>
+	<div class="features-section">
+		<h2>Преимущества</h2>
+		<div class="features">
+			<img class="features-img" src="img/help.png" alt="Эмоциональная поддержка">
+			<span class="features-text">Эмоциональная поддержка</span>
+		</div>
+		<div class="features">
+			<img class="features-img" src="img/power.png" alt="Физическая поддержка">
+			<span class="features-text">Физическая помощь</span>
+		</div>
+		<div class="features">
+			<img class="features-img" src="img/wow.png" alt="Престижность покупки слона">
+			<span class="features-text">Престижно</span><br>  
+		</div>
+		<button class="button">Купить в один клик</button>
+	</div>
+	<div class="price-section" id="price-link">
+		<h2>Стоимость</h2>
+		<table>
+			<tr>
+				<th>Вид</th>
+				<th>Вес</th>
+				<th>Стоимость</th>
+			</tr>	
+			<tr>
+				<td>Африканский слон</td>
+				<td>6000 кг</td>
+				<td>€10000</td>
+			</tr>
+			<tr>
+				<td>Индийский слон</td>
+				<td>5000 кг</td>
+				<td>€8000</td>
+			</tr>
+			<tr>
+				<td>Лесной слон</td>
+				<td>2700 кг</td>
+				<td>€5000</td>
+			</tr>
+		</table>
+		<button class="button price__btn">Позвонить нам</button>
+	</div>
+	<div class="contacts-section" id="contacts-link">
+		<h2>Контакты</h2>
+		<img class="contacts__img" src="img/elephant.png" alt="Африканский">
+		<form class="contacts-form" action="file.php" method="POST">
+			<input class="contacts-text" type="text" name="name" placeholder="Введите имя">
+			<div class="form-choice">
+				<span class="form-title">Вид слона:</span>
+				<input type="checkbox" name="type_elephant"> Африканский
+				<input type="checkbox" name="type_elephant"> Индийский
+				<input type="checkbox" name="type_elephant"> Лесной
+			</div>
+			<div class="form-choice">
+				<span class="form-title">Пол слона:</span>
+				<input type="radio" name="gender_elephant"> Он
+				<input type="radio" name="gender_elephant"> Она
+				<input type="radio" name="gender_elephant"> Без разницы
+			</div>
+			<textarea placeholder="Оставьте комментарий"></textarea>
+			<input type="submit" class="button contacts-btn" value="Отправить">
+		</form>
+	</div>
+	<div class="footer">
+		<p class="footer-copyright">Сайт создан компанией<br> "Купи слона"</p>
+	</div>
+</body>
+</html>

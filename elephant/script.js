@@ -1,6 +1,7 @@
 //OVERLAY
 let overlay = document.querySelector('.overlay');
 let overlayBtn = document.querySelector('.modal__btn');
+let modalForm = document.querySelector('.modal__text');
 
 let btnFeatures = document.querySelector('.features__btn').onclick = showModal;
 let btnPrice = document.querySelector('.price__btn').onclick = showModal;
@@ -15,7 +16,6 @@ function showModal() {
 	}
 }
 
-
 // OVERLAY CLOSE
 overlay.onclick = function() {
 	overlay.classList.remove('modal-overlay-in');
@@ -24,22 +24,23 @@ overlay.onclick = function() {
 	}
 }
 
-window.addEventListener('keydown', function (event) {
+window.addEventListener('keyup', function (e) {
 	overlay.classList.remove('modal-overlay-in');
-  if (event.key === 'Escape') {
-    overlay.classList.add('modal-overlay-out');
-  }
-})
-
+  	if (e.keyCode === 13 || e.keyCode === 27 || e.keyCode === 32) {
+    	e.preventDefault();
+   		overlay.classList.add('modal-overlay-out');
+  	}
+});
 
 // FORM VALIDATION
-let nameForm = document.querySelector('.contacts-text');
-let messageForm = document.querySelector('.contacts-comment');
-let btnForm = document.querySelector('.contacts-btn');
-let modalForm = document.querySelector('.modal__text');
 
+let btnForm = document.querySelector('.contacts-btn');
 btnForm.onclick = function() {
-	if (nameForm.value == "" || messageForm.value == "") {
+	let form = {
+		name: document.querySelector('.contacts-text'),
+		message: document.querySelector('.contacts-comment'),
+	}
+	if (form.name.value == "" || form.message.value == "") {
 		showModal();
 		modalForm.innerHTML = 'Пожалуйста, заполните все поля формы';
 	}
@@ -49,7 +50,6 @@ btnForm.onclick = function() {
 	}
 }
 
-
 // ELEPHANT SOUND
 let roarElephant = document.querySelector('.contacts__img').onclick = soundElephant;
 function soundElephant() {
@@ -58,14 +58,27 @@ function soundElephant() {
 	audio.autoplay = true;
 }
 
+//SHADOW AND BLUR BUTTON
+function showShadow() {
+	let shadow = {
+		btn: document.querySelector('.fixed-btn'),
+		increaseShadow () {
+			shadow.btn.classList.add('shadow-btn');
+			return; 
+		},
+	};
+	setTimeout(shadow.increaseShadow, 500);
+	shadow.btn.classList.remove('shadow-btn');
+	btn_blink.remove();
+}
+setInterval(showShadow, 8000);
 
-//SHADOW BUTTON
-let button = document.querySelector('.fixed-btn');
-function shadowBtn() {
-	button.classList.add('shadow-btn');
+let btn_blink = document.createElement('div');
+function showBlur() {
+	let btn = document.querySelector('.price__btn');
+	btn_blink.className = '.price__btn_blink';
+	btn.append(btn_blink);
+	btn_blink.classList.add('price__btn_blink');
+	btn_blink.classList.add('btn-blink');
 }
-function stopShadowBtn() {
-	button.classList.remove('shadow-btn');
-}
-setInterval(shadowBtn, 2000);
-setInterval(stopShadowBtn, 4000);
+setInterval(showBlur, 5000);

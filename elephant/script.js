@@ -57,3 +57,15 @@ function soundElephant() {
 	audio.src = 'elephant.mp3';
 	audio.autoplay = true;
 }
+
+
+//SHADOW BUTTON
+let button = document.querySelector('.fixed-btn');
+function shadowBtn() {
+	button.classList.add('shadow-btn');
+}
+function stopShadowBtn() {
+	button.classList.remove('shadow-btn');
+}
+setInterval(shadowBtn, 2000);
+setInterval(stopShadowBtn, 4000);

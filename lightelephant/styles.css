@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 body {
-	max-width: 1100px; 
+	max-width: 1100px;  /*максимальная ширина указан, чтобы контент сайта выше этой величины не увиличивался, при этом уменьшаться может(например, при уменьшении окна браузера)*/
 	margin: 0 auto;
 	padding: 0 10px 0 10px;
 	color: #333333;
@@ -29,7 +29,7 @@ h1 {
 ul {
 	margin-top: -30px;
 	text-align: right;
-	list-style: none;   /*маркеры были удалены*/
+	list-style: none;   /*маркеры списка были удалены*/
 }
 li {
 	display: inline-block;
@@ -70,7 +70,7 @@ h2 {
 	text-align: center;
 }
 .button {
-	display: block; /*по умолчанию кнопка строчная*/
+	display: block;
 	width: 250px;
 	margin: 80px auto 0 auto; /*центрирую кнопку и добавляю сверху 80px*/
 	padding: 20px;
@@ -84,7 +84,6 @@ h2 {
 }
 .button:hover {
 	color: #ffffff;
-	border: 2px solid transparent; /*при hover сделал границу прозрачной, чтобы не портить тень*/
 	background-color: #994609;
 }
 .price-section {
@@ -129,7 +128,7 @@ td {
 	display: inline-block;
 	width: 200px;
 	margin: 0;
-	padding: 10px; /*10px для всех сторон */
+	padding: 10px;
 	border: 2px solid #994609;
 	border-radius: 10px;
 }
@@ -149,12 +148,12 @@ input {
 }
 textarea {
 	display: block;
-	width: 100%; /*100% от ширины родителя, т.е. form*/
+	width: 100%;            /*100% от ширины родителя, т.е. form*/
 	height: 180px;
-	padding: 10px; /*10px для всех сторон */
+	padding: 10px;
 	border: 2px solid #994609;
 	border-radius: 10px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;  /*для textarea нужно прописывать шрифт, иначе браузер применит свой стиль*/  
 	font-size: 14px;
 }
 .contacts-btn {
@@ -171,8 +170,7 @@ textarea {
 	font-size: 16px;
 }
 
-
-/*Ниже стили для адаптивности сайта - можно уже не смотреть. */
+/*Ниже стили для адаптивности сайта*/
 @media (max-width: 880px) {
 	.form-choice {
 		margin: 5px;

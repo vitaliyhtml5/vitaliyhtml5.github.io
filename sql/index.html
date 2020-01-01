@@ -15,7 +15,7 @@
 			<div class="container">
 				<div class="header-logo">
 					<img class="header-logo__img" src="img/logo.svg" alt="Лого MySql">
-					<h1 class="header-logo__title"><span class="hidden">MySQL</span>Tutorial<sup class="beta_red">beta</sup class="beta_red"></h1>
+					<h1 class="header-logo__title"><span class="hidden">MySQL</span>Tutorial<sup class="beta_red">beta</sup></h1>
 				</div>
 				<p class="header-text">Данный сайт содержит основные команды для <span class="sea-color">MySQL</span>.<br>Если ваш <span class="sea-color">MySQL Workbench</span> выдаёт ошибку, всегда можно сравнить с командами ниже</p>
 				<nav class="sidebar">
@@ -48,13 +48,13 @@
 							<ul class="tutorial__list">
 								<li class="tutorial__item"><a href="#choose-link_first" class="tutorial__link">Select * (все столбцы)</a></li>
 								<li class="tutorial__item"><a href="#choose-link_second" class="tutorial__link">Select (отдельные столбцы)</a></li>
-								<li class="tutorial__item"><a href="#choose-link_third" class="tutorial__link">Ключевое слово Where</a></li>
+								<li class="tutorial__item"><a href="#choose-link_third" class="tutorial__link">Ключевое слово where</a></li>
 								<li class="tutorial__item"><a href="#choose-link_forth" class="tutorial__link">Оператор and</a></li>
 								<li class="tutorial__item"><a href="#choose-link_fifth" class="tutorial__link">Оператор or</a></li>
-								<li class="tutorial__item"><a href="#choose-link_sixth" class="tutorial__link">Оператор in</a></li>
+								<li class="tutorial__item"><a href="#choose-link_sixth" class="tutorial__link">Условие in</a></li>
 								<li class="tutorial__item"><a href="#choose-link_seventh" class="tutorial__link">Вывод значений null</a></li>
 								<li class="tutorial__item"><a href="#choose-link_eighth" class="tutorial__link">Операторы сравнения</a></li>
-								<li class="tutorial__item"><a href="#choose-link_nineth" class="tutorial__link">Оператор like</a></li>
+								<li class="tutorial__item"><a href="#choose-link_nineth" class="tutorial__link">Ключевое слово like</a></li>
 								<li class="tutorial__item"><a href="#choose-link_tenth" class="tutorial__link">Order by и limit</a></li>
 								<li class="tutorial__item"><a href="#choose-link_eleventh" class="tutorial__link">Агрегатные функции</a></li>
 							</ul>
@@ -69,7 +69,7 @@
 						<div class="tutorial-join hidden">
 							<ul class="tutorial__list">
 								<li class="tutorial__item"><a href="#join-link_first" class="tutorial__link">Внутреннее соединение</a></li>
-								<li class="tutorial__item"><a href="#join-link_second" class="tutorial__link">Внутреннее соединение с оператором where</a></li>
+								<li class="tutorial__item"><a href="#join-link_second" class="tutorial__link">Внутреннее соединение с where</a></li>
 							</ul>
 						</div>
 						<a href="#header-main" class="btnup btnup-create"></a>
@@ -81,78 +81,103 @@
 								<h3 class="main-subtitle" id="create-link_first">Create table (без первичного ключа)</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">CREATE TABLE friends (<br>name varchar(10),<br>age int,<br>birth date<br>job varchar(12)<br>);</p>
-										<span class="check-code">Просмотреть структуру таблицы: <span class="check-code_blue"> DESC friends;</span>
+										<p class="sql-code">CREATE TABLE friends (<br>name varchar(10),<br>age int,<br>birth date,<br>job varchar(12)<br>);</p>
+										<span class="check-code">Просмотреть структуру таблицы: <span class="check-code_blue"> DESC friends;</span></span>
 									</div>
 									<table class="table_main">
 										<tr>
-											<th>name</th>
-											<th>age</th>
-											<th>birth</th>
-											<th>job</th>
+											<th>field</th>
+											<th>type</th>
+											<th>null</th>
+											<th>Key</th>
+											<th>Extra</th>
 										</tr>
 										<tr>
-											<td>Ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>name</td>
+											<td>varchar(10)</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
 										</tr>
 										<tr>
-											<td>Ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>age</td>
+											<td>int</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
 										</tr>
 										<tr>
-											<td>Ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>birth</td>
+											<td>date</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>job</td>
+											<td>varchar(12)</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="create-link_second">Create table (с первичным ключом)</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">CREATE TABLE friends (<br>id int auto_increment not null PRIMARY KEY,<br>name varchar(10),<br>age int,<br>birth date<br>job varchar(12)<br>);</p>
-										<span class="check-code">Просмотреть структуру таблицы: <span class="check-code_blue"> DESC friends;</span>
+										<p class="sql-code">CREATE TABLE friends (<br>id int auto_increment not null PRIMARY KEY,<br>name varchar(10),<br>age int,<br>birth date,<br>job varchar(12)<br>);</p>
+										<span class="check-code">Просмотреть структуру таблицы: <span class="check-code_blue"> DESC friends;</span></span>
 									</div>
 									<table class="table_main">
 										<tr>
-											<th>id</th>
-											<th>name</th>
-											<th>age</th>
-											<th>birth</th>
-											<th>job</th>
+											<th>field</th>
+											<th>type</th>
+											<th>null</th>
+											<th>Key</th>
+											<th>Extra</th>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>id</td>
+											<td>int</td>
+											<td>no</td>
+											<td>pri</td>
+											<td>auto_increment</td>
 										</tr>
 										<tr>
-											<td>2</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>name</td>
+											<td>varchar(10)</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
 										</tr>
 										<tr>
-											<td>3</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>age</td>
+											<td>int</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>birth</td>
+											<td>date</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>job</td>
+											<td>varchar(12)</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="create-link_third">Insert Into (одна строка)</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">INSERT INTO friends (name, age, birth, job)<br>VALUES ('ross', 32, '1971-02-03', 'scientist');</p>
-										<span class="check-code">Просмотреть данные таблицы: <span class="check-code_blue"> SELECT * FROM friends;</span>
+										<p class="sql-code">INSERT INTO friends (name, age, birth, job)<br>VALUES ('ross', 32, '1971-02-03', 'paleontologist');</p>
+										<span class="check-code">Просмотреть данные таблицы: <span class="check-code_blue"> SELECT * FROM friends;</span></span>
 									</div>
 									<table class="table_main">
 										<tr>
@@ -165,17 +190,17 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>33</td>
+											<td>1967-05-12</td>
+											<td>paleontologist</td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="create-link_forth">Insert Into (данные известны частично)</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">INSERT INTO friends (name, age, job)<br>VALUES ('rachel', 26 'waitress');</p>
-										<span class="check-code">Просмотреть данные таблицы: <span class="check-code_blue">SELECT * FROM friends;</span>
+										<p class="sql-code">INSERT INTO friends (name, age, job)<br>VALUES ('monica', 24, 'cook');</p>
+										<span class="check-code">Просмотреть данные таблицы: <span class="check-code_blue">SELECT * FROM friends;</span></span>
 									</div>
 									<table class="table_main">
 										<tr>
@@ -188,25 +213,25 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>32</td>
+											<td>33</td>
 											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>paleontologist</td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>rachel</td>
-											<td>26</td>
+											<td>monica</td>
+											<td>24</td>
 											<td>null</td>
-											<td>waitress</td>
+											<td>cook</td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="create-link_fifth">Insert Into (несколько строк)</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">INSERT INTO friends (name, age, job)<br>VALUES ('rachel', 26 'waitress'),
-											<br>('rachel', 26 'waitress'),<br>('rachel', 26 'waitress'),<br>('rachel', 26 'waitress');</p>
-										<span class="check-code">Просмотреть данные таблицы: <span class="check-code_blue">SELECT * FROM friends;</span>
+										<p class="sql-code">INSERT INTO friends (name, age, birth, job)<br>VALUES ('rachel', 24, '1970-05-05', 'waitress'),
+											<br>('chandler', 26, '1968-04-08', 'copywriter'),<br>('joey', 36, '1968-01-09', 'actor'),<br>('phoebe', 37, null, 'musician');</p>
+										<span class="check-code">Просмотреть данные таблицы: <span class="check-code_blue">SELECT * FROM friends;</span></span>
 									</div>
 									<table class="table_main table-small">
 										<tr>
@@ -219,44 +244,44 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>32</td>
+											<td>33</td>
 											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>paleontologist</td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>rachel</td>
-											<td>26</td>
+											<td>monica</td>
+											<td>24</td>
 											<td>null</td>
-											<td>waitress</td>
+											<td>cook</td>
 										</tr>
 										<tr>
 											<td>3</td>
 											<td>rachel</td>
-											<td>26</td>
-											<td>null</td>
+											<td>24</td>
+											<td>1970-05-05</td>
 											<td>waitress</td>
 										</tr>
 										<tr>
 											<td>4</td>
-											<td>rachel</td>
+											<td>chandler</td>
 											<td>26</td>
-											<td>null</td>
-											<td>waitress</td>
+											<td>1968-01-09</td>
+											<td>copywriter</td>
 										</tr>
 										<tr>
 											<td>5</td>
-											<td>rachel</td>
-											<td>26</td>
-											<td>null</td>
-											<td>waitress</td>
+											<td>joey</td>
+											<td>36</td>
+											<td>1968-01-09</td>
+											<td>actor</td>
 										</tr>
 										<tr>
 											<td>6</td>
-											<td>rachel</td>
-											<td>26</td>
+											<td>phoebe</td>
+											<td>37</td>
 											<td>null</td>
-											<td>waitress</td>
+											<td>musician</td>
 										</tr>
 									</table>
 								</div>
@@ -281,44 +306,44 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>32</td>
+											<td>33</td>
 											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>paleontologist</td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>rachel</td>
-											<td>26</td>
+											<td>monica</td>
+											<td>24</td>
 											<td>null</td>
-											<td>waitress</td>
+											<td>cook</td>
 										</tr>
 										<tr>
 											<td>3</td>
 											<td>rachel</td>
-											<td>26</td>
-											<td>null</td>
+											<td>24</td>
+											<td>1970-05-05</td>
 											<td>waitress</td>
 										</tr>
 										<tr>
 											<td>4</td>
-											<td>rachel</td>
+											<td>chandler</td>
 											<td>26</td>
-											<td>null</td>
-											<td>waitress</td>
+											<td>1968-01-09</td>
+											<td>copywriter</td>
 										</tr>
 										<tr>
 											<td>5</td>
-											<td>rachel</td>
-											<td>26</td>
-											<td>null</td>
-											<td>waitress</td>
+											<td>joey</td>
+											<td>36</td>
+											<td>1968-01-09</td>
+											<td>actor</td>
 										</tr>
 										<tr>
 											<td>6</td>
-											<td>rachel</td>
-											<td>26</td>
+											<td>phoebe</td>
+											<td>37</td>
 											<td>null</td>
-											<td>waitress</td>
+											<td>musician</td>
 										</tr>
 									</table>
 								</div><hr>
@@ -334,34 +359,34 @@
 										</tr>
 										<tr>
 											<td>ross</td>
-											<td>scientist</td>
+											<td>paleontologist</td>
+										</tr>
+										<tr>
+											<td>monica</td>
+											<td>cook</td>
 										</tr>
 										<tr>
 											<td>rachel</td>
 											<td>waitress</td>
 										</tr>
 										<tr>
-											<td>rachel</td>
-											<td>waitress</td>
+											<td>chandler</td>
+											<td>copywriter</td>
 										</tr>
 										<tr>
-											<td>rachel</td>
-											<td>waitress</td>
+											<td>joey</td>
+											<td>actor</td>
 										</tr>
 										<tr>
-											<td>rachel</td>
-											<td>waitress</td>
-										</tr>
-										<tr>
-											<td>rachel</td>
-											<td>waitress</td>
+											<td>phoebe</td>
+											<td>musician</td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="choose-link_third">Ключевое слово where</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT * FROM friends<br>WHERE name = 'phibie';</p>
+										<p class="sql-code">SELECT * FROM friends<br>WHERE name = 'phoebe';</p>
 									</div>
 									<table class="table_main">
 										<tr>
@@ -372,18 +397,18 @@
 											<th>job</th>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>6</td>
+											<td>phoebe</td>
+											<td>37</td>
+											<td>null</td>
+											<td>musician</td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="choose-link_forth">Оператор and</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT * FROM friends<br>WHERE name = 'chandler'<br>AND name = 'monica';<span class="sql-code-comment">При <span class="sea-color_comment">AND</span> все условия должны выполняться. Если бы мы вместо 'monica' написали 'jeniss', таблица не выдала бы нам никаких данных (даже по 'monica'). Так как два условия не были выполнены</span></p>
+										<p class="sql-code">SELECT * FROM friends<br>WHERE id = 2<br>AND name = 'monica';<span class="sql-code-comment">При <span class="sea-color_comment">AND</span> все условия должны выполняться. Если бы мы вместо 'monica' написали 'janice', таблица не выдала бы нам никаких данных (даже при наличии в таблице 'id = 2'). Так как два условия не были выполнены.</span></p>
 									</div>
 									<table class="table_main">
 										<tr>
@@ -394,25 +419,18 @@
 											<th>job</th>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>2</td>
+											<td>monica</td>
+											<td>24</td>
+											<td>null</td>
+											<td>cook</td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="choose-link_fifth">Оператор or</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT * FROM friends<br>WHERE name = 'chandler'<br>OR age = 26;<span class="sql-code-comment">При <span class="sea-color_comment">OR</span> должно выполниться хотя бы одно условие.</span></p>	
+										<p class="sql-code">SELECT * FROM friends<br>WHERE name = 'chandler'<br>OR age = 24;<span class="sql-code-comment">При <span class="sea-color_comment">OR</span> должно выполниться хотя бы одно условие.</span></p>	
 									</div>
 									<table class="table_main">
 										<tr>
@@ -423,32 +441,32 @@
 											<th>job</th>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>2</td>
+											<td>monica</td>
+											<td>24</td>
+											<td>null</td>
+											<td>cook</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>3</td>
+											<td>rachel</td>
+											<td>24</td>
+											<td>1970-05-05</td>
+											<td>waitress</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>4</td>
+											<td>chandler</td>
+											<td>26</td>
+											<td>1968-01-09</td>
+											<td>copywriter</td>
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_sixth">Оператор in</h3>
+								<h3 class="main-subtitle" id="choose-link_sixth">Условие in</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT * FROM friends<br>WHERE name IN ('chandler', 'ross', 'joe');<span class="sql-code-comment">Более короткая запись <span class="sea-color_comment">OR</span></span></p>
+										<p class="sql-code">SELECT * FROM friends<br>WHERE name IN ('chandler', 'ross', 'joey');<span class="sql-code-comment">Более короткая запись <span class="sea-color_comment">OR</span></span></p>
 									</div>
 									<table class="table_main">
 										<tr>
@@ -463,28 +481,28 @@
 											<td>ross</td>
 											<td>32</td>
 											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>paleontologist</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>4</td>
+											<td>chandler</td>
+											<td>26</td>
+											<td>1968-01-09</td>
+											<td>copywriter</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>5</td>
+											<td>joey</td>
+											<td>36</td>
+											<td>1968-01-09</td>
+											<td>actor</td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="choose-link_seventh">Вывод значений null</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT * FROM friends<br>WHERE age IS NULL<span class="sql-code-comment">Если нужны значения "не null", используем команду: <br><span class="sea-color_comment">SELECT * FROM friends WHERE age IS NOT NULL</span>;</span></p>
+										<p class="sql-code">SELECT * FROM friends<br>WHERE birth IS NULL;<span class="sql-code-comment">Если нужны значения "не null", используем команду: <br><span class="sea-color_comment">SELECT * FROM friends WHERE birth IS NOT NULL;</span></span></p>
 									</div>
 									<table class="table_main">
 										<tr>
@@ -495,18 +513,25 @@
 											<th>job</th>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>2</td>
+											<td>monica</td>
+											<td>24</td>
+											<td>null</td>
+											<td>cook</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>phoebe</td>
+											<td>37</td>
+											<td>null</td>
+											<td>musician</td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="choose-link_eighth">Операторы сравнения</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT * FROM friends<br>WHERE age > 20<span class="sql-code-comment">Можно использовать следующие операторы:</span></p>
+										<p class="sql-code">SELECT * FROM friends<br>WHERE age > 30;<span class="sql-code-comment">Можно использовать следующие операторы:</span></p>
 										<ul>
 											<li class="sql-code-item">Больше: <span class="sea-color">&#62;</span></li>
 											<li class="sql-code-item">Меньше: <span class="sea-color">&#60;</span></li>
@@ -526,32 +551,32 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>32</td>
+											<td>33</td>
 											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>paleontologist</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>5</td>
+											<td>joey</td>
+											<td>36</td>
+											<td>1968-01-09</td>
+											<td>actor</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>6</td>
+											<td>phoebe</td>
+											<td>37</td>
+											<td>null</td>
+											<td>musician</td>
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_nineth">Оператор like</h3>
+								<h3 class="main-subtitle" id="choose-link_nineth">Ключевое слово like</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT * FROM friends<br>WHERE name LIKE 'Phi%' <span class="sql-code-comment">Несколько важных моментов:</span></p>
+										<p class="sql-code">SELECT * FROM friends<br>WHERE name LIKE 'Phi%';<span class="sql-code-comment">Несколько важных моментов:</span></p>
 										<ul>
-											<li class="sql-code-item">Знак процента можно ставить в любой части слова</li>
+											<li class="sql-code-item">знак процента можно ставить в любой части слова</li>
 											<li class="sql-code-item">кавычки обязательны (даже для чисел)</li>
 										</ul>
 									</div>
@@ -572,14 +597,14 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_tenth">Ключевое слово order by и limit</h3>
+								<h3 class="main-subtitle" id="choose-link_tenth">Order by и limit</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT * FROM friends<br>ORDER BY name<br>LIMIT 3;</p>
+										<p class="sql-code">SELECT * FROM friends<br>ORDER BY age<br>LIMIT 3;</p>
 										<ul>
-											<li class="sql-code-item"><span class="sea-color_comment">Order by</span> - группирует а алфавитном порядке (от Я до А) и цифры по нарастающей</li>
-											<li class="sql-code-item">Можно поменять направление через слово <span class="sea-color_comment">DESC</span>. Например, для порядка от А до Я можно прописать <span class="sea-color_comment">SELECT * FROM friends<br>ORDER BY name DESC;</span></li>
-											<li class="sql-code-item"><span class="sea-color_comment">Limit</span> - ограничивает число строк. На данном примере только 3 строки отображены</li>
+											<li class="sql-code-item"><span class="sea-color_comment">Order by</span> - группирует значения а алфавитном порядке (от А до Я) и цифры по возрастанию</li>
+											<li class="sql-code-item">Можно поменять направление через слово <span class="sea-color_comment">DESC</span>. Например, от большего к меньшему:<br> <span class="sea-color_comment">SELECT * FROM friends<br>ORDER BY age DESC;</span></li>
+											<li class="sql-code-item"><span class="sea-color_comment">Limit</span> - ограничивает число записей. На данном примере только 3 строки отображены</li>
 										</ul>
 									</div>
 									<table class="table_main">
@@ -591,54 +616,46 @@
 											<th>job</th>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>2</td>
+											<td>monica</td>
+											<td>24</td>
+											<td>null</td>
+											<td>cook</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>3</td>
+											<td>rachel</td>
+											<td>24</td>
+											<td>1970-05-05</td>
+											<td>waitress</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>4</td>
+											<td>chandler</td>
+											<td>26</td>
+											<td>1968-01-09</td>
+											<td>copywriter</td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="choose-link_eleventh">Агрегатные функции</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT * FROM friends<br>WHERE MAX(age);<span class="sql-code-comment">Можно использовать следующие функции:</span></p>
+										<p class="sql-code">SELECT MAX(age) FROM friends;<span class="sql-code-comment">Можно использовать следующие функции:</span></p>
 										<ul>
-											<li class="sql-code-item"><span class="sea-color">MAX</span> - макисмальное значение</li>
+											<li class="sql-code-item"><span class="sea-color">MAX</span> - максимальное значение</li>
 											<li class="sql-code-item"><span class="sea-color">MIN</span> - минимальное значение</li>
-											<li class="sql-code-item"><span class="sea-color">AVG</span> - среднее арифметическое значение</li>
-											<li class="sql-code-item"><span class="sea-color">SUM</span> - сумма</li>
-											<li class="sql-code-item"><span class="sea-color">COUNT(*)</span> - количество строк</li>
+											<li class="sql-code-item"><span class="sea-color">AVG</span> - среднее  значение для числового столбца</li>
+											<li class="sql-code-item"><span class="sea-color">SUM</span> - сумма числовых значений</li>
+											<li class="sql-code-item"><span class="sea-color">COUNT(*)</span> - количество записей в столбце</li>
 										</ul>
 									</div>
 									<table class="table_main">
 										<tr>
-											<th>id</th>
-											<th>name</th>
-											<th>age</th>
-											<th>birth</th>
-											<th>job</th>
+											<th>MAX(age)</th>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>37</td>
 										</tr>
 									</table>
 								</div>
@@ -650,7 +667,7 @@
 								<h3 class="main-subtitle" id="change-link_first">Изменение данных в таблице</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">UPDATE friends<br>SET job = 'manager'<br>WHERE name = 'rachel';</p>
+										<p class="sql-code">UPDATE friends<br>SET job = 'manager'<br>WHERE name = 'rachel';</p><span class="check-code">Просмотреть данные таблицы:<br> <span class="check-code_blue">SELECT * FROM friends WHERE name = 'rachel';</span></span>
 									</div>
 									<table class="table_main">
 										<tr>
@@ -661,48 +678,75 @@
 											<th>job</th>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
-										</tr>
-										
+											<td>3</td>
+											<td>rachel</td>
+											<td>24</td>
+											<td>1970-05-05</td>
+											<td>manager</td>
 										</tr>
 									</table>
 								</div><hr>
 								<h3 class="main-subtitle" id="change-link_second">Изменение структуры таблицы</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">ALTER TABLE friends<br>ADD COLUMN email varchar(15); <span class="sql-code-comment">Можно использовать следующие операторы:</span></p>
+										<p class="sql-code">ALTER TABLE friends<br>ADD COLUMN email varchar(15); <span class="sql-code-comment">Можно использовать следующие команды:</span></p>
 										<ul>
 											<li class="sql-code-item"><span class="sea-color_comment">ADD COLUMN</span> - добавить столбец</li>
 											<li class="sql-code-item"><span class="sea-color_comment">DROP COLUMN</span> - удалить столбец</li>
 											<li class="sql-code-item"><span class="sea-color_comment">CHANGE COLUMN</span> - изменить имя и тип данных столбца</li>
 											<li class="sql-code-item"><span class="sea-color_comment">MODIFY COLUMN</span> - изменить только тип данных столбца</li>
 										</ul>
+										<span class="check-code">Просмотреть структуру таблицы: <span class="check-code_blue"> DESC friends;</span></span>
 									</div>
-									<table class="table_main">
+									<table class="table_main table-small">
 										<tr>
-											<th>id</th>
-											<th>name</th>
-											<th>age</th>
-											<th>birth</th>
-											<th>job</th>
+											<th>field</th>
+											<th>type</th>
+											<th>null</th>
+											<th>Key</th>
+											<th>Extra</th>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>id</td>
+											<td>int</td>
+											<td>no</td>
+											<td>pri</td>
+											<td>auto_increment</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>name</td>
+											<td>varchar(10)</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>age</td>
+											<td>int</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>birth</td>
+											<td>date</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>job</td>
+											<td>varchar(12)</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>email</td>
+											<td>varchar(15)</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
 										</tr>
 									</table>
 								</div><hr>
@@ -721,23 +765,81 @@
 								<p class="sql-code-comment sql-code-comment_normal">У нас уже есть "главная" таблица friends. Создадим еще одну таблицу hobby, внешний ключ которой будет связан с первичным ключом таблицы friends.</p>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">CREATE TABLE hobby (<br>id int auto_increment not null PRIMARY KEY,<br>passion varchar(10),<br> id_friends int,<br>CONSTRAINT fk_friends_id<br>FOREIGN KEY(id_friends)<br>REFERENCES friends_id);
+										<p class="sql-code">CREATE TABLE hobby (<br>id int auto_increment not null PRIMARY KEY,<br>interest varchar(10),<br> id_friends int,<br>CONSTRAINT fk_friends_id<br>FOREIGN KEY (id_friends)<br>REFERENCES friends (id)<br>);
 										<span class="sql-code-comment">Просмотреть структуру таблицы: <span class="check-code_blue"> DESC hobby;</span></span></p>
 									</div>
 									<table class="table_main">
 										<tr>
+											<th>field</th>
+											<th>type</th>
+											<th>null</th>
+											<th>Key</th>
+											<th>Extra</th>
+										</tr>
+										<tr>
+											<td>id</td>
+											<td>int</td>
+											<td>no</td>
+											<td>pri</td>
+											<td>auto_increment</td>
+										</tr>
+										<tr>
+											<td>interest</td>
+											<td>varchar(10)</td>
+											<td>yes</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>id_friends</td>
+											<td>int</td>
+											<td>yes</td>
+											<td>mul</td>
+											<td></td>
+										</tr>
+									</table>
+								</div>
+								<p class="sql-code-comment sql-code-comment_normal">Добавим данные в таблицу хобби</p>
+								<div class="query">
+									<div class="query__code">
+										<p class="sql-code">INSERT INTO hobby (interest, id_friends)<br>VALUES ('science', 1),<br>('order', 2),<br>('fashion', 3),<br>('jokes', 4),<br>('food', 5),<br>('nature', 6);</p>
+										<span class="sql-code-comment">Просмотреть данные таблицы: <span class="check-code_blue">SELECT * FROM friends;</span></span>
+									</div>
+									<table class="table_main table-small">
+										<tr>
 											<th>id</th>
-											<th>name</th>
-											<th>age</th>
-											<th>birth</th>
-											<th>job</th>
+											<th>interest</th>
+											<th>id_friends</th>
 										</tr>
 										<tr>
 											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>science</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>order</td>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>fashion</td>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>jokes</td>
+											<td>4</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>food</td>
+											<td>5</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>nature</td>
+											<td>6</td>
 										</tr>
 									</table>
 								</div>	
@@ -754,76 +856,138 @@
 										<tr>
 											<td class="column_bold">1</td>
 											<td>ross</td>
-											<td>32</td>
+											<td>33</td>
 											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>paleontologist</td>
+										</tr>
+										<tr>
+											<td class="column_bold">2</td>
+											<td>monica</td>
+											<td>24</td>
+											<td>null</td>
+											<td>cook</td>
+										</tr>
+										<tr>
+											<td class="column_bold">3</td>
+											<td>rachel</td>
+											<td>24</td>
+											<td>1970-05-05</td>
+											<td>waitress</td>
+										</tr>
+										<tr>
+											<td class="column_bold">4</td>
+											<td>chandler</td>
+											<td>26</td>
+											<td>1968-01-09</td>
+											<td>copywriter</td>
+										</tr>
+										<tr>
+											<td class="column_bold">5</td>
+											<td>joey</td>
+											<td>36</td>
+											<td>1968-01-09</td>
+											<td>actor</td>
+										</tr>
+										<tr>
+											<td class="column_bold">6</td>
+											<td>phoebe</td>
+											<td>37</td>
+											<td>null</td>
+											<td>musician</td>
 										</tr>
 									</table>
 									<table class="table_main table-small">
 										<tr>
 											<th>id</th>
-											<th>name</th>
-											<th>age</th>
-											<th>birth</th>
+											<th>interest</th>
 											<th class="column_bold">id_friends</th>
 										</tr>
 										<tr>
 											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td class="column_bold">scientist</td>
+											<td>science</td>
+											<td class="column_bold">1</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>order</td>
+											<td class="column_bold">2</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>fashion</td>
+											<td class="column_bold">3</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>jokes</td>
+											<td class="column_bold">4</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>food</td>
+											<td class="column_bold">5</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>nature</td>
+											<td class="column_bold">6</td>
 										</tr>
 									</table>
 								</div>
-								<p class="sql-code-comment sql-code-comment_normal">Выведем имена из таблицы friends и соединим с хобби из таблицы hobby.</p>	
+								<p class="sql-code-comment sql-code-comment_normal">Выведем имена из таблицы friends и соединим с интересами из таблицы hobby.</p>	
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT friends.name, hobby.passion<br>FROM friends<br>INNER JOIN hobby<br>ON friends.id = hobby.id_friends;</p>
+										<p class="sql-code">SELECT friends.name, hobby.interest<br>FROM friends<br>INNER JOIN hobby<br>ON friends.id = hobby.id_friends;</p>
 									</div>
 									<table class="table_main table-small">
 										<tr>
-											<th>id</th>
 											<th>name</th>
-											<th>age</th>
-											<th>birth</th>
-											<th>job</th>
+											<th>interest</th>
 										</tr>
 										<tr>
-											<td>1</td>
 											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>science</td>
+										</tr>
+										<tr>
+											<td>monica</td>
+											<td>order</td>
+										</tr>
+										<tr>
+											<td>rachel</td>
+											<td>fashion</td>
+										</tr>
+										<tr>
+											<td>chandler</td>
+											<td>jokes</td>
+										</tr>
+										<tr>
+											<td>joey</td>
+											<td>food</td>
+										</tr>
+										<tr>
+											<td>phoebe</td>
+											<td>nature</td>
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="join-link_second">Внутреннее соединение с оператором where</h3>
+								<h3 class="main-subtitle" id="join-link_second">Внутреннее соединение с where</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT friends.name, hobby.passion<br>FROM friends<br>INNER JOIN hobby<br>ON friends.id = hobby.id_friends;<br>WHERE friends.name = 'ross' AND friends.name = 'monica'</p>
+										<p class="sql-code">SELECT friends.name, hobby.interest<br>FROM friends<br>INNER JOIN hobby<br>ON friends.id = hobby.id_friends<br>WHERE friends.name = 'ross' OR friends.name = 'rachel';</p>
 									</div>
 									<table class="table_main">
 										<tr>
-											<th>id</th>
 											<th>name</th>
-											<th>age</th>
-											<th>birth</th>
-											<th>job</th>
+											<th>interest</th>
 										</tr>
 										<tr>
-											<td>1</td>
 											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>science</td>
 										</tr>
 										<tr>
-											<td>1</td>
-											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
-											<td>scientist</td>
+											<td>rachel</td>
+											<td>fashion</td>
+										</tr>
 										</tr>
 									</table>
 								</div>

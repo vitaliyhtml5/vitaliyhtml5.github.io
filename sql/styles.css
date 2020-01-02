@@ -384,7 +384,7 @@ tr:nth-child(1) {
 		margin: 10px auto;
 	}
 	.main-title {
-		margin-bottom: 0;
+		margin: -40px 0 0;
 		font-size: 20px;
 	}
 	.main-subtitle {
@@ -540,6 +540,9 @@ tr:nth-child(1) {
 		100% {
 			left: 100%;
 		}
+	}
+	.main-title {
+		margin: 0;
 	}
 	.main-wrap {
 		margin-top: 25px;

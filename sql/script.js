@@ -1,3 +1,4 @@
+//TABS
 function changeTabs() {	
 	let tabs = {
 		createTable: document.getElementById('create-table'),
@@ -59,4 +60,51 @@ function changeTabs() {
 		links.showHideLinks(links.joinLink, links.createLink, links.selectLink, links.changeLink);
 	}
 }
+
+//HAMBURGER
+function openCloseBurger() {
+	document.querySelector('.hamburger-open').onclick = function () {
+		burger.openBurger();
+	}
+	document.querySelector('.hamburger-close').onclick = function () {
+		burger.closeBurger();
+	}
+	
+	let burger = {
+		open: document.querySelector('.hamburger-open').style,
+		close: document.querySelector('.hamburger-close').style,
+		list: document.querySelector('.sidebar__list'),
+		items: document.querySelectorAll( ".sidebar__item" ),
+		openBurger: function() {
+			if (burger.open.zIndex = 12) {
+				burger.close.display = 'block';
+				burger.list.classList.remove('sidebar-disappear');
+				burger.list.classList.add('sidebar-appear');
+				burger.open.zIndex = -5;
+				burger.close.zIndex = 12;
+				burger.open.display = 'none';
+				
+				burger.list.onmousedown = function () {
+  					for( let i = 0; i < burger.items.length; i++){ 
+    					burger.items[i].onmouseup = function() {
+    						burger.closeBurger();
+    					}
+	  				}		
+				}
+			}	
+		},
+		closeBurger: function() {
+			if (burger.close.zIndex = 12) {
+				burger.open.display = 'block';
+				burger.list.classList.remove('sidebar-appear');
+				burger.list.classList.add('sidebar-disappear');
+				burger.open.zIndex = 12;
+				burger.close.zIndex = -5;
+				burger.close.display = 'none';
+			}
+		},
+	};
+}	
+
 changeTabs();
+openCloseBurger();

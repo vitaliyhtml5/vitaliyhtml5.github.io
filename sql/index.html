@@ -16,6 +16,8 @@
 				<div class="header-logo">
 					<img class="header-logo__img" src="img/logo.svg" alt="Лого MySql">
 					<h1 class="header-logo__title"><span class="hidden">MySQL</span>Tutorial<sup class="beta_red">beta</sup></h1>
+					<button class="hamburger hamburger-open"><span class="hamburger-open_border"></span></button>
+					<button class="hamburger hamburger-close"><span class="hamburger-close_border"></span></button>
 				</div>
 				<p class="header-text">Данный сайт содержит основные команды для <span class="sea-color">MySQL</span>.<br>Если ваш <span class="sea-color">MySQL Workbench</span> выдаёт ошибку, всегда можно сравнить с командами ниже</p>
 				<nav class="sidebar">
@@ -75,6 +77,7 @@
 						<a href="#header-main" class="btnup btnup-create"></a>
 					</aside>
 					<div class="content">
+						<a href="#header-main" class="btnup btnup-smdev btnup-create"></a>
 						<section id="create-table">
 							<div class="create-table-tab">
 								<h2 class="main-title">Создать таблицу и внести значения</h2>
@@ -650,7 +653,7 @@
 											<li class="sql-code-item"><span class="sea-color">COUNT(*)</span> - количество записей в столбце</li>
 										</ul>
 									</div>
-									<table class="table_main">
+									<table class="table_main table-small_dt">
 										<tr>
 											<th>MAX(age)</th>
 										</tr>
@@ -698,7 +701,7 @@
 										</ul>
 										<span class="check-code">Просмотреть структуру таблицы: <span class="check-code_blue"> DESC friends;</span></span>
 									</div>
-									<table class="table_main table-small">
+									<table class="table_main table-small table-small_dt">
 										<tr>
 											<th>field</th>
 											<th>type</th>
@@ -768,7 +771,7 @@
 										<p class="sql-code">CREATE TABLE hobby (<br>id int auto_increment not null PRIMARY KEY,<br>interest varchar(10),<br> id_friends int,<br>CONSTRAINT fk_friends_id<br>FOREIGN KEY (id_friends)<br>REFERENCES friends (id)<br>);
 										<span class="sql-code-comment">Просмотреть структуру таблицы: <span class="check-code_blue"> DESC hobby;</span></span></p>
 									</div>
-									<table class="table_main">
+									<table class="table_main table-small table-small_dt">
 										<tr>
 											<th>field</th>
 											<th>type</th>
@@ -973,7 +976,7 @@
 								<h3 class="main-subtitle" id="join-link_second">Внутреннее соединение с where</h3>
 								<div class="query">
 									<div class="query__code">
-										<p class="sql-code">SELECT friends.name, hobby.interest<br>FROM friends<br>INNER JOIN hobby<br>ON friends.id = hobby.id_friends<br>WHERE friends.name = 'ross' OR friends.name = 'rachel';</p>
+										<p class="sql-code">SELECT friends.name, hobby.interest<br>FROM friends<br>INNER JOIN hobby<br>ON friends.id = hobby.id_friends<br>WHERE friends.name = 'ross'<br> OR friends.name = 'rachel';</p>
 									</div>
 									<table class="table_main">
 										<tr>
@@ -992,7 +995,7 @@
 									</table>
 								</div>
 							</div>
-						</section>					
+						</section>
 					</div>
 				</div>
 			</div>

@@ -49,7 +49,6 @@ a {
 }
 .header-logo {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: flex-start;
 	width: 300px;
 	margin-bottom: 15px;

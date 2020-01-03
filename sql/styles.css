@@ -296,11 +296,17 @@ tr:nth-child(1) {
 	font-style: italic;
 }
 @media (max-width: 1150px) {
+	.hamburger {
+		display: none;
+	}
 	.table_main {
 		width: 320px;
 	}
 }
 @media (max-width: 1065px) {
+	.hamburger {
+		display: none;
+	}
 	.table_main {
 		width: 300px;
 		margin: 10px 0;
@@ -312,6 +318,9 @@ tr:nth-child(1) {
 	}
 }
 @media (max-width: 997px) {
+	.hamburger {
+		display: none;
+	}
 	.content {
 		width: 80%;
 		padding: 10px;
@@ -344,6 +353,9 @@ tr:nth-child(1) {
 	}
 }
 @media (max-width: 950px) {
+	.hamburger {
+		display: none;
+	}
 	.query__code {
 		width: 100%;
 	}
@@ -361,7 +373,8 @@ tr:nth-child(1) {
 	}
 }
 @media (max-width: 700px) {
-	.tutorial {
+	.tutorial,
+	.hamburger {
 		display: none;
 	}
 	.btnup-smdev {

@@ -1051,7 +1051,7 @@
 									</tr>
 								</table>
 								<p class="check-code check-code_gen">Сделайте выборку имени и дохода троих самых богатых людей мира в 2019 году по версии Forbes</p>
-								<h3 class="task-answer task-answer_first">Решение</h3>
+								<h3 class="task-answer task-answer_first">Решение<span class="arrow-down"></span></h3>
 								<div class="query show-answer_first">	
 									<div class="query__code">
 										<p class="sql-code">SELECT name, net_worth FROM billioners <br>WHERE position <= 3;</p>
@@ -1116,7 +1116,7 @@
 									</tr>
 								</table>
 								<p class="check-code check-code_gen">Сделайте выборку данных среди победителей награды "Золотой мяч", которая выведит Месси и Роналду с 2015 по 2019 год</p>
-								<h3 class="task-answer task-answer_second">Решение</h3>
+								<h3 class="task-answer task-answer_second">Решение<span class="arrow-down"></span></h3>
 								<div class="query show-answer_second">	
 									<div class="query__code">
 										<p class="sql-code">SELECT winner, year FROM football_players <br>WHERE winner = 'messi'<br>OR winner = 'ronaldo'<br> AND year BETWEEN 2015 AND 2019<br>ORDER BY year;</p>
@@ -1170,7 +1170,7 @@
 									</tr>
 								</table>
 								<p class="check-code check-code_gen">Какая самая низкая температура была зафиксирована в Антарктиде?</p>
-								<h3 class="task-answer task-answer_third">Решение</h3>
+								<h3 class="task-answer task-answer_third">Решение<span class="arrow-down"></span></h3>
 								<div class="query show-answer_third">	
 									<div class="query__code">
 										<p class="sql-code">SELECT MIN(min) FROM temperature;</p>
@@ -1208,7 +1208,7 @@
 									</tr>
 								</table>
 								<p class="check-code check-code_gen">Кто выиграл наибольшее количество золотых медалей среди плавцов Украины на олимпийских играх в Сиднее? Вывести имя и количество медалей через агрегатную функцию</p>
-								<h3 class="task-answer task-answer_forth">Решение</h3>
+								<h3 class="task-answer task-answer_forth">Решение<span class="arrow-down"></span></h3>
 								<div class="query show-answer_forth">	
 									<div class="query__code">
 										<p class="sql-code">SELECT name, MAX(gold) FROM swimmers<br>GROUP BY name<br>HAVING name = 'klochkova';</p>
@@ -1290,7 +1290,7 @@
 									</table>
 								</div>
 								<p class="check-code check-code_gen">Выведите имена QA специалистов, которые работают в компании "Ilovesql", и их должность</p>
-								<h3 class="task-answer task-answer_fifth">Решение</h3>
+								<h3 class="task-answer task-answer_fifth">Решение<span class="arrow-down"></span></h3>
 								<div class="query show-answer_fifth">	
 									<div class="query__code">
 										<p class="sql-code">SELECT staff.name, job.position<br> FROM staff <br>INNER JOIN job<br>ON staff.id_job = job.id<br>WHERE job.position = 'qa';</p>
@@ -1397,7 +1397,7 @@
 									</table>
 								</div>
 								<p class="check-code check-code_gen">В каких фильмах снимался Леонардо Ди Каприо? Вывести имя актёра и название фильма</p>
-								<h3 class="task-answer task-answer_sixth">Решение</h3>
+								<h3 class="task-answer task-answer_sixth">Решение<span class="arrow-down"></span></h3>
 								<div class="query show-answer_sixth">	
 									<div class="query__code">
 										<p class="sql-code">SELECT characters.actor, movie.name<br> FROM characters <br>INNER JOIN movie<br>INNER JOIN key_list<br>ON movie.id = key_list.id_movie<br>ON characters.id = key_list.id_characters<br>WHERE characters.actor = 'dicaprio';</p>

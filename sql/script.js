@@ -136,26 +136,37 @@ function showHideAnsw() {
 		document.querySelector('.show-answer_fifth'),
 		document.querySelector('.show-answer_sixth'),
 	];
-
-	let toggleAnsw = (answ) => answ.classList.toggle('show-answer');
 	
+	let arrow = document.querySelectorAll('.arrow-down');
+	let toggleAnsw = answ => {
+		answ.classList.toggle('show-answer');
+		for (let i=0; i<arrow.length; i++) {
+		}
+	}
+
 	btnTasks[0].onclick = function () {
 		toggleAnsw(answTasks[0]);
+		arrow[0].classList.toggle('arrow-up');
 	}
 	btnTasks[1].onclick = function () {
 		toggleAnsw(answTasks[1]);
+		arrow[1].classList.toggle('arrow-up');
 	}
 	btnTasks[2].onclick = function () {
 		toggleAnsw(answTasks[2]);
+		arrow[2].classList.toggle('arrow-up');
 	}
 	btnTasks[3].onclick = function () {
 		toggleAnsw(answTasks[3]);
+		arrow[3].classList.toggle('arrow-up');
 	}
 	btnTasks[4].onclick = function () {
 		toggleAnsw(answTasks[4]);
+		arrow[4].classList.toggle('arrow-up');
 	}
 	btnTasks[5].onclick = function () {
 		toggleAnsw(answTasks[5]);
+		arrow[5].classList.toggle('arrow-up');
 	}
 }
 

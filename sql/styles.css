@@ -242,7 +242,10 @@ a {
 	transition: 0.4s;
 	cursor: pointer;
 }
-.task-answer::after {
+.task-answer:hover {
+	color: #136882;
+}
+.arrow-down {
 	position: absolute;
 	content: "";
 	top: 9.5px;
@@ -253,11 +256,12 @@ a {
 	border-top: 8px solid #3f3f3f;
 	transition: 0.4s;
 }
-.task-answer:hover {
-	color: #136882;
+.task-answer:hover .arrow-down {
+	border-top-color: #136882;
 }
-.task-answer:hover::after {
-	border-top-color: #136882; 
+.arrow-up {
+	transform: rotate(-180deg);
+	transform-origin: 50% 35%;
 }
 .table_main {
 	width: 400px;

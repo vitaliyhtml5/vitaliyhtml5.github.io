@@ -45,7 +45,9 @@ a {
 .hamburger,
 .hamburger-open,
 .hamburger-close {
+	position: relative;
 	display: none;
+	z-index: -1 !important;
 }
 .header-logo {
 	display: flex;

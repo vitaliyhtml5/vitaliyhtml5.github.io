@@ -171,6 +171,16 @@ function showHideAnsw() {
 	}
 }
 
+//ADVERTASING
+function showAdvertising() {
+	let advertasing = document.querySelector('.advertise');
+	
+	setTimeout( () => advertasing.classList.add('show-advertising'), 10000);
+	document.querySelector('.advertise__btn').onclick = () => advertasing.style.display = 'none';
+}
+
+
 changeTabs();
 openCloseBurger();
-showHideAnsw()
+showHideAnsw();
+showAdvertising();

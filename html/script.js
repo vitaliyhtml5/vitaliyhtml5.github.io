@@ -77,7 +77,8 @@ function openCloseBurger() {
     					burger.items[i].onmouseup = function() {
     						burger.closeBurger();
     					}
-	  				}		
+	  				}
+	  				window.scrollTo(0,0);		
 				}
 			}	
 		},

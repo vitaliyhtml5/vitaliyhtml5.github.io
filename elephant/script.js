@@ -16,8 +16,13 @@ function showModal() {
 	}
 }
 
+document.querySelector('.modal').onclick = (e) => e.stopPropagation();
+
 // OVERLAY CLOSE
-overlay.onclick = function() {
+overlay.onclick = closeOverlay;
+overlayBtn.onclick = closeOverlay;
+
+function closeOverlay() {
 	overlay.classList.remove('modal-overlay-in');
 	if (overlay) {
 		overlay.classList.add('modal-overlay-out');

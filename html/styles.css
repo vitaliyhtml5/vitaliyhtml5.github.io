@@ -47,6 +47,9 @@ a {
 .hamburger-close {
 	display: none;
 }
+.hamburger {
+	z-index: -1 !important;
+}
 .header-logo {
 	display: flex;
 	flex-wrap: wrap;
@@ -421,7 +424,8 @@ a {
 	transform-origin: 50% 35%;
 }
 @media (max-width: 997px) {
-	.hamburger {
+	.hamburger,
+	.hamburger-open {
 		display: none;
 	}
 	.content {
@@ -452,7 +456,8 @@ a {
 	body {
 		font-size: 14px;
 	}
-	.hamburger {
+	.hamburger,
+	.hamburger-open {
 		display: none;
 	}
 	.query__code {
@@ -499,7 +504,8 @@ a {
 	}
 }
 @media (max-width: 800px) {
-	.hamburger {
+	.hamburger,
+	.hamburger-open {
 		display: none;
 	}
 	.query__example {
@@ -511,7 +517,8 @@ a {
 }
 @media (max-width: 700px) {
 	.tutorial,
-	.hamburger {
+	.hamburger,
+	.hamburger-open {
 		display: none;
 	}
 	.btnup-smdev {

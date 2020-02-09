@@ -167,6 +167,7 @@ a {
 	margin: 20px 0;
 }
 .sql-code {
+	display: block;
 	color: #136882;
 	font-family: Raleway, Arial, Helvetica, sans-serif;
 	font-weight: 600;
@@ -180,6 +181,7 @@ a {
 }
 .check-code_blue {
 	color: #136882;
+	font-family: Raleway, Arial, Helvetica, sans-serif;
 	font-weight: 600;
 }
 .check-code_gen {

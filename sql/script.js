@@ -172,15 +172,15 @@ function showHideAnsw() {
 }
 
 //ADVERTASING
-function showAdvertising() {
-	let advertasing = document.querySelector('.advertise');
+// function showAdvertising() {
+// 	let advertasing = document.querySelector('.advertise');
 	
-	setTimeout( () => advertasing.classList.add('show-advertising'), 10000);
-	document.querySelector('.advertise__btn').onclick = () => advertasing.style.display = 'none';
-}
+// 	setTimeout( () => advertasing.classList.add('show-advertising'), 10000);
+// 	document.querySelector('.advertise__btn').onclick = () => advertasing.style.display = 'none';
+// }
 
 
 changeTabs();
 openCloseBurger();
 showHideAnsw();
-showAdvertising();
+// showAdvertising();

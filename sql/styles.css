@@ -168,6 +168,7 @@ a {
 }
 .sql-code {
 	color: #136882;
+	font-family: Raleway, Arial, Helvetica, sans-serif;
 	font-weight: 600;
 	line-height: 1.4;
 	word-spacing: 5px;
@@ -302,6 +303,25 @@ tr:nth-child(1) {
 }
 .table_inner .table-tasks__name {
 	margin-top: 0;
+}
+.hometask-item {
+	position: relative;
+	padding-left: 20px;
+	list-style: none;
+	font-size: 16px;
+	transition: 0.4s;
+}
+.hometask-item::before {
+	position: absolute;
+	content: "";
+	top: 4px;
+	left: -2px;
+	width: 30px;
+	height: 30px;
+	background: url(img/download.svg) no-repeat;
+}
+.hometask-item:hover {
+	color: #136882;
 }
 .column_bold {
 	border: 2px solid #ef2727a8;
@@ -531,6 +551,9 @@ tr:nth-child(1) {
 		justify-content: center;
 		margin: 10px auto;
 	}
+	.sidebar__item {
+		margin-right: 25px;
+	}
 	.main-title {
 		margin: -40px 0 0;
 		font-size: 20px;
@@ -705,7 +728,8 @@ tr:nth-child(1) {
 	.sql-code-item {
 		width: 95%;
 	}
-	.check-code_gen {
+	.check-code_gen,
+	.hometask-item {
 		font-size: 14px;
 	}
 	table {

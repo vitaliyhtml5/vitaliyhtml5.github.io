@@ -83,6 +83,9 @@
 								<li class="tutorial__item"><a href="#task-link_forth" class="tutorial__link">Задача №4</a></li>
 								<li class="tutorial__item"><a href="#task-link_fifth" class="tutorial__link">Задача №5</a></li>
 								<li class="tutorial__item"><a href="#task-link_sixth" class="tutorial__link">Задача №6</a></li>
+								<li class="tutorial__item"><a href="#task-link_seventh" class="tutorial__link">Домашнее задание-1</a></li>
+								<li class="tutorial__item"><a href="#task-link_eighth" class="tutorial__link">Домашнее задание-2</a></li>
+								<li class="tutorial__item"><a href="#task-link_nineth" class="tutorial__link">Домашнее задание-3</a></li>
 							</ul>
 						</div>
 						<a href="#header-main" class="btnup btnup-create"></a>
@@ -1119,7 +1122,7 @@
 								<h3 class="task-answer task-answer_second">Решение<span class="arrow-down"></span></h3>
 								<div class="query show-answer_second">	
 									<div class="query__code">
-										<p class="sql-code">SELECT winner, year FROM football_players <br>WHERE winner = 'messi'<br>OR winner = 'ronaldo'<br> AND year BETWEEN 2015 AND 2019<br>ORDER BY year;</p>
+										<p class="sql-code">SELECT winner, year FROM football_players <br>WHERE winner IN ('messi', 'ronaldo')<br>AND year BETWEEN 2015 AND 2019<br>ORDER BY year;</p>
 									</div>
 									<table class="table_main table-tasks">
 									<caption class="table-tasks__name">football_players</caption>
@@ -1416,7 +1419,30 @@
 											<td>revenant</td>
 										</tr>
 									</table>
-								</div>	
+								</div><hr>
+								<h3 class="main-subtitle" id="task-link_seventh">Домашнее задание - 1 <sup class="beta_red">new</sup></h3>
+								<div class="table_inner">
+									<ol class="hometask-list">
+										<li class="hometask-item"><a target="_blank" href="download/continents.sql" download>continents.sql</a></li>
+										<li class="hometask-item"><a target="_blank" href="download/home_task_1.pdf" download>home_task_1.pdf</a></li>
+									</ol>
+								</div><hr>
+								<h3 class="main-subtitle" id="task-link_eighth">Домашнее задание - 2 <sup class="beta_red">new</sup></h3>
+								<div class="table_inner">
+									<ol class="hometask-list">
+										<li class="hometask-item"><a target="_blank" href="download/film.sql" download>film.sql</a></li>
+										<li class="hometask-item"><a target="_blank" href="download/director.sql" download>director.sql</a></li>
+										<li class="hometask-item"><a target="_blank" href="download/home_task_2.pdf" download>home_task_2.pdf</a></li>
+									</ol>
+								</div><hr>
+								<h3 class="main-subtitle" id="task-link_nineth">Домашнее задание - 3 <sup class="beta_red">new</sup></h3>
+								<div class="table_inner">
+									<ol class="hometask-list">
+										<li class="hometask-item"><a target="_blank" href="download/stars.sql" download>stars.sql</a></li>
+										<li class="hometask-item"><a target="_blank" href="download/phones.sql" download>phones.sql</a></li>
+										<li class="hometask-item"><a target="_blank" href="download/home_task_3.pdf" download>home_task_3.pdf</a></li>
+									</ol>
+								</div>
 							</div>		
 						</section>
 					</div>
@@ -1431,10 +1457,10 @@
 			</div>
 		</div>
 	</footer>
-	<div class="advertise">
+	<!-- <div class="advertise">
 		<p class="advertise__text">Ссылка на <a href="https://vitaliyhtml5.github.io/html" target="_blank" class="advertise__text_orange">html/css tutorial</a></p>
 		<button class="advertise__btn"></button>
-	</div>
+	</div> -->
 	<script src="script.js"></script>
 </body>
 </html>

@@ -1200,27 +1200,51 @@
 									<tr>
 										<td>1</td>
 										<td>klochkova</td>
-										<td>2</td>
 										<td>1</td>
+										<td>0</td>
 									</tr>
 									<tr>
 										<td>2</td>
 										<td>sylantyev</td>
 										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>klochkova</td>
+										<td>0</td>
 										<td>1</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>sylantyev</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>sylantyev</td>
+										<td>0</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>klochkova</td>
+										<td>1</td>
+										<td>0</td>
 									</tr>
 								</table>
 								<p class="check-code check-code_gen">Кто выиграл наибольшее количество золотых медалей среди плавцов Украины на олимпийских играх в Сиднее? Вывести имя и количество медалей через агрегатную функцию</p>
 								<h3 class="task-answer task-answer_forth">Решение<span class="arrow-down"></span></h3>
 								<div class="query show-answer_forth">	
 									<div class="query__code">
-										<code class="sql-code">SELECT name, MAX(gold) FROM swimmers<br>GROUP BY name<br>HAVING MAX(gold);</code>
+										<code class="sql-code">SELECT name, SUM(gold) FROM swimmers<br>GROUP BY name<br>ORDER BY SUM(gold) DESC<br>LIMIT 1;</code>
 									</div>
 									<table class="table_main table-tasks">
 									<caption class="table-tasks__name">swimmers</caption>
 									<tr>
 										<th>name</th>
-										<th>MAX(gold)</th>
+										<th>SUM(gold)</th>
 									</tr>
 									<tr>
 										<td>klochkova</td>

@@ -361,6 +361,10 @@ tr:nth-child(1) {
 .btnup-smdev {
 	display: none;
 }
+.video {
+	width: 100%;
+	z-index: 11;
+}
 .footer {
 	padding: 10px;
 	color: #fff;

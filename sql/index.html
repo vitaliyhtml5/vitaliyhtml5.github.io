@@ -54,12 +54,14 @@
 								<li class="tutorial__item"><a href="#choose-link_third" class="tutorial__link">Ключевое слово where</a></li>
 								<li class="tutorial__item"><a href="#choose-link_forth" class="tutorial__link">Оператор and</a></li>
 								<li class="tutorial__item"><a href="#choose-link_fifth" class="tutorial__link">Оператор or</a></li>
-								<li class="tutorial__item"><a href="#choose-link_sixth" class="tutorial__link">Условие in</a></li>
-								<li class="tutorial__item"><a href="#choose-link_seventh" class="tutorial__link">Вывод значений null</a></li>
-								<li class="tutorial__item"><a href="#choose-link_eighth" class="tutorial__link">Операторы сравнения</a></li>
-								<li class="tutorial__item"><a href="#choose-link_nineth" class="tutorial__link">Ключевое слово like</a></li>
-								<li class="tutorial__item"><a href="#choose-link_tenth" class="tutorial__link">Order by и limit</a></li>
-								<li class="tutorial__item"><a href="#choose-link_eleventh" class="tutorial__link">Агрегатные функции</a></li>
+								<li class="tutorial__item"><a href="#choose-link_sixth" class="tutorial__link">Оператор between</a></li>
+								<li class="tutorial__item"><a href="#choose-link_seventh" class="tutorial__link">Условие in</a></li>
+								<li class="tutorial__item"><a href="#choose-link_eighth" class="tutorial__link">Вывод значений null</a></li>
+								<li class="tutorial__item"><a href="#choose-link_nineth" class="tutorial__link">Операторы сравнения</a></li>
+								<li class="tutorial__item"><a href="#choose-link_tenth" class="tutorial__link">Ключевое слово like</a></li>
+								<li class="tutorial__item"><a href="#choose-link_eleventh" class="tutorial__link">Order by и limit</a></li>
+								<li class="tutorial__item"><a href="#choose-link_twelfth" class="tutorial__link">Агрегатные функции</a></li>
+								<li class="tutorial__item"><a href="#choose-link_thirteenth" class="tutorial__link">Оператор distinct</a></li>
 							</ul>
 						</div>
 						<div class="tutorial-change hidden">
@@ -99,7 +101,7 @@
 								<h3 class="main-subtitle" id="create-link_first">Create table (без первичного ключа)</h3>
 								<div class="query">
 									<div class="query__code">
-										<code class="sql-code">CREATE TABLE friends (<br>name varchar(10),<br>age int,<br>birth date,<br>job varchar(12)<br>);</code>
+										<code class="sql-code">CREATE TABLE friends (<br>name varchar(10),<br>age int,<br>birth date,<br>job varchar(16)<br>);</code>
 										<span class="check-code">Просмотреть структуру таблицы: <code class="check-code_blue"> DESC friends;</code></span>
 									</div>
 									<table class="table_main">
@@ -143,7 +145,7 @@
 								<h3 class="main-subtitle" id="create-link_second">Create table (с первичным ключом)</h3>
 								<div class="query">
 									<div class="query__code">
-										<code class="sql-code">CREATE TABLE friends (<br>id int auto_increment not null PRIMARY KEY,<br>name varchar(10),<br>age int,<br>birth date,<br>job varchar(12)<br>);</code>
+										<code class="sql-code">CREATE TABLE friends (<br>id int auto_increment not null PRIMARY KEY,<br>name varchar(10),<br>age int,<br>birth date,<br>job varchar(16)<br>);</code>
 										<span class="check-code">Просмотреть структуру таблицы: <code class="check-code_blue"> DESC friends;</code></span>
 									</div>
 									<table class="table_main">
@@ -481,7 +483,43 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_sixth">Условие in</h3>
+								<h3 class="main-subtitle" id="choose-link_sixth">Оператор between <sup class="beta_red">new</sup></h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="sql-code">SELECT * FROM friends<br>WHERE age BETWEEN 33 AND 40;<span class="sql-code-comment">Меньшее число должно указываться первым</span></code>
+									</div>
+									<table class="table_main">
+										<tr>
+											<th>id</th>
+											<th>name</th>
+											<th>age</th>
+											<th>birth</th>
+											<th>job</th>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>ross</td>
+											<td>33</td>
+											<td>1971-02-03</td>
+											<td>paleontologist</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>joey</td>
+											<td>36</td>
+											<td>1968-01-09</td>
+											<td>actor</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>phoebe</td>
+											<td>37</td>
+											<td>null</td>
+											<td>musician</td>
+										</tr>
+									</table>
+								</div><hr>
+								<h3 class="main-subtitle" id="choose-link_seventh">Условие in</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">SELECT * FROM friends<br>WHERE name IN ('chandler', 'ross', 'joey');<span class="sql-code-comment">Более короткая запись <span class="sea-color_comment">OR</span></span></code>
@@ -517,7 +555,7 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_seventh">Вывод значений null</h3>
+								<h3 class="main-subtitle" id="choose-link_eighth">Вывод значений null</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">SELECT * FROM friends<br>WHERE birth IS NULL;<span class="sql-code-comment">Если нужны значения "не null", используем команду: <br><code class="sea-color_comment">SELECT * FROM friends WHERE birth IS NOT NULL;</code></span></code>
@@ -546,7 +584,7 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_eighth">Операторы сравнения</h3>
+								<h3 class="main-subtitle" id="choose-link_nineth">Операторы сравнения</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">SELECT * FROM friends<br>WHERE age > 30;<span class="sql-code-comment">Можно использовать следующие операторы:</span></code>
@@ -589,7 +627,7 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_nineth">Ключевое слово like</h3>
+								<h3 class="main-subtitle" id="choose-link_tenth">Ключевое слово like</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">SELECT * FROM friends<br>WHERE name LIKE 'ph%';<span class="sql-code-comment">Несколько важных моментов:</span></code>
@@ -615,7 +653,7 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_tenth">Order by и limit</h3>
+								<h3 class="main-subtitle" id="choose-link_eleventh">Order by и limit</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">SELECT * FROM friends<br>ORDER BY age<br>LIMIT 3;</code>
@@ -656,7 +694,7 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_eleventh">Агрегатные функции</h3>
+								<h3 class="main-subtitle" id="choose-link_twelfth">Агрегатные функции</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">SELECT MAX(age) FROM friends;<span class="sql-code-comment">Можно использовать следующие функции:</span></code>
@@ -671,6 +709,32 @@
 									<table class="table_main table-small_dt">
 										<tr>
 											<th>MAX(age)</th>
+										</tr>
+										<tr>
+											<td>37</td>
+										</tr>
+									</table>
+								</div><hr>
+								<h3 class="main-subtitle" id="choose-link_thirteenth">Оператор distinct <sup class="beta_red">new</sup></h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="sql-code">SELECT DISTINCT age FROM friends;<span class="sql-code-comment">Позволяет сделать выборку уникальных значений. Т.е. если столбец содержит несколько одинаковых значений, в выборке оно будет представлено всего один раз</span></code>
+									</div>
+									<table class="table_main table-small_dt">
+										<tr>
+											<th>age</th>
+										</tr>
+										<tr>
+											<td>33</td>
+										</tr>
+										<tr>
+											<td>24</td>
+										</tr>
+										<tr>
+											<td>26</td>
+										</tr>
+										<tr>
+											<td>36</td>
 										</tr>
 										<tr>
 											<td>37</td>
@@ -1197,16 +1261,19 @@
 										<th>name</th>
 										<th>gold</th>
 										<th>silver</th>
+										<th>bronze</th>
 									</tr>
 									<tr>
 										<td>1</td>
 										<td>klochkova</td>
 										<td>1</td>
 										<td>0</td>
+										<td>0</td>
 									</tr>
 									<tr>
 										<td>2</td>
 										<td>sylantyev</td>
+										<td>0</td>
 										<td>0</td>
 										<td>0</td>
 									</tr>
@@ -1215,10 +1282,12 @@
 										<td>klochkova</td>
 										<td>0</td>
 										<td>1</td>
+										<td>0</td>
 									</tr>
 									<tr>
 										<td>4</td>
 										<td>sylantyev</td>
+										<td>0</td>
 										<td>0</td>
 										<td>0</td>
 									</tr>
@@ -1227,11 +1296,13 @@
 										<td>sylantyev</td>
 										<td>0</td>
 										<td>1</td>
+										<td>0</td>
 									</tr>
 									<tr>
 										<td>6</td>
 										<td>klochkova</td>
 										<td>1</td>
+										<td>0</td>
 										<td>0</td>
 									</tr>
 								</table>

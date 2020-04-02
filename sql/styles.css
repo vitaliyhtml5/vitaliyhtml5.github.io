@@ -323,7 +323,11 @@ tr:nth-child(1) {
 	height: 30px;
 	background: url(img/download.svg) no-repeat;
 }
-.hometask-item:hover {
+.hometask-item_ordered {
+	margin-left: 15px;
+}
+.hometask-item:hover,
+.hometask-item_ordered:hover {
 	color: #136882;
 }
 .column_bold {

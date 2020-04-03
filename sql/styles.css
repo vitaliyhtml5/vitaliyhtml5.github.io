@@ -580,6 +580,9 @@ tr:nth-child(1) {
 	.table_inner {
 		margin: 10px 0;
 	}
+	.btnup:hover::before {
+		background: url(img/btn_arrow_right.svg) no-repeat;
+	}
 	.footer {
 		padding: 5px;
 	}
@@ -752,6 +755,9 @@ tr:nth-child(1) {
 	.column_bold {
 		border-width: 1.5px;
 	}
+	.hometask-item_ordered:last-child {
+		margin-bottom: 20px;
+	}
 	.footer {
 		font-size: 10px;
 		line-height: 12px;
@@ -773,8 +779,6 @@ tr:nth-child(1) {
 	.sql-code-comment {
 		font-size: 12px;
 	}
-}
-@media (max-width: 350px) {
 	.table-small_dt,
 	.table_inner .table_main {
 		font-size: 10px;

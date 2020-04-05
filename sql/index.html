@@ -26,7 +26,7 @@
 						<li class="sidebar__item sidebar__item_choose">Выбрать</li>
 						<li class="sidebar__item sidebar__item_change">Изменить</li>
 						<li class="sidebar__item sidebar__item_join">Соединить</li>
-						<li class="sidebar__item sidebar__item_tasks">Задачи</li>
+						<li class="sidebar__item sidebar__item_tasks">Материалы</li>
 					</ul>
 				</nav>
 			</div>
@@ -43,7 +43,7 @@
 								<li class="tutorial__item"><a href="#create-link_first" class="tutorial__link">Create table (без ключа)</a></li>
 								<li class="tutorial__item"><a href="#create-link_second" class="tutorial__link">Create table (с ключом)</a></li>
 								<li class="tutorial__item"><a href="#create-link_third" class="tutorial__link">Insert Into (одна строка)</a></li>
-								<li class="tutorial__item"><a href="#create-link_forth" class="tutorial__link">Insert Into (неполная)</a></li>
+								<li class="tutorial__item"><a href="#create-link_fourth" class="tutorial__link">Insert Into (неполная)</a></li>
 								<li class="tutorial__item"><a href="#create-link_fifth" class="tutorial__link">Insert Into (несколько строк)</a></li>
 							</ul>
 						</div>
@@ -52,7 +52,7 @@
 								<li class="tutorial__item"><a href="#choose-link_first" class="tutorial__link">Select * (все столбцы)</a></li>
 								<li class="tutorial__item"><a href="#choose-link_second" class="tutorial__link">Select (отдельные столбцы)</a></li>
 								<li class="tutorial__item"><a href="#choose-link_third" class="tutorial__link">Ключевое слово where</a></li>
-								<li class="tutorial__item"><a href="#choose-link_forth" class="tutorial__link">Оператор and</a></li>
+								<li class="tutorial__item"><a href="#choose-link_fourth" class="tutorial__link">Оператор and</a></li>
 								<li class="tutorial__item"><a href="#choose-link_fifth" class="tutorial__link">Оператор or</a></li>
 								<li class="tutorial__item"><a href="#choose-link_sixth" class="tutorial__link">Оператор between</a></li>
 								<li class="tutorial__item"><a href="#choose-link_seventh" class="tutorial__link">Условие in</a></li>
@@ -77,6 +77,7 @@
 								<li class="tutorial__item"><a href="#join-link_second" class="tutorial__link">Внутреннее соединение с where</a></li>
 								<li class="tutorial__item"><a href="#join-link_third" class="tutorial__link">Внешнее соединение</a></li>
 								<li class="tutorial__item"><a href="#join-link_fourth" class="tutorial__link">Объединение запросов</a></li>
+								<li class="tutorial__item"><a href="#join-link_fifth" class="tutorial__link">Подзапросы</a></li>
 							</ul>
 						</div>
 						<div class="tutorial-task hidden">
@@ -84,7 +85,7 @@
 								<li class="tutorial__item"><a href="#task-link_first" class="tutorial__link">Задача №1</a></li>
 								<li class="tutorial__item"><a href="#task-link_second" class="tutorial__link">Задача №2</a></li>
 								<li class="tutorial__item"><a href="#task-link_third" class="tutorial__link">Задача №3</a></li>
-								<li class="tutorial__item"><a href="#task-link_forth" class="tutorial__link">Задача №4</a></li>
+								<li class="tutorial__item"><a href="#task-link_fourth" class="tutorial__link">Задача №4</a></li>
 								<li class="tutorial__item"><a href="#task-link_fifth" class="tutorial__link">Задача №5</a></li>
 								<li class="tutorial__item"><a href="#task-link_sixth" class="tutorial__link">Задача №6</a></li>
 								<li class="tutorial__item"><a href="#task-link_seventh" class="tutorial__link">Домашнее задание-1</a></li>
@@ -198,7 +199,7 @@
 								<h3 class="main-subtitle" id="create-link_third">Insert Into (одна строка)</h3>
 								<div class="query">
 									<div class="query__code">
-										<code class="sql-code">INSERT INTO friends (name, age, birth, job)<br>VALUES ('ross', 32, '1971-02-03', 'paleontologist');</code>
+										<code class="sql-code">INSERT INTO friends (name, age, birth, job)<br>VALUES ('ross', 27, '1967-10-18', 'paleontologist');</code>
 										<span class="check-code">Просмотреть данные таблицы: <code class="check-code_blue"> SELECT * FROM friends;</code></span>
 									</div>
 									<table class="table_main">
@@ -212,13 +213,13 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>33</td>
+											<td>27</td>
 											<td>1967-05-12</td>
 											<td>paleontologist</td>
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="create-link_forth">Insert Into (данные известны частично)</h3>
+								<h3 class="main-subtitle" id="create-link_fourth">Insert Into (данные известны частично)</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">INSERT INTO friends (name, age, job)<br>VALUES ('monica', 24, 'cook');</code>
@@ -235,8 +236,8 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>33</td>
-											<td>1971-02-03</td>
+											<td>27</td>
+											<td>1967-10-18</td>
 											<td>paleontologist</td>
 										</tr>
 										<tr>
@@ -252,7 +253,7 @@
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">INSERT INTO friends (name, age, birth, job)<br>VALUES ('rachel', 24, '1970-05-05', 'waitress'),
-											<br>('chandler', 26, '1968-04-08', 'copywriter'),<br>('joey', 36, '1968-01-09', 'actor'),<br>('phoebe', 37, null, 'musician');</code>
+											<br>('chandler', 26, '1968-04-08', 'copywriter'),<br>('joey', 26, '1968-01-09', 'actor'),<br>('phoebe', 28, null, 'musician');</code>
 										<span class="check-code">Просмотреть данные таблицы: <code class="check-code_blue">SELECT * FROM friends;</code></span>
 									</div>
 									<table class="table_main table-small">
@@ -266,8 +267,8 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>33</td>
-											<td>1971-02-03</td>
+											<td>27</td>
+											<td>1967-10-18</td>
 											<td>paleontologist</td>
 										</tr>
 										<tr>
@@ -294,14 +295,14 @@
 										<tr>
 											<td>5</td>
 											<td>joey</td>
-											<td>36</td>
+											<td>26</td>
 											<td>1968-01-09</td>
 											<td>actor</td>
 										</tr>
 										<tr>
 											<td>6</td>
 											<td>phoebe</td>
-											<td>37</td>
+											<td>28</td>
 											<td>null</td>
 											<td>musician</td>
 										</tr>
@@ -328,8 +329,8 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>33</td>
-											<td>1971-02-03</td>
+											<td>27</td>
+											<td>1967-10-18</td>
 											<td>paleontologist</td>
 										</tr>
 										<tr>
@@ -356,14 +357,14 @@
 										<tr>
 											<td>5</td>
 											<td>joey</td>
-											<td>36</td>
+											<td>26</td>
 											<td>1968-01-09</td>
 											<td>actor</td>
 										</tr>
 										<tr>
 											<td>6</td>
 											<td>phoebe</td>
-											<td>37</td>
+											<td>28</td>
 											<td>null</td>
 											<td>musician</td>
 										</tr>
@@ -421,13 +422,13 @@
 										<tr>
 											<td>6</td>
 											<td>phoebe</td>
-											<td>37</td>
+											<td>28</td>
 											<td>null</td>
 											<td>musician</td>
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="choose-link_forth">Оператор and</h3>
+								<h3 class="main-subtitle" id="choose-link_fourth">Оператор and</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">SELECT * FROM friends<br>WHERE id = 2<br>AND name = 'monica';<span class="sql-code-comment">При <span class="sea-color_comment">AND</span> все условия должны выполняться. Если бы мы вместо 'monica' написали 'janice', таблица не выдала бы нам никаких данных (даже при наличии в таблице 'id = 2'). Так как два условия не были выполнены.</span></code>
@@ -488,7 +489,7 @@
 								<h3 class="main-subtitle" id="choose-link_sixth">Оператор between <sup class="beta_red">new</sup></h3>
 								<div class="query">
 									<div class="query__code">
-										<code class="sql-code">SELECT * FROM friends<br>WHERE age BETWEEN 33 AND 40;<span class="sql-code-comment">Меньшее число должно указываться первым</span></code>
+										<code class="sql-code">SELECT * FROM friends<br>WHERE age BETWEEN 27 AND 30;<span class="sql-code-comment">Меньшее число должно указываться первым</span></code>
 									</div>
 									<table class="table_main">
 										<tr>
@@ -501,21 +502,14 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>33</td>
-											<td>1971-02-03</td>
+											<td>27</td>
+											<td>1967-10-18</td>
 											<td>paleontologist</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>joey</td>
-											<td>36</td>
-											<td>1968-01-09</td>
-											<td>actor</td>
 										</tr>
 										<tr>
 											<td>6</td>
 											<td>phoebe</td>
-											<td>37</td>
+											<td>28</td>
 											<td>null</td>
 											<td>musician</td>
 										</tr>
@@ -537,8 +531,8 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>32</td>
-											<td>1971-02-03</td>
+											<td>27</td>
+											<td>1967-10-18</td>
 											<td>paleontologist</td>
 										</tr>
 										<tr>
@@ -551,7 +545,7 @@
 										<tr>
 											<td>5</td>
 											<td>joey</td>
-											<td>36</td>
+											<td>26</td>
 											<td>1968-01-09</td>
 											<td>actor</td>
 										</tr>
@@ -580,7 +574,7 @@
 										<tr>
 											<td>6</td>
 											<td>phoebe</td>
-											<td>37</td>
+											<td>28</td>
 											<td>null</td>
 											<td>musician</td>
 										</tr>
@@ -589,7 +583,7 @@
 								<h3 class="main-subtitle" id="choose-link_nineth">Операторы сравнения</h3>
 								<div class="query">
 									<div class="query__code">
-										<code class="sql-code">SELECT * FROM friends<br>WHERE age > 30;<span class="sql-code-comment">Можно использовать следующие операторы:</span></code>
+										<code class="sql-code">SELECT * FROM friends<br>WHERE age > 24;<span class="sql-code-comment">Можно использовать следующие операторы:</span></code>
 										<ul>
 											<li class="sql-code-item">Больше: <span class="sea-color">&#62;</span></li>
 											<li class="sql-code-item">Меньше: <span class="sea-color">&#60;</span></li>
@@ -609,21 +603,28 @@
 										<tr>
 											<td>1</td>
 											<td>ross</td>
-											<td>33</td>
-											<td>1971-02-03</td>
+											<td>27</td>
+											<td>1967-10-18</td>
 											<td>paleontologist</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>chandler</td>
+											<td>26</td>
+											<td>1968-04-08</td>
+											<td>copywriter</td>
 										</tr>
 										<tr>
 											<td>5</td>
 											<td>joey</td>
-											<td>36</td>
+											<td>26</td>
 											<td>1968-01-09</td>
 											<td>actor</td>
 										</tr>
 										<tr>
 											<td>6</td>
 											<td>phoebe</td>
-											<td>37</td>
+											<td>28</td>
 											<td>null</td>
 											<td>musician</td>
 										</tr>
@@ -649,7 +650,7 @@
 										<tr>
 											<td>6</td>
 											<td>phoebe</td>
-											<td>37</td>
+											<td>28</td>
 											<td>null</td>
 											<td>musician</td>
 										</tr>
@@ -713,7 +714,7 @@
 											<th>MAX(age)</th>
 										</tr>
 										<tr>
-											<td>37</td>
+											<td>28</td>
 										</tr>
 									</table>
 								</div><hr>
@@ -727,7 +728,7 @@
 											<th>age</th>
 										</tr>
 										<tr>
-											<td>33</td>
+											<td>27</td>
 										</tr>
 										<tr>
 											<td>24</td>
@@ -736,10 +737,7 @@
 											<td>26</td>
 										</tr>
 										<tr>
-											<td>36</td>
-										</tr>
-										<tr>
-											<td>37</td>
+											<td>28</td>
 										</tr>
 									</table>
 								</div>
@@ -820,7 +818,7 @@
 										</tr>
 										<tr>
 											<td>job</td>
-											<td>varchar(12)</td>
+											<td>varchar(16)</td>
 											<td>yes</td>
 											<td></td>
 											<td></td>
@@ -940,8 +938,8 @@
 										<tr>
 											<td class="column_bold">1</td>
 											<td>ross</td>
-											<td>33</td>
-											<td>1971-02-03</td>
+											<td>27</td>
+											<td>1967-10-18</td>
 											<td>paleontologist</td>
 										</tr>
 										<tr>
@@ -968,14 +966,14 @@
 										<tr>
 											<td class="column_bold">5</td>
 											<td>joey</td>
-											<td>36</td>
+											<td>26</td>
 											<td>1968-01-09</td>
 											<td>actor</td>
 										</tr>
 										<tr>
 											<td class="column_bold">6</td>
 											<td>phoebe</td>
-											<td>37</td>
+											<td>28</td>
 											<td>null</td>
 											<td>musician</td>
 										</tr>
@@ -1116,7 +1114,7 @@
 										</tr>
 										<tr>
 											<td>1</td>
-											<td>1971-02-03</td>
+											<td>1967-10-18</td>
 											<td class="column_bold">1</td>
 										</tr>
 										<tr>
@@ -1163,7 +1161,7 @@
 										</tr>
 										<tr>
 											<td>ross</td>
-											<td>1971-02-03</td>
+											<td>1967-10-18</td>
 										</tr>
 										<tr>
 											<td>monica</td>
@@ -1258,6 +1256,73 @@
 										<tr>
 											<td>3</td>
 											<td>marcel</td>
+										</tr>
+									</table>
+								</div><hr>
+								<h3 class="main-subtitle" id="join-link_fifth">Вложенные запросы (подзапросы) <sup class="beta_red"> new</sup></h3>
+								<div class="query">
+									<table class="table_main table-small">
+										<tr>
+											<th>id</th>
+											<th>name</th>
+											<th>age</th>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>ross</td>
+											<td>27</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>rachel</td>
+											<td>24</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>chandler</td>
+											<td>26</td>
+										</tr>
+									</table>
+									<table class="table_main table-small">
+										<tr>
+											<th>id</th>
+											<th>name</th>
+											<th>age</th>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>janice</td>
+											<td>30</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>gunther</td>
+											<td>32</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>marcel</td>
+											<td>9</td>
+										</tr>
+									</table>
+									<p class="sql-code-comment sql-code-comment_normal">Сделаем выборку значений из таблицы others, где возраст будет больше возраста ross из таблицы friends</p>	
+									<div class="query__code">
+										<code class="sql-code">SELECT * FROM others<br>WHERE age > (SELECT age FROM friends<br>WHERE name = 'ross');</code>
+									</div>
+									<table class="table_main table-small">
+										<tr>
+											<th>id</th>
+											<th>name</th>
+											<th>age</th>
+										</tr>
+											<td>1</td>
+											<td>janice</td>
+											<td>30</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>gunther</td>
+											<td>32</td>
 										</tr>
 									</table>
 								</div>
@@ -1441,7 +1506,7 @@
 									</tr>
 								</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="task-link_forth">Задание №4 (сложный уровень)</h3>
+								<h3 class="main-subtitle" id="task-link_fourth">Задание №4 (сложный уровень)</h3>
 								<table class="table_main table-tasks">
 									<caption class="table-tasks__name">swimmers</caption>
 									<tr>

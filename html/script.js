@@ -97,13 +97,45 @@ function openCloseBurger() {
 
 // FILES
 function showHideFiles() {
-	let btnFile = document.querySelector('.files-text');
-	let allFile = document.querySelector('.files-all');
-	let arrowDown = document.querySelector('.arrow-down');
+	let btnFiles = [
+			document.querySelector('.files-mockup_first'),
+			document.querySelector('.files-mockup_second'),
+			document.querySelector('.files-site_first'),
+			document.querySelector('.files-site_second'),
+	];
+	let listFiles = [
+			document.querySelector('.show-mockup_first'),
+			document.querySelector('.show-mockup_second'),
+			document.querySelector('.show-site_first'),
+			document.querySelector('.show-site_second'),
+		];
+	let arrow = document.querySelectorAll('.arrow-down');
 
-	btnFile.onclick = function () {
-		allFile.classList.toggle('show-file');
-		arrowDown.classList.toggle('arrow-up');
+	let toggleAnsw = answ => {
+		answ.classList.toggle('show-file');
+		for (let i=0; i<arrow.length; i++) {
+		}
+	}
+
+	btnFiles[0].onclick = function () {
+		toggleAnsw(listFiles[0]);
+		arrow[0].classList.toggle('arrow-up');
+		this.classList.toggle('color-orange');
+	}
+	btnFiles[1].onclick = function () {
+		toggleAnsw(listFiles[1]);
+		arrow[1].classList.toggle('arrow-up');
+		this.classList.toggle('color-orange');
+	}
+	btnFiles[2].onclick = function () {
+		toggleAnsw(listFiles[2]);
+		arrow[2].classList.toggle('arrow-up');
+		this.classList.toggle('color-orange');
+	}
+	btnFiles[3].onclick = function () {
+		toggleAnsw(listFiles[3]);
+		arrow[3].classList.toggle('arrow-up');
+		this.classList.toggle('color-orange');
 	}
 }
 

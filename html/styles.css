@@ -16,7 +16,8 @@ body {
 img {
 	max-width: 100%;
 }
-ul li {
+ul li,
+ol li {
 	margin-left: 0;
 	padding-left: 0;
 	list-style-type: none;
@@ -322,6 +323,7 @@ a {
 }
 .files-list {
 	padding-left: 20px;
+	font-family: Arial, Helvetica, sans-serif;
 	line-height: 28px;
 	transition: 0.3s;
 }
@@ -330,11 +332,15 @@ a {
 	cursor: pointer;
 }
 .files-download,
-.files-site {
+.files-site,
+.files-home,
+.files-video {
 	position: relative;
 }
 .files-download::before,
-.files-site::before {
+.files-site::before,
+.files-home::before,
+.files-video::before {
 	position: absolute;
 	content: "";
 	top: 6px;
@@ -343,8 +349,22 @@ a {
 	height: 30px;
 	background: url(img/download.svg) no-repeat;
 }
+.files-home::before {
+	top: 4px;
+	left: -2px;
+	width: 18px;
+	height: 18px;
+	background: url(img/house.svg) no-repeat;
+}
 .files-site::before {
 	background: url(img/example.svg) no-repeat;
+}
+.files-video::before {
+	top: 6px;
+	left: -1px;
+	width: 16px;
+	height: 18px;
+	background: url(img/video.svg) no-repeat;
 }
 .btnup {
 	position: -webkit-sticky;
@@ -397,7 +417,13 @@ a {
 	transition: 0.4s;
 	cursor: pointer;
 }
+.files-list_ordered {
+	margin: 0 0 5px 2px;
+}
 .files-text:hover {
+	color: #d9541e;
+}
+.color-orange {
 	color: #d9541e;
 }
 .show-file {
@@ -410,10 +436,10 @@ a {
 	content: "";
 	top: 9.5px;
 	right: -20px;
-	width: 10px;
-	height: 10px;
+	width: 8px;
+	height: 8px;
 	border: 5px solid transparent; 
-	border-top: 8px solid #3f3f3f;
+	border-top: 6px solid #3f3f3f;
 	transform-origin: 50% 35%;
 	transition: 0.4s;
 }
@@ -421,6 +447,7 @@ a {
 	border-top-color: #d9541e;
 }
 .arrow-up {
+	border-top-color: #d9541e;
 	transform: rotate(-180deg);
 	transform-origin: 50% 35%;
 }

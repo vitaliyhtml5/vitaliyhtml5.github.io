@@ -580,6 +580,11 @@ a {
 	.query {
 		margin: 10px 0;
 	}
+	.files-list:hover,
+	.files-text:hover .arrow-down {
+    	border-top-color: #3f3f3f;
+		color: #3f3f3f;
+	}
 	.footer {
 		padding: 5px;
 	}

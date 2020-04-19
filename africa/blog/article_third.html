@@ -16,6 +16,14 @@
 		<div class="header-wrap">
 			<div class="container">
 				<div class="header">
+					<div class="hamburger-wrap">
+						<div class="hamburger hidden">
+							<span class="hamburger__btn"></span>
+							<span class="hamburger__btn_right"></span>
+							<span class="hamburger__btn_left"></span>
+						</div>
+						<span class="hamburger-close"></span>
+					</div>
 					<a href="../index.html#banner" class="header-logo">
 						<img class="header__img" src="../img/icons/africa-logo.png" alt="Лого Моя Африка">
 						<h1 class="header__title">My Africa</h1>
@@ -67,7 +75,7 @@
 					<div class="blog-wrap">
 						<a class="article-block article-block_first" href="article_first.html"><span class="article-block__link">Африканская саванна</span></a>
 						<a class="article-block article-block_second" href="article_second.html"><span class="article-block__link">Вулкан Килиманджаро</span></a>
-				</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -127,6 +135,16 @@
 			</div>
 		</div>
 	</footer>
-	<script src="script.js"></script>
+	<nav class="hamburger-menu hidden">
+		<ul class="hamburger-menu__list">
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="../index.html#header">Главная</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="../index.html#about">О нас</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="../index.html#tour">Туры</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="../index.html#gallery">Галерея</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="blog.html">Блог</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="../index.html#contacts">Контакты</a></li>
+		</ul>
+	</nav>
+	<script src="../script.js"></script>
 </body>
 </html>

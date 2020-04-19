@@ -1,506 +1,426 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>HTML/CSS tutorial</title>
-	<meta charset="UTF-8">
+	<title>My Africa</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" href="#" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500,500i,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header id="header-main">
-		<div class="header">
+<header id="header">
+		<div class="header-wrap">
 			<div class="container">
-				<div class="header-logo">
-					<img class="header-logo__img" src="img/html-logo.svg" alt="Лого html">
-					<img class="header-logo__img" src="img/css-logo.svg" alt="Лого css">
-					<h1 class="header-logo__title"><span class="hidden">HTML и CSS</span>Tutorial</h1>
-					<button class="hamburger hamburger-open"><span class="hamburger-open_border"></span></button>
-					<button class="hamburger hamburger-close"><span class="hamburger-close_border"></span></button>
+				<div class="header">
+					<div class="hamburger-wrap">
+						<div class="hamburger hidden">
+							<span class="hamburger__btn"></span>
+							<span class="hamburger__btn_right"></span>
+							<span class="hamburger__btn_left"></span>
+						</div>
+						<span class="hamburger-close"></span>
+					</div>
+					<div class="header-logo">
+						<img class="header__img" src="img/icons/africa-logo.png" alt="Лого Моя Африка">
+						<h1 class="header__title">My Africa</h1>
+					</div>
+					<span class="header__tel">+00(000)000-00-00</span>
+					<a class="button header__btn" href="#tour">Заказать тур</a>
 				</div>
-				<p class="header-text">Данный сайт содержит основные элементы <span class="code-item_orange">HTML</span> и стили <span class="code-item_orange">CSS</span>.<br>Если ваш сайт не отображается должным образом, всегда можно сравнить ваш код с примерами ниже</p>
-				<nav class="sidebar">
-					<ul class="sidebar__list">
-						<li class="sidebar__item sidebar__item_html sidebar__item_selected">HTML</li>
-						<li class="sidebar__item sidebar__item_css">CSS</li>
-						<li class="sidebar__item sidebar__item_files">Материалы</li>
+				<nav>
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#about">О нас</a>
+						</li>
+						<li class="nav__item">
+							<a href="#tour">Туры</a>
+						</li>
+						<li class="nav__item">
+							<a href="#gallery">Галерея</a>
+						</li>
+						<li class="nav__item">
+							<a href="#contacts">Контакты</a>
+						</li>	
 					</ul>
 				</nav>
 			</div>
 		</div>
+		<div class="banner">
+			<div class="container">
+				<div class="banner-block">
+					<em class="banner__em">Африка -</em><br>
+					<p class="banner__text">место, где время замедляется. Каждый, кто хоть раз побывал здесь, возвращается снова</p>
+					<a class="button banner_btn" href="#about">Узнать больше</a>
+				</div>
+			</div>
+		</div>
 	</header>
 	<main>
-		<div class="main">
+		<section id="about">
 			<div class="container">
-				<div class="main-wrap">
-					<aside class="tutorial">
-						<h2 class="tutorial__title">Быстрый переход</h2>
-						<div class="tutorial-html">
-							<ul class="tutorial__list">
-								<li class="tutorial__item"><a href="#html-link_first" class="tutorial__link">Заголовок</a></li>
-								<li class="tutorial__item"><a href="#html-link_second" class="tutorial__link">Параграф</a></li>
-								<li class="tutorial__item"><a href="#html-link_third" class="tutorial__link">Список</a></li>
-								<li class="tutorial__item"><a href="#html-link_fourth" class="tutorial__link">Изображение</a></li>
-								<li class="tutorial__item"><a href="#html-link_fifth" class="tutorial__link">Ссылки</a></li>
-								<li class="tutorial__item"><a href="#html-link_sixth" class="tutorial__link">Таблица</a></li>
-								<li class="tutorial__item"><a href="#html-link_seventh" class="tutorial__link">Форма</a></li>
-							</ul>
+				<div class="about">
+					<h2 class="title about__title">О нас</h2>
+					<img class="about__img about__img_left" src="img/about-ocean.jpg" alt="Девушка с велосипедом у океана, Морокко">
+					<p class="about__text">Много лет назад мы были небольшой группой энтузиастов, которые были готовы в любой момент отправиться в увлекательное и незабываемое путешествие. Мы бывали в разных местах: покоряли горы Тибета, бывали в пустынях Австралии, спускались по реке Миссисипи, бродили в джунглях Амазонии и даже льды Антарктиды были нами освоены. Но было место, которое нас тянуло снова и снова. Это была Африка! </p>
+					<p class="about__text">Что же в ней такого особенного? Ведь климат там, мягко говоря, не самый дружелюбный на Земле. Но, несмотря на это, миллионы людей ежегодно устремляются в эти далёкие земли. Мы все разные, и каждый ищет в этом мире что-то свое: особенное, уникальное и неповторимое. И Африка может это дать. Ее природа уникальна, культура неповторима и сама атмосфера очень сильно отличается от всех остальных континентов.</p>
+					<img class="about__img about__img_right" src="img/about-mountain.jpg" alt="Турист на уступе, Килиманджаро">
+					<p class="about__text">Любители релакса устремляются на песчаные пляжи Марокко, Туниса и Египта; ценители истории исследуют Пирамиды и развалины Карфагена; другие бороздят просторы национальных парков Кении, Руанды и Танзании; ценители европейских удобств чинно прогуливаются по бульварам Йоханнесбурга.</p>
+					<p class="about__text">Путешествуя по всем этим красотам, мы поняли, что наше призвание - открывать этот великолепный уголок другим людям. На протяжении нескольких лет мы создаём туры по разным уголкам африканского континента: от севера до юга и от запада до востока.</p>
+					<p class="about__text">Если хотите открыть для себя новый мир. Мир, который до этого никогда не знали, присоединяйтесь к нашей команде и отправляйтесь с нами в путешествие по самым удивительным и незабываемым местам планеты.</p>
+					<a href="blog/blog.html" class="about-link">Узнать больше о природе Африки</a>
+				</div>
+			</div>
+		</section>
+		<section id="tour">
+			<div class="container">
+				<div class="tour">
+					<h2 class="title tour__title">Туры</h2>
+					<ul class="tour__list">
+						<li class="tour__item tour__item_active">Премиум</li>
+						<li class="tour__item">Стандарт</li>
+						<li class="tour__item">Эконом</li>
+					</ul>
+					<div class="package package_first">
+						<h3 class="package__title">Премиум</h3>
+						<span class="package__tooltip"><span class="tooltip-text">Включает проживание<br> и питание (FB)</span></span>
+						<table class="package__table">
+							<tr>
+								<th>Название</th>
+								<th>Места</th>
+								<th>Длительность</th>
+								<th>Дата вылета</th>
+							</tr>
+							<tr>
+								<td>Африканская саванна</td>
+								<td>
+									<ul>
+										<li>Гора Кения</li>
+										<li>Крокодиловая ферма</li>
+										<li>Заповедник Серенгети</li>
+										<li>Пляж Занзибара</li>
+									</ul>
+								</td>
+								<td>7 дней и 6 ночей</td>
+								<td class="dropdown"><span class="dropdown__text">12 мая</span><span class="dots"></span>
+									<ul class="dropdown__list hidden">
+										<li class="dropdown__item">Купить<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Забронировать<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Другая дата</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>Вулкан Килиманджаро</td>
+								<td>
+									<ul>
+										<li>Полосатые скалы</li>
+										<li>Ухуру Пик</li>
+										<li>Озеро Маньяра</li>
+									</ul>
+								</td>
+								<td>12 дней и 11 ночей</td>
+								<td class="dropdown"><span class="dropdown__text">15 мая</span><span class="dots"></span>
+									<ul class="dropdown__list hidden">
+										<li class="dropdown__item">Купить<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Забронировать<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Другая дата</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>Водопад Виктория</td>
+								<td>
+									<ul>
+										<li>Круиз по Замбези</li>
+										<li>Водопад Виктория</li>
+										<li>Мыс Доброй Надежды</li>
+									</ul>
+								</td>
+								<td>6 дней и 5 ночей</td>
+								<td class="dropdown"><span class="dropdown__text">18 мая</span><span class="dots"></span>
+									<ul class="dropdown__list hidden">
+										<li class="dropdown__item">Купить<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Забронировать<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Другая дата</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<div class="pagination">
+							<button class="pagination__btn pagination__btn_active">1</button>
+							<button class="pagination__btn">2</button>
+							<button class="pagination__btn">3</button>
 						</div>
-						<div class="tutorial-css hidden">
-							<ul class="tutorial__list">
-								<li class="tutorial__item"><a href="#css-link_first" class="tutorial__link">Подключение CSS</a></li>
-								<li class="tutorial__item"><a href="#css-link_second" class="tutorial__link">Ширина и высота</a></li>
-								<li class="tutorial__item"><a href="#css-link_third" class="tutorial__link">Семейство шрифтов</a></li>
-								<li class="tutorial__item"><a href="#css-link_fourth" class="tutorial__link">Размер шрифта</a></li>
-								<li class="tutorial__item"><a href="#css-link_fifth" class="tutorial__link">Другие свойства шрифта</a></li>
-								<li class="tutorial__item"><a href="#css-link_sixth" class="tutorial__link">Цвет</a></li>
-								<li class="tutorial__item"><a href="#css-link_seventh" class="tutorial__link">div и span</a></li>
-								<li class="tutorial__item"><a href="#css-link_eighth" class="tutorial__link">Граница</a></li>
-								<li class="tutorial__item"><a href="#css-link_nineth" class="tutorial__link">Внутренний и внешний отступ</a></li>
-								<li class="tutorial__item"><a href="#css-link_tenth" class="tutorial__link">Свойство display</a></li>
-								<li class="tutorial__item"><a href="#css-link_eleventh" class="tutorial__link">Классы и идентификаторы</a></li>
-							</ul>
+					</div>	
+					<div class="package package_second hidden">
+						<h3 class="package__title">Стандарт</h3>
+						<span class="package__tooltip"><span class="tooltip-text">Включает проживание<br> и питание (HB)</span></span>
+						<table class="package__table">
+							<tr>
+								<th>Название</th>
+								<th>Места</th>
+								<th>Длительность</th>
+								<th>Дата вылета</th>
+							</tr>
+							<tr>
+								<td>Африканская саванна</td>
+								<td>
+									<ul>
+										<li>Озеро Маньяра</li>
+										<li>Парк Тарангир</li>
+										<li>Гора Кения</li>
+										<li>Национальный парк Ватаму</li>
+									</ul>
+								</td>
+								<td>6 дней и 5 ночей</td>
+								<td class="dropdown"><span class="dropdown__text">15 мая</span><span class="dots"></span>
+									<ul class="dropdown__list hidden">
+										<li class="dropdown__item">Купить<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Забронировать<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Другая дата</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>Вулкан Килиманджаро</td>
+								<td>
+									<ul>
+										<li>Парк Тарангире</li>
+										<li>Ухуру Пик</li>
+										<li>Кибо</li>
+									</ul>
+								</td>
+								<td>10 дней и 10 ночей</td>
+								<td class="dropdown"><span class="dropdown__text">18 мая</span><span class="dots"></span>
+									<ul class="dropdown__list hidden">
+										<li class="dropdown__item">Купить<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Забронировать<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Другая дата</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>Водопад Виктория</td>
+								<td>
+									<ul>
+										<li>Сафари в Ботсване</li>
+										<li>Водопад Виктория</li>
+										<li>Замок Доброй Надежды</li>
+									</ul>
+								</td>
+								<td>5 дней и 5 ночей</td>
+								<td class="dropdown"><span class="dropdown__text">22 мая</span><span class="dots"></span>
+									<ul class="dropdown__list hidden">
+										<li class="dropdown__item">Купить<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Забронировать<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Другая дата</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<div class="pagination">
+							<button class="pagination__btn pagination__btn_active">1</button>
 						</div>
-						<div class="tutorial-files hidden">
-							<ul class="tutorial__list">
-								<li class="tutorial__item"><a href="#files-link_first" class="tutorial__link">HTML-код базовый</a></li>
-								<li class="tutorial__item"><a href="#files-link_second" class="tutorial__link">HTML-код:  таблица+форма</a></li>
-								<li class="tutorial__item"><a href="#files-link_third" class="tutorial__link">HTML и CSS</a></li>
-								<li class="tutorial__item"><a href="#files-link_fourth" class="tutorial__link">Домашнее задание - 1</a></li>
-								<li class="tutorial__item"><a href="#files-link_fifth" class="tutorial__link">Домашнее задание - 2</a></li>
-								<li class="tutorial__item"><a href="#files-link_fourth" class="tutorial__link">Домашнее задание - 3</a></li>
-								<li class="tutorial__item"><a href="#files-link_seventh" class="tutorial__link">Макеты</a></li>
-								<li class="tutorial__item"><a href="#files-link_eighth" class="tutorial__link">Примеры готовых сайтов</a></li>
-								<li class="tutorial__item"><a href="#files-link_nineth" class="tutorial__link">Видео</a></li>
-								<!-- <li class="tutorial__item"><a href="#files-link_tenth" class="tutorial__link">Проверка сайта</a></li>-->	
-							</ul>
+					</div>
+					<div class="package package_third hidden">
+						<h3 class="package__title">Эконом</h3>
+						<span class="package__tooltip"><span class="tooltip-text">Включает проживание<br> и питание (HB)</span></span>
+						<table class="package__table">
+							<tr>
+								<th>Название</th>
+								<th>Места</th>
+								<th>Длительность</th>
+								<th>Дата вылета</th>
+							</tr>
+							<tr>
+								<td>Африканская саванна</td>
+								<td>
+									<ul>
+										<li>Кратер Нронгоро</li>
+										<li>Парк Тарангире</li>
+										<li>Национальный парк Ватаму</li>
+										<li>Геологический музей Додома</li>
+									</ul>
+								</td>
+								<td>5 дней и 5 ночей</td>
+								<td class="dropdown"><span class="dropdown__text">12 мая</span><span class="dots"></span>
+									<ul class="dropdown__list hidden">
+										<li class="dropdown__item">Купить<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Забронировать<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Другая дата</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>Вулкан Килиманджаро</td>
+								<td>
+									<ul>
+										<li>Мандара</li>
+										<li>Ухуру Пик</li>
+										<li>Хоромбо</li>
+									</ul>
+								</td>
+								<td>8 дней и 7 ночей</td>
+								<td class="dropdown"><span class="dropdown__text">18 мая</span><span class="dots"></span>
+									<ul class="dropdown__list hidden">
+										<li class="dropdown__item">Купить<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Забронировать<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Другая дата</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>Водопад Виктория</td>
+								<td>
+									<ul>
+										<li>Музей Кейптауна</li>
+										<li>Водопад Виктория</li>
+										<li>Дорога Садов</li>
+									</ul>
+								</td>
+								<td>4 дня и 3 ночи</td>
+								<td class="dropdown"><span class="dropdown__text">20 мая</span><span class="dots"></span>
+									<ul class="dropdown__list hidden">
+										<li class="dropdown__item">Купить<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Забронировать<hr class="dropdown__line"></li>
+										<li class="dropdown__item">Другая дата</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<div class="pagination">
+							<button class="pagination__btn pagination__btn_active">1</button>
 						</div>
-						<a href="#header-main" class="btnup btnup-create"></a>
-					</aside>
-					<div class="content">
-						<a href="#header-main" class="btnup btnup-smdev btnup-create"></a>
-						<section id="html-table">
-							<div class="html-tab">
-								<h2 class="main-title">Основные html элементы</h2>
-								<h3 class="main-subtitle" id="html-link_first">Заголовок</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;h1&gt;<span class="code_grey">Купи слона</span>&lt;/h1&gt;<br>&lt;h2&gt;<span class="code_grey">Купи слона</span>&lt;/h2&gt;<br>&lt;h3&gt;<span class="code_grey">Купи слона</span>&lt;/h3&gt;<br>&lt;h4&gt;<span class="code_grey">Купи слона</span>&lt;/h4&gt;<br>&lt;h5&gt;<span class="code_grey">Купи слона</span>&lt;/h5&gt;<br>&lt;h6&gt;<span class="code_grey">Купи слона</span>&lt;/h6&gt;</code>
-										<p class="code-comment">Существует 6 уровней заголовков, где <span class="code">h1</span> - имеет наибольшую важность, а <span class="code">h6</span> - наименьшую.</p>
-									</div>
-									<div class="query__example">
-										<span class="query__example_h1">Купи слона</span>
-										<h2>Купи слона</h2>
-										<h3>Купи слона</h3>
-										<h4>Купи слона</h4>
-										<h5>Купи слона</h5>
-										<h6>Купи слона</h6>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="html-link_second">Параграф</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;p&gt;<span class="code_grey">Слоны - самые гигантские сухопутные животные на Земле. Средняя масса их достигает пяти тонн, а длина туловища — 6-7 метров.</span>&lt;/p&gt;<br>&lt;p&gt;<span class="code_grey">Слоны обычно общаются при помощи инфразвука, поэтому долгое время слоновий язык оставался неразгаданным.</span>&lt;/p&gt;</code>
-										<p class="code-comment">При отображении <span class="code">p</span>, браузер автоматически добавляет до и после него отступы, отделяя его от других элементов. Используется для больших блоков текста.</p>
-									</div>
-									<div class="query__example">
-										<p class="code_grey">Слоны - самые гигантские сухопутные животные на Земле. Средняя масса их достигает пяти тонн, а длина туловища — 6-7 метров.</p>
-										<p class="code_grey">Слоны обычно общаются при помощи инфразвука, поэтому долгое время слоновий язык оставался неразгаданным.</p>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="html-link_third">Список</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;ul&gt;<br>&emsp;&lt;li&gt;<span class="code_grey">Эмоциональная поддержка</span>&lt;/li&gt;<br>&emsp;&lt;li&gt;<span class="code_grey">Физическая помощь</span>&lt;/li&gt;<br>&emsp;&lt;li&gt;<span class="code_grey">Престижно</span>&lt;/li&gt;<br>&lt;/ul&gt;</code>
-										<span class="code-comment">Наиболее популярны следующие виды списков:</span>
-										<ul class="code-list">
-											<li><span class="code-comment_grey">Маркированный - используется контейнер </span><span class="code">ul</span></li>
-											<li><span class="code-comment_grey">Нумерованный - используется контейнер </span><span class="code">ol</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<ul>
-											<li>Эмоциональная поддержка</li>
-											<li>Физическая помощь</li>
-											<li>Престижно</li>
-										</ul>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="html-link_fourth">Изображение</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;img src="monkey.png"  alt="The chimpanzee"&gt;</code>
-										<span class="code-comment">Обязательны следующие атрибуты:</span>
-										<ul class="code-list">
-											<li><span class="code">src - </span><span class="code-comment_grey">путь к изображению. Если картинка находится в одной папке с index.html, прописывается только ее название с расширением.</span></li>
-											<li><span class="code">alt - </span><span class="code-comment_grey">позволяет получить текстовую информацию о рисунке при отсутствии загрузки изображения.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<img src="img/monkey.png" alt="Monkey is on the tree">
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="html-link_fifth">Ссылки</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;a href="https://ru.wikipedia.org/"&gt;<span class="code_grey">Статья в Википедии</span>&lt;/a&gt;</code>
-										<span class="code-comment">Атрибуты:</span>
-										<ul class="code-list">
-											<li><span class="code">href - </span><span class="code-comment_grey">адрес, на который следует перейти.</span></li>
-											<li><span class="code">target="_blank" - </span><span class="code-comment_grey">загружает страницу в новой вкладке браузера.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<a href="https://ru.wikipedia.org/">Статья в Википедии</a>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="html-link_sixth">Таблица</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;table&gt;<br>&emsp;&lt;tr&gt;<br>&emsp;&emsp;&lt;th&gt;<span class="code_grey">Вид</span>&lt;/th&gt;<br>&emsp;&emsp;&lt;th&gt;<span class="code_grey">Вес</span>&lt;/th&gt;<br>&emsp;&lt;/tr&gt;<br>&emsp;&lt;tr&gt;<br>&emsp;&emsp;&lt;td&gt;<span class="code_grey">Африканский слон</span>&lt;/td&gt;<br>&emsp;&emsp;&lt;td&gt;<span class="code_grey">Индийский слон</span>&lt;/td&gt;<br>&emsp;&lt;/tr&gt;<br>&emsp;&lt;tr&gt;<br>&emsp;&emsp;&lt;td&gt;<span class="code_grey">6000 кг</span>&lt;/td&gt;<br>&emsp;&emsp;&lt;td&gt;<span class="code_grey">5000 кг</span>&lt;/td&gt;<br>&emsp;&lt;/tr&gt;<br>&lt;/table&gt;</code>
-										<span class="code-comment">Элементы таблицы:</span>
-										<ul class="code-list">
-											<li><span class="code">table - </span><span class="code-comment_grey">контейнер для элементов таблицы.</span></li>
-											<li><span class="code">tr - </span><span class="code-comment_grey">отображает строки таблицы.</span></li>
-											<li><span class="code">td - </span><span class="code-comment_grey">ячейка таблицы для внесения данных.</span></li>
-											<li><span class="code">th - </span><span class="code-comment_grey">тот же td, используется для "шапки" таблицы.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<table>
-											<tr>
-												<th>Вид</th>
-												<th>Вес</th>
-											</tr>	
-											<tr>
-												<td>Африканский слон</td>
-												<td>6000 кг</td>
-											</tr>
-											<tr>
-												<td>Индийский слон</td>
-												<td>5000 кг</td>
-											</tr>
-										</table>
-										<p class="code-comment">* чтобы у таблицы появилась граница, нужно в сss для th и td добавить:  border: 1px solid black;</p>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="html-link_seventh">Форма</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;form method="POST" action="file.php"&gt;<br>&emsp;&lt;input type="text" name="login"&gt;<br>&emsp;&lt;input type="password" name="password"&gt;<br>&emsp;&lt;textarea placeholder="Your comment"&gt;&lt;/textarea&gt;<br>&emsp;&lt;input type="submit" value="Send"&gt;<br>&lt;/form&gt;</code>
-										<span class="code-comment">Элементы и атрибуты формы:</span>
-										<ul class="code-list">
-											<li><span class="code">form - </span><span class="code-comment_grey">контейнер для элементов формы. Как правило, содержит два атрибута:</span>
-												<ul class="code__sublist">
-													<li class="code_circle"><span class="code">method - </span><span class="code-comment_grey">метод запроса. Например, post или get.</span></li>
-													<li class="code_circle"><span class="code">action - </span><span class="code-comment_grey">адрес на обработку формы.</span></li>	
-												</ul>
-											</li>
-											<li><span class="code">input - </span><span class="code-comment_grey">ключевой элемент формы. Меняет свой вид благодаря атрибуту type: </span>
-												<ul class="code__sublist">
-													<li class="code_circle"><span class="code">text - </span><span class="code-comment_grey"> определяет однострочное текстовое поле.</span></li>
-													<li class="code_circle"><span class="code">password - </span><span class="code-comment_grey">определяет поле для ввода пароля (замаскированные символы).</span></li>
-													<li class="code_circle"><span class="code">radio - </span><span class="code-comment_grey">переключатели для выбора одного варианта.</span></li>
-													<li class="code_circle"><span class="code">checkbox - </span><span class="code-comment_grey">флажки, которые могут быть либо установлены, либо сняты.</span></li>
-													<li class="code_circle"><span class="code">submit - </span><span class="code-comment_grey">кнопка для отправки формы.</span></li>	
-												</ul>
-											</li>
-											<li><span class="code">textarea - </span><span class="code-comment_grey">определяет многострочное текстовое поле.</span>
-											<li><span class="code">placeholder - </span><span class="code-comment_grey"> подсказка для ввода значений.</span>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<form method="POST" action="file.php">
-											<input type="text" name="login">
-											<input type="password" name="password">
-											<textarea placeholder="Your comment"></textarea>
-											<input type="submit" value="Send">
-										</form>
-										<p class="code-comment">* чтобы каждая группа формы начиналась с новой строки c отступом, нужно в сss для input и textarea добавить:  display: block; margin-bottom: 10px; </p>
-									</div>
-								</div>
-							</div>
-						</section>
-						<section id="css-table" class="hidden">
-							<div class="css-table-tab">
-								<h2 class="main-title">Основные свойства и значения CSS</h2>
-								<h3 class="main-subtitle" id="css-link_first">Подключение внешнего файла CSS</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;link rel="stylesheet" href="style.css"&gt;</code>
-										<p class="code-comment">Строку кода помещают в <span class="code">head</span></p>
-										<p class="code-comment">Если файл со стилями находится в одной папке с index.html, прописывается только его название с расширением</p>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_second">Ширина и высота</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">img {<br>&emsp;width: 100px;<br>&emsp;height: 120px;<br>}</code>
-										<ul>
-											<li><span class="code">width - </span><span class="code-comment_grey">ширина элемента</span></li>
-											<li><span class="code">height - </span><span class="code-comment_grey">высота элемента</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<img src="img/monkey.png" alt="Monkey is on the tree2">
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_third">Семейство шрифтов</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">p {<br>&emsp;font-family: Lora, "Times New Roman", serif;<br>}</code>
-										<span class="code-comment">Стандартные семейства шрифтов:</span>
-										<ul class="code-list">
-											<li><span class="code">sans-serif - </span><span class="code-comment_grey">шрифты без засечек, с прямыми и чётко прописанными контурами (Arial, Verdana).</span></li>
-											<li><span class="code">serif - </span><span class="code-comment_grey">шрифты с засечками (Times New Roman, Georgia).</span></li>
-											<li><span class="code">monospace - </span><span class="code-comment_grey">моноширинные шрифты; ширина каждого символа в таком семействе одинакова (Courier).</span></li>
-											<li><span class="code">cursive - </span><span class="code-comment_grey">курсивные шрифты; попытка повторить на компьютере рукописный текст (Comic Sans).</span></li>
-											<li><span class="code">fantasy - </span><span class="code-comment_grey">декоративные шрифты.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<p class="query__example_serif">Чтобы долететь до Луны на самолете, потребуется около 20 дней. На автомобиле пришлось бы ехать около полугода, пешком - идти около 5 лет.</p>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_fourth">Размер шрифта</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">p {<br>&emsp;font-size: 18px;<br>}</code>
-										<span class="code-comment">Популярные единицы измерения:</span>
-										<ul class="code-list">
-											<li><span class="code">px (пиксель) - </span><span class="code-comment_grey">точка равная одному физическому пикселю на экране.</span></li>
-											<li><span class="code">em - </span><span class="code-comment_grey">задаёт размер относительно шрифта родителя.</span></li>
-											<li><span class="code">rem - </span><span class="code-comment_grey">задаёт размер относительно шрифта <span class="code">html</span>, используется для удобства глобального масштабирования.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<p class="query__example_big">Это один маленький шаг для человека, но гигантский скачок для всего человечества</p>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_fifth">Дополнительные свойства шрифта</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">p {<br>&emsp;font-weight: 700;<br>&emsp;line-height: 30px;<br>}</code>
-										<ul>
-											<li><span class="code">font-weight - </span><span class="code-comment_grey">насыщенность (жирность) шрифта.</span></li>
-											<li><span class="code">font-style - </span><span class="code-comment_grey">начертание шрифта (курсивное или наклонное).</span></li>
-											<li><span class="code">line-height - </span><span class="code-comment_grey">межстрочный интервал.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<p class="query__example_bold">Полное солнечное затмение в Украине будет наблюдаться 20 апреля 2061 года</p>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_sixth">Цвет</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">ul {<br>&emsp;color: yellow;<br>&emsp;background-color: #1089f4;<br>}</code>
-										<ul>
-											<li><span class="code">color - </span><span class="code-comment_grey">устанавливает цвет текста.</span></li>
-											<li><span class="code">background-color - </span><span class="code-comment_grey">определяет цвет фона элемента.</span></li>
-										</ul>	
-										<span class="code-comment">Способы добавления цвета:</span>
-										<ul class="code-list">
-											<li><span class="code">ключевые цвета - </span><span class="code-comment_grey">название цвета на английском языке (red, blue, green).</span></li>
-											<li><span class="code">hex - </span><span class="code-comment_grey">шестнадцатеричный код цвета. Он представляет собой шесть символов, стоящих после символа # (#00ff33).</span></li>
-											<li><span class="code">rgb - </span><span class="code-comment_grey">использует три числа, которые описывают относительное количество красного, зеленого и синего цветов. Они смешаны вместе для получения любого оттенка: rgb(204, 10, 155).</span></li>
-											<li><span class="code">rgba - </span><span class="code-comment_grey">тот же rgb, только дополнительно устанавливается степень прозрачности: от 0 (полностью прозрачный) до 1 (полностью непрозрачный). Например, rgba(204, 10, 155, 0.5).</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<ul class="query__example_color">
-											<li>Июнь</li>
-											<li>Июль</li>
-											<li>Август</li>
-										</ul>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_seventh">div и span</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;div&gt;<br>&emsp;&lt;img src="muscle.svg" alt="Muscles of the arm"&gt;<br>&emsp;&lt;h3&gt;<span class="code_grey">Физическая</span> &lt;span&gt;<span class="code_grey">помощь</span>&lt;/span&gt;&lt;/h3&gt;<br>&lt;/div&gt;</code><br>
-										<code class="code">div {<br>&emsp;background-color: #6ad58f;<br>}<br>span {<br>&emsp;color: red;<br>}</code>
-										<ul>
-											<li><span class="code">div - </span><span class="code-comment_grey">блочный элемент, который используется для группировки элементов в целях стилизации.</span></li>
-											<li><span class="code">span - </span><span class="code-comment_grey">строчный элемент, предназначен для выделения отдельных строк, символов и других строчных элементов для дальнейшего изменения.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<div class="query__example query__example_green">
-											<img src="img/muscle.svg" alt="Физическая поддержка">
-											<h3 class="query__example_bold">Физическая <span class="code-item_red">помощь</span></h3>
-										</div>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_eighth">Граница</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">p {<br>&emsp;border: 2px solid brown;<br>&emsp;border-radius: 10px;<br>}</code>
-										<ul>
-											<li><span class="code">border - </span><span class="code-comment_grey">позволяет одновременно установить толщину, стиль и цвет границы.</span></li>
-											<li><span class="code">border-radius - </span><span class="code-comment_grey">устанавливает радиус скругления уголков рамки.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<p class="query__example_border">Олимп - потухший вулкан на Марсе, самая высокая гора в Солнечной системе (27км). Его невозможно увидеть полностью с поверхности планеты (дистанция, необходимая для обозрения вулкана, столь велика, что он будет скрыт из-за кривизны поверхности).</p>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_nineth">Внутренний и внешний отступ</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">p {<br>&emsp;margin-bottom: 40px;<br>&emsp;padding-left: 25px;<br>&emsp;border: 2px solid #6ebd89;<br>}</code>
-										<ul>
-											<li><span class="code">margin - </span><span class="code-comment_grey">внешний отступ, который отделяет один элемент от другого.</span></li>
-											<li><span class="code">padding - </span><span class="code-comment_grey">внутренний отступ между содержимым (например, текст) и границей этого же элемента.</span></li>
-										</ul>
-										<p class="code-comment">* можно прописать свойство margin или padding для всех сторон элемента. Например, <code class="code">margin: 10px 0 20px 5px</code> - это короткая запись для:<br>
-										<code class="code">margin-top: 10px;<br>margin-right: 0;<br>margin-bottom: 20px;<br>margin-left: 5px;</code></p>	
-									</div>
-									<div class="query__example">
-										<p class="query__example_space">Гора Эверест - высочайшая вершина Земли (8848 метров над уровнем моря). С 2014 года каждый альпинист, поднимающийся на Эверест, по возвращении должен вынести со склона горы не менее 8 килограммов мусора.</p>
-										<p class="query__example_space">Марианская впадина - океанический глубоководный жёлоб на западе Тихого океана, самый глубокий из известных на Земле - 11022 метра.</p>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_tenth">Свойство display</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">li {<br>&emsp;display: inline-block;<br>&emsp;padding-right: 5px;<br>}</code>
-										<span class="code-comment">Значения свойства display:</span>
-										<ul class="code-list">
-											<li><span class="code">block - </span><span class="code-comment_grey">элемент отображается как блочный.</span></li>
-											<li><span class="code">inline - </span><span class="code-comment_grey">элемент становится строчным.</span></li>
-											<li><span class="code">inline-block - </span><span class="code-comment_grey">способ сделать элемент строчным, но сохранить его "блочные" возможности: ширина, высота и отступы.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<ul>
-											<li class="query__example_list">Главная</li>
-											<li class="query__example_list">Продукция</li>
-											<li class="query__example_list">Контакты</li>
-										</ul>
-									</div>
-								</div><hr>
-								<h3 class="main-subtitle" id="css-link_eleventh">Классы и идентификаторы</h3>
-								<div class="query">
-									<div class="query__code">
-										<code class="code">&lt;h1 id="header"&gt;<span class="code_grey">Купи слона</span>&lt;/h1&gt;<br>&lt;a class="link" href="https://ru.wikipedia.org/"&gt;<span class="code_grey">Статья в Википедии</span>&lt;/a&gt;</code><br>
-										<code class="code">#header {<br>&emsp;font-weight: 700;<br>}<br>.link {<br>&emsp;font-style: oblique;<br>}</code>
-										<ul>
-											<li><span class="code">id - </span><span class="code-comment_grey">имя должно быть уникальным и не использоваться больше одного раза.</span></li>
-											<li><span class="code">class - </span><span class="code-comment_grey">используется многократно для разных элементов.</span></li>
-										</ul>	
-									</div>
-									<div class="query__example">
-										<h3 class="query__example_bold">Купи слона</h3>
-										<a class="query__example_oblique" href="https://ru.wikipedia.org/">Статья в Википедии</a>
-									</div>
-								</div>
-							</div>
-						</section>
-						<section id="files-table" class="hidden">
-							<div class="files-table-tab">
-								<h3 class="main-subtitle" id="files-link_first">HTML-код без таблицы и формы</h3>
-								<div class="query">
-									<ul>
-										<li class="files-list files-download"><a href="download/examples/html_basic.html" download>Загрузить файл</a></li>
-										<li class="files-list files-site"><a href="example/html_basic.html" target="_blank">Открыть готовый пример</a></li>
-									</ul>
-								</div><hr>
-								<h3 class="main-subtitle" id="files-link_second">HTML-код c таблицей и формой</h3>
-								<div class="query">
-									<ul>
-										<li class="files-list files-download"><a href="download/examples/html_full.zip" download>Загрузить архив</a></li>
-										<li class="files-list files-site"><a href="example/html_full/index.html" target="_blank">Открыть готовый пример</a></li>
-									</ul>
-								</div><hr>
-								<h3 class="main-subtitle" id="files-link_third">HTML и CSS</h3>
-								<div class="query">
-									<ul>
-										<li class="files-list files-download"><a href="download/examples/html_css.zip" download>Загрузить архив</a></li>
-										<li class="files-list files-site"><a href="example/html_css/index.html" target="_blank">Открыть готовый пример</a></li>
-									</ul>
-								</div><hr>
-								<h3 class="main-subtitle" id="files-link_fourth">Домашнее задание - 1<sup class="beta_red"> new</sup></h3>
-								<div class="query">
-									<ul>
-										<li class="files-list files-home"><a href="download/task/html_basic.zip" download>Альпы</a></li>
-										<li class="files-list files-video"><a href="https://youtu.be/DUcth2UAqRM" target="_blank">Видеоинструкция (ссылка на YouTube)</a></li>
-									</ul>
-								</div><hr>
-								<h3 class="main-subtitle" id="files-link_fifth">Домашнее задание - 2<sup class="beta_red"> new</sup></h3>
-								<div class="query">
-									<ul>
-										<li class="files-list files-home"><a href="download/task/html_advanced.zip" download>Путёвка на Марс</a></li>
-									</ul>
-								</div><hr>
-								<h3 class="main-subtitle" id="files-link_sixth">Домашнее задание - 3<sup class="beta_red"> new</sup></h3>
-								<div class="query">
-									<ul>
-										<li class="files-list files-home"><a href="download/task/css.zip" download>Мороженое</a></li>
-										<li class="files-list files-video"><a href="https://youtu.be/WYqczzTb4U8" target="_blank">Видеоинструкция (ссылка на YouTube)</a></li>
-									</ul>
-								</div><hr>
-								<h3 class="main-subtitle" id="files-link_seventh">Макеты</h3>
-								<div class="query">
-									<ol>
-										<li class="files-list_ordered">
-											<p class="files-text files-mockup_first">1. Моё лето (легкий уровень)<span class="arrow-down"></span></p>
-											<ul class="files-all show-mockup_first hidden">
-												<li class="files-list files-download"><a href="download/mockup/easy_mockup.jpg" download>Макет сайта</a></li>
-												<li class="files-list files-download"><a href="download/mockup/easy.zip" download>Изображения и текст</a></li>
-											</ul>
-										</li>
-										<li class="files-list_ordered">
-											<p class="files-text files-mockup_second">2. Светофор (средний уровень)<span class="arrow-down"></span></p>
-											<ul class="files-all show-mockup_second hidden">
-												<li class="files-list files-download"><a href="download/mockup/medium_mockup.jpg" download>Макет сайта</a></li>
-												<li class="files-list files-download"><a href="download/mockup/medium.zip" download>Изображения и текст</a></li>
-											</ul>
-										</li>
-									</ol>
-								</div><hr>
-								<h3 class="main-subtitle" id="files-link_eighth">Примеры готовых сайтов</h3>
-								<div class="query">
-									<ol>
-										<li class="files-list_ordered">
-											<p class="files-text files-site_first">1. Облегчённая версия<span class="arrow-down"></span></p>
-											<ul class="files-all show-site_first hidden">
-												<li class="files-list files-site"><a href="https://vitaliyhtml5.github.io/lightelephant/" target="_blank">lightelephant</a></li>
-												<li class="files-list files-download"><a href="download/examples/lightelephant.zip" download>Загрузить архив</a></li>
-											</ul>
-										</li>
-										<li class="files-list_ordered">
-											<p class="files-text files-site_second">2. Полная версия<span class="arrow-down"></span></p>
-											<ul class="files-all show-site_second hidden">
-												<li class="files-list files-site"><a href="https://vitaliyhtml5.github.io/elephant/" target="_blank">elephant</a></li>
-												<li class="files-list files-download"><a href="download/examples/fullelephant.zip" download>Загрузить архив</a></li>
-											</ul>
-										</li>
-									</ol>
-								</div><hr>
-								<h3 class="main-subtitle" id="files-link_nineth">Видеоуроки (ссылки на YouTube) <sup class="beta_red"> new</sup></h3>
-								<div class="query">
-									<ul>
-										<li class="files-list files-video"><a href="https://youtu.be/LfAGFvwQXAw" target="_blank">Знакомство с Sublime Text 3</a></li>
-										<li class="files-list files-video"><a href="https://www.youtube.com/watch?v=zd_QkX8r6kk" target="_blank">Работа с Инструментом разработчика (DevTools)</a></li>
-									</ul>
-								</div>
-							</div>		
-						</section>
+					</div>
+					<div class="accordion-wrap">	
+						<div class="accordion">
+							<p class="accordion__title">Информация о питании<span class="accordion-arrow"></span></p>
+							<p class="accordion__text hidden">Полный пансион (FB): завтрак + обед + ужин. Полупансион (HB): завтрак + ужин</p>
+						</div>
+						<div class="accordion">
+							<p class="accordion__title">Детали проживания<span class="accordion-arrow"></span></p>
+							<p class="accordion__text hidden">Комфортное проживание в отелях 4*</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="gallery">
+			<div class="container">
+				<div class="gallery">
+					<h2 class="title gallery-title">Галерея</h2>
+					<div class="slider-block">
+						<button class="slider__btn_left">1</button>
+						<button class="slider__btn_right">2</button>
+						<div class="slider">
+							<img class="slider__img" src="img/slider/lion.jpg" alt="Лев в африканской саванне на закате дня">
+							<img class="slider__img" src="img/slider/giraffes.jpg" alt="Жирафы в Кении">
+							<img class="slider__img" src="img/slider/flamingo.jpg" alt="Фламинго в Намибии">
+							<img class="slider__img" src="img/slider/night.jpg" alt="Тихая ночь в Кении">
+							<img class="slider__img" src="img/slider/leopard.jpg" alt="Леопард в джунглях Уганды">
+						</div>
+					</div>
+					<span class="gallery__text">Если у Вас есть фото с Ваших путешествий по Африке, отправьте на <span class="gallery__text_orange">example@africa</span><br>Мы с радостью опубликуем их на нашем сайте</span>
+				</div>
+			</div>
+		</section>
+		<section id="contacts">
+			<div class="container">
+				<div class="contacts">
+					<h2 class="title contacts__title">Контакты</h2>
+					<p class="contacts__text">Остались вопросы? Напишите нам</p>
+					<div class="contacts-wrap">
+						<form class="contacts__form" method="POST" action="#">
+							<input class="contacts__input" type="text" name="name" placeholder="Ваше имя" maxlength="18">
+							<textarea class="contacts__comment" name="comment" placeholder="Ваш комментарий"></textarea>
+							<button class="button contacts__btn">Отправить</button>
+						</form>
+						<div class="contacts-block">
+							<span class="contacts__data contacts__tel">+00(000)000-00-00</span>
+							<span class="contacts__data contacts__email">example@africa</span>
+							<span class="contacts__data contacts__skype">example-skype</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrap">
+				<nav class="footer-nav">
+					<ul class="footer-nav__list">
+						<li class="footer-nav__item">
+							<a href="#header" class="footer-nav__link">Главная</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#about" class="footer-nav__link">О нас</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#tour" class="footer-nav__link">Туры</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#gallery" class="footer-nav__link">Галерея</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#contacts" class="footer-nav__link">Контакты</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="blog/blog.html" class="footer-nav__link">Блог</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer-social">
+					<span class="footer-social__text">Мы в социальных сетях:</span>
+					<ul class="footer-social__list">
+						<li class="footer-social__item">
+							<a target="_blank" href="https://www.facebook.com" class="footer-social__link footer-social__link_first"></a>
+						</li>
+						<li class="footer-social__item">
+							<a target="_blank" href="https://www.google.com" class="footer-social__link footer-social__link_second"></a>
+						</li>
+						<li class="footer-social__item">
+							<a target="_blank" href="https://www.instagram.com" class="footer-social__link footer-social__link_third"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="copyright-wrap">
+					<div class="copyright-left">
+						<span class="copyright-left__text">&copy; Сайт построен в образовательных целях</span>
+					</div>
+					<div class="copyright-right">
+						<a href="#header" class="copyright-right__img">
+							<img class="header__img copyright__logo" src="img/icons/africa-logo.png" alt="Лого Моя Африка">
+							<span class="header__title copyright-right__text">My Africa</span>
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</main>
-	<footer>
-		<div class="footer">
-			<div class="container">
-				<p class="footer__text">Данный сайт создан исключительно в образовательных целях<br>Вопросы и предложения по работе сайта можно отправить на e-mail: <span class="footer__text_email">vitaliyhtml5@gmail.com</span></p>
-			</div>
-		</div>
 	</footer>
+	<div class="overlay hidden">
+		<div class="modal">
+			<p class="modal__text">Сайт на стадии разработки<br>Попробуйте позже</p>
+			<button class="button modal__btn">Закрыть</button>
+		</div>
+	</div>
+	<nav class="hamburger-menu hidden">
+		<ul class="hamburger-menu__list">
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#header">Главная</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#about">О нас</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#tour">Туры</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#gallery">Галерея</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="blog/blog.html">Блог</a></li>
+			<li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#contacts">Контакты</a></li>
+		</ul>
+	</nav>
 	<script src="script.js"></script>
 </body>
 </html>
+

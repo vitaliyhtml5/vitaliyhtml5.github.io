@@ -50,6 +50,7 @@ a {
 }
 #header {
 	min-height: 100vh;
+	padding-bottom: 60px;
 	color: #ffffff;
 	background: #999 url(img/banner.jpg) no-repeat;
 	background-size: cover;
@@ -72,6 +73,7 @@ a {
 	width: 30%;
 }
 .header__title {
+	color: #fff;
 	font-family: Lobster, fantasy;
 }
 .header__img {
@@ -1207,6 +1209,8 @@ a {
 	.blog-wrap {
     	justify-content: space-between;
     	width: 100%;
+    	margin-bottom: 0;
+    	padding-bottom: 75px;
     }
     .blog-wrap .article-block {
    		width: 150px;

@@ -1398,7 +1398,8 @@ a {
 		transform: translateY(25%);
 	}
 	.accordion__text {
-		font-size: 14px;
+		width: 300px;
+		font-size: 13px;
 	}
 	#gallery {
 		background: #80c4f0;

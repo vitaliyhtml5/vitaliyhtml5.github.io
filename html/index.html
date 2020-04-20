@@ -46,6 +46,7 @@
 								<li class="tutorial__item"><a href="#html-link_fifth" class="tutorial__link">Ссылки</a></li>
 								<li class="tutorial__item"><a href="#html-link_sixth" class="tutorial__link">Таблица</a></li>
 								<li class="tutorial__item"><a href="#html-link_seventh" class="tutorial__link">Форма</a></li>
+								<li class="tutorial__item"><a href="#html-link_eighth" class="tutorial__link">label</a></li>
 							</ul>
 						</div>
 						<div class="tutorial-css hidden">
@@ -219,6 +220,19 @@
 											<input type="submit" value="Send">
 										</form>
 										<p class="code-comment">* чтобы каждая группа формы начиналась с новой строки c отступом, нужно в сss для input и textarea добавить:  display: block; margin-bottom: 10px; </p>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="html-link_eighth">Label<sup class="beta_red"> new</sup></h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">&lt;label&gt;<br>&emsp;&lt;input type="checkbox" name="tea" value="green"&gt;<br>&emsp;&lt;span&gt;<span class="code_grey">Зелёный чай</span>&lt;/span&gt;<br>&lt;/label&gt;</code>
+										<p class="code-comment">Элемент <span class="code">label</span> позволяет связать <span class="code">input</span> с текстом. Таким образом, можно кликнуть мышкой на текст и рядом стоящий чекбокс будет отмечен</p>
+									</div>
+									<div class="query__example">
+										<label>
+											<input type="checkbox" name="tea" value="green">
+											<span>&emsp;Зелёный чай</span>
+										</label>
 									</div>
 								</div>
 							</div>

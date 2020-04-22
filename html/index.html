@@ -61,7 +61,9 @@
 								<li class="tutorial__item"><a href="#css-link_eighth" class="tutorial__link">Граница</a></li>
 								<li class="tutorial__item"><a href="#css-link_nineth" class="tutorial__link">Внутренний и внешний отступ</a></li>
 								<li class="tutorial__item"><a href="#css-link_tenth" class="tutorial__link">Свойство display</a></li>
-								<li class="tutorial__item"><a href="#css-link_eleventh" class="tutorial__link">Классы и идентификаторы</a></li>
+								<li class="tutorial__item"><a href="#css-link_eleventh" class="tutorial__link">Выравнивание блока</a></li>
+								<li class="tutorial__item"><a href="#css-link_twelfth" class="tutorial__link">Выравнивание текста</a></li>
+								<li class="tutorial__item"><a href="#css-link_thirteenth" class="tutorial__link">Классы и идентификаторы</a></li>
 							</ul>
 						</div>
 						<div class="tutorial-files hidden">
@@ -396,7 +398,38 @@
 										</ul>
 									</div>
 								</div><hr>
-								<h3 class="main-subtitle" id="css-link_eleventh">Классы и идентификаторы</h3>
+								<h3 class="main-subtitle" id="css-link_eleventh">Выравнивание блока<sup class="beta_red"> new</sup></h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">ul {<br>&emsp;width: 100px;<br>&emsp;margin: 0 auto 0 auto;<br>}</code>
+										<p class="code-comment">Если строчный элемент нужно выровнять по центру, можно его преобразовать в блочный элемент через <span class="code">display: block;</span></p>
+									</div>
+									<div class="query__example block-align">
+										<ul class="query__example_color block-align__list">
+											<li>Июнь</li>
+											<li>Июль</li>
+											<li>Август</li>
+										</ul>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="css-link_twelfth">Выравнивание текста<sup class="beta_red"> new</sup></h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">h2 {<br>&emsp;border: 1px solid purple;<br>&emsp;text-align: center;<br>}</code>
+										<p class="code-comment">Свойство <span class="code">text-align </span> выравнивает текст в блочных элементах</p>
+										<span class="code-comment">Значения свойства text-align:</span>
+										<ul class="code-list">
+											<li><span class="code">left - </span><span class="code-comment_grey">выравнивание текста по левому краю.</span></li>
+											<li><span class="code">right - </span><span class="code-comment_grey">выравнивание текста по правому краю.</span></li>
+											<li><span class="code">center - </span><span class="code-comment_grey">выравнивание по центру.</span></li>
+											<li><span class="code">justify - </span><span class="code-comment_grey">выравнивание по ширине.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<h2 class="query__example_align">Преимущества</h2>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="css-link_thirteenth">Классы и идентификаторы</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="code">&lt;h1 id="header"&gt;<span class="code_grey">Купи слона</span>&lt;/h1&gt;<br>&lt;a class="link" href="https://ru.wikipedia.org/"&gt;<span class="code_grey">Статья в Википедии</span>&lt;/a&gt;</code><br>

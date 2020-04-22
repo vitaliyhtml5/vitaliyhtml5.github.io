@@ -249,6 +249,19 @@ a {
 	border: 2px solid brown;
 	border-radius: 10px;
 }
+.query__example_align {
+	border: 1px solid purple;
+	text-align: center;
+}
+.block-align {
+	background-color: #1089f4;
+}
+.block-align__list {
+	width: 100px;
+	margin: 0 auto;
+	color: inherit;
+	background-color: gold;
+}
 .query__example_space {
 	margin-bottom: 40px !important;
 	padding-left: 25px; 

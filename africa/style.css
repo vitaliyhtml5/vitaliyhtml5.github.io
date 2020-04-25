@@ -1479,6 +1479,12 @@ a {
 		width: 100%;
 		margin: 0 auto;
 	}
+	.article__img_right {
+		padding-left: 0;
+	}
+	.article__img_left {
+		padding-right: 0;
+	}
 	.article-wrap .blog-wrap {
 		padding-bottom: 0;
 	}

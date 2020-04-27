@@ -317,6 +317,7 @@ a {
 	background-size: 100px 75px;
 }
 .query__example_shadow {
+	display: block;
 	width: 20% !important;
 	margin: 5px auto 10px;
 	border-radius: 50%;

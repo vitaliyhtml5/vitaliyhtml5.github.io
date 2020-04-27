@@ -25,6 +25,7 @@
 					<ul class="sidebar__list">
 						<li class="sidebar__item sidebar__item_html sidebar__item_selected">HTML</li>
 						<li class="sidebar__item sidebar__item_css">CSS</li>
+						<li class="sidebar__item sidebar__item_advanced">Продвинутый CSS</li>
 						<li class="sidebar__item sidebar__item_files">Материалы</li>
 					</ul>
 				</nav>
@@ -64,6 +65,22 @@
 								<li class="tutorial__item"><a href="#css-link_eleventh" class="tutorial__link">Выравнивание блока</a></li>
 								<li class="tutorial__item"><a href="#css-link_twelfth" class="tutorial__link">Выравнивание текста</a></li>
 								<li class="tutorial__item"><a href="#css-link_thirteenth" class="tutorial__link">Классы и идентификаторы</a></li>
+							</ul>
+						</div>
+						<div class="tutorial-advanced hidden">
+							<ul class="tutorial__list">
+								<li class="tutorial__item"><a href="#advanced-link_first" class="tutorial__link">Элементы HTML 5</a></li>
+								<li class="tutorial__item"><a href="#advanced-link_second" class="tutorial__link">Flexbox</a></li>
+								<li class="tutorial__item"><a href="#advanced-link_third" class="tutorial__link">Ссылка на элемент</a></li>
+								<li class="tutorial__item"><a href="#advanced-link_fourth" class="tutorial__link">Фоновое изображение</a></li>
+								<li class="tutorial__item"><a href="#advanced-link_fifth" class="tutorial__link">Тень</a></li>
+								<li class="tutorial__item"><a href="#advanced-link_sixth" class="tutorial__link">Градиент</a></li>
+								<li class="tutorial__item"><a href="#advanced-link_seventh" class="tutorial__link">Позиционирование</a></li>
+								<li class="tutorial__item"><a href="#advanced-link_eighth" class="tutorial__link">Псевдоклассы</a></li>
+								<li class="tutorial__item"><a href="#advanced-link_nineth" class="tutorial__link">Псевдоэлементы</a></li>
+								<li class="tutorial__item"><a href="#advanced-link_tenth" class="tutorial__link">Transition</a></li>	
+								<li class="tutorial__item"><a href="#advanced-link_eleventh" class="tutorial__link">Анимация</a></li>	
+								<li class="tutorial__item"><a href="#advanced-link_twelfth" class="tutorial__link">Медиа-запросы</a></li>	
 							</ul>
 						</div>
 						<div class="tutorial-files hidden">
@@ -445,6 +462,222 @@
 									</div>
 								</div>
 							</div>
+						</section>
+						<section id="advanced-table" class="hidden">
+							<div class="advanced-tab">
+								<h2 class="main-title">HTML и CSS высокого уровня</h2>
+								<h3 class="main-subtitle" id="advanced-link_first">Элементы <span class="code-font">HTML 5</span></h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">&lt;nav&gt;<br>&emsp;&lt;ul&gt;<br>&emsp;&emsp;&lt;li&gt;<span class="code_grey">Главная</span>&lt;/li&gt;<br>&emsp;&emsp;&lt;li&gt;<span class="code_grey">О нас</span>&lt;/li&gt;<br>&emsp;&emsp;&lt;li&gt;<span class="code_grey">Контакты</span>&lt;/li&gt;<br>&emsp;&lt;/ul&gt;<br>&lt;/nav&gt;</code>
+										<p class="code-comment">Данные элементы позволяют заменить <span class="code">div </span> для отдельных блоков, добавив смысловое значение</p>
+										<ul class="code-list">
+											<li><span class="code">header - </span><span class="code-comment_grey">«шапка» сайта или раздела.</span></li>
+											<li><span class="code">nav - </span><span class="code-comment_grey">навигационное меню.</span></li>
+											<li><span class="code">section - </span><span class="code-comment_grey">раздел сайта с заголовком, контентом.</span></li>
+											<li><span class="code">aside - </span><span class="code-comment_grey">боковая панель (sidebar).</span></li>
+											<li><span class="code">footer - </span><span class="code-comment_grey">«подвал» сайта или раздела.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<ul>
+											<li class="query__example_list example-list_nav">Главная</li>
+											<li class="query__example_list example-list_nav">О нас</li>
+											<li class="query__example_list example-list_nav">Контакты</li>
+										</ul>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_second">Flexbox</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">&lt;div&gt;<br>&emsp;&lt;img src="earth.svg"  alt="Earth"&gt;<br>&emsp;&lt;img src="sun.svg"  alt="The Sun"&gt;<br>&emsp;&lt;img src="moon.svg"  alt="The Moon"&gt;<br>&lt;/div&gt;</code><br>
+										<code class="code">div {<br>&emsp;display: flex;<br>&emsp;justify-content: space-between;<br>}<br>img {<br>&emsp;width: 20%;<br>}</code>
+										<p class="code-comment">Свойства <span class="code">display</span> и <span class="code"> justify-content</span> добавляют для родителя. Дочерние элементы ограничивают шириной.</p>
+										<span class="code-comment">Значения<span class="code"> justify-content:</span></span>
+										<ul class="code-list">
+											<li><span class="code">flex-start - </span><span class="code-comment_grey">флексы прижаты к началу строки.</span></li>
+											<li><span class="code">flex-end - </span><span class="code-comment_grey">флексы прижаты к концу строки.</span></li>
+											<li><span class="code">center - </span><span class="code-comment_grey">выравнивание элементов по центру.</span></li>
+											<li><span class="code">space-around - </span><span class="code-comment_grey">распределяются по всей строке с отступами справа и слева.</span></li>
+											<li><span class="code">space-between - </span><span class="code-comment_grey">флексы распределяются по всей строке.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<div class="query__example_flex">
+											<img src="img/earth.svg" alt="Earth">
+											<img src="img/sun.svg" alt="The Sun">
+											<img src="img/moon.svg" alt="The Moon">
+										</div>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_third">Ссылка на элемент HTML</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">&lt;h3 id="flexbox-article"&gt;<span class="code_grey">Flexbox</span>&lt;/h3&gt;</code><br>
+										<code class="code">&lt;a href="#flexbox-article"&gt;<span class="code_grey">Узнать больше о flexbox</span>&lt;/a&gt;</code>
+										<p class="code-comment">В атрибут <span class="code">href</span> добавляют <span class="code"> # </span> и <span class="code"> id </span> элемента, на который осуществится переход по ссылке.</p>
+									</div>
+									<div class="query__example">
+										<a href="#advanced-link_second">Узнать больше о flexbox</a>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_fourth">Фоновое изображение</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">div {<br>&emsp;width: 200px;<br>&emsp;height: 150px;<br>&emsp;border: 1px solid brown;<br>&emsp;background-image: url(house.svg);<br>&emsp;background-position: center bottom;<br>&emsp;background-size: 100px 75px;<br>&emsp;background-repeat: no-repeat;<br>}</code>
+										<ul class="code-list">
+											<li><span class="code">background-image - </span><span class="code-comment_grey">путь к файлу с изображением.</span></li>
+											<li><span class="code">background-position - </span><span class="code-comment_grey">положение по горизонтали и вертикали относительно родителя.</span></li>
+											<li><span class="code">background-size - </span><span class="code-comment_grey">ширина и высота фона.</span></li>
+											<li><span class="code">background-repeat - </span><span class="code-comment_grey">повторение фонового изображения.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<div class="query__example_background"></div>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_fifth">Тень</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">img {<br>&emsp;border-radius: 50%;<br>&emsp;box-shadow: 2px 1px 35px 10px gold;<br>}</code>
+										<span class="code-comment">Составляющие <span class="code">box-shadow</span> по данному примеру:</span>
+										<ul class="code-list">
+											<li><span class="code">2px - </span><span class="code-comment_grey">cмещение тени по горизонтали.</span></li>
+											<li><span class="code">1px - </span><span class="code-comment_grey">cмещение тени по вертикали.</span></li>
+											<li><span class="code">35px - </span><span class="code-comment_grey">размытие тени.</span></li>
+											<li><span class="code">10px - </span><span class="code-comment_grey">растяжение тени.</span></li>
+											<li><span class="code">gold - </span><span class="code-comment_grey">цвет.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<img class="query__example_shadow" src="img/sun.svg" alt="The Sun">
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_sixth">Градиент</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">button {<br>&emsp;border: none;<br>&emsp;border-radius: 16px;<br>&emsp;padding: 10px 20px 10px 20px;<br>&emsp;background: linear-gradient(to top, violet, purple);<br>&emsp;cursor: pointer;<br>}</code>
+										<span class="code-comment">Градиент - плавный переход от одного цвета к другому</span>
+										<ul class="code-list">
+											<li><span class="code">to top - </span><span class="code-comment_grey">направление градиента.</span></li>
+											<li><span class="code">violet - </span><span class="code-comment_grey">начальный цвет.</span></li>
+											<li><span class="code">purple - </span><span class="code-comment_grey">конечный цвет.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<button class="query__example_gradient">Отправить</button>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_seventh">Абсолютное позиционирование</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">div {<br>&emsp;position: relative;<br>&emsp;border: 1px solid brown;<br>}<br></code>
+										<code class="code">.sun-img {<br>&emsp;position: absolute;<br>&emsp;z-index: 1;<br>&emsp;top: 0;<br>&emsp;left: 0;<br>}</code><br>
+										<code class="code">.earth-img {<br>&emsp;position: absolute;<br>&emsp;z-index: 2;<br>&emsp;top: 8px;<br>&emsp;left: 10px;<br>}</code><br>
+										<span class="code-comment">Если у родительского элемента <span class="code">position: relative;</span>, у дочерних элементов <span class="code">position: absolute;</span>, последние "вырываются" из потока и размещаются относительно родителя.</span>
+										<ul class="code-list">
+											<li><span class="code">top - </span><span class="code-comment_grey">расстояние от верхней границы родителя.</span></li>
+											<li><span class="code">left - </span><span class="code-comment_grey">расстояние от левой границы родителя.</span></li>
+											<li><span class="code">z-index - </span><span class="code-comment_grey">чем больше, тем выше находится элемент по сравнению с другими позиционируемыми элементами.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<div class="query__example_position">
+											<img class="sun-img" src="img/sun.svg" alt="The Sun">
+											<img class="earth-img" src="img/earth.svg" alt="Earth">
+										</div>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_eighth">Псевдоклассы</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">a {<br>&emsp;color: royalblue;<br>&emsp;text-decoration: none;<br>}</code><br>
+										<code class="code">a:hover {<br>&emsp;color: purple;<br>&emsp;text-decoration: underline;<br>}</code>
+										<span class="code-comment">Переопределяют свойства и значения CSS. Например, при клике, наведении мышью и т.д.</span>
+										<ul class="code-list">
+											<li><span class="code">:link - </span><span class="code-comment_grey">ссылка, еще не посещенная пользователем.</span></li>
+											<li><span class="code">:visited - </span><span class="code-comment_grey">посещенная ссылка.</span></li>
+											<li><span class="code">:hover - </span><span class="code-comment_grey">при наведении курсора мыши.</span></li>
+											<li><span class="code">:focus - </span><span class="code-comment_grey">при фокусе на элемент (например, ввод в input).</span></li>
+											<li><span class="code">:active - </span><span class="code-comment_grey">при активации элемента (например, после щелчка мыши).</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<a class="query__example_hover" href="#advanced-link_nineth">Ссылка на статью</a>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_nineth">Псевдоэлементы ::before и ::after</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">a {<br>&emsp;position: relative;<br>}</code><br>
+										<code class="code">a::before {<br>&emsp;position: absolute;<br>&emsp;content: "";<br>&emsp;top: 0;<br>&emsp;left: -25px;<br>&emsp;width: 15px;<br>&emsp;height: 15px;<br>&emsp;background: url(video.svg) no-repeat;<br>}</code>
+										<span class="code-comment">Добавляют контент для определённого элемента. Часто используются при создании иконок.</span>
+										<ul class="code-list">
+											<li><span class="code">::before - </span><span class="code-comment_grey">добавление контента перед элементом.</span></li>
+											<li><span class="code">::after - </span><span class="code-comment_grey">добавление контента после элемента.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<a class="query__example_pseudo" href="#advanced-link_tenth">Загрузить видео</a>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_tenth">Transition</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">.img-moon {<br>&emsp;width: 20%;<br>&emsp;transition-property: width;<br>&emsp;transition-duration: 1s;<br>}</code><br>
+										<code class="code">.img-moon:hover {<br>&emsp;width: 30%;<br>}</code>
+										<span class="code-comment">Смена одних значений другими через заданный промежуток времени.</span>
+										<ul class="code-list">
+											<li><span class="code">transition-property - </span><span class="code-comment_grey">изменяемое свойство CSS.</span></li>
+											<li><span class="code">transition-duration - </span><span class="code-comment_grey">длительность смены стилей.</span></li>
+											<li><span class="code">transition-delay - </span><span class="code-comment_grey">задержка запуска transition.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<div class="transition-wrap">
+											<img class="query__example_transition" src="img/moon.svg" alt="The Moon">
+										</div>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_eleventh">Анимация</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">.img-sun {<br>&emsp;position: absolute;<br>&emsp;bottom: 0;<br>&emsp;left: 20%;<br>&emsp;animation-name: sunRise;<br>&emsp;animation-duration: 15s;<br>&emsp;animation-iteration-count: infinite;<br>}</code><br>
+										<code class="code">@keyframes sunRise {<br>&emsp;0% {<br>&emsp;&emsp;bottom: 0;<br>&emsp;&emsp;left: 20%;<br>&emsp;}<br>&emsp;50% {<br>&emsp;&emsp;bottom: 60%;<br>&emsp;&emsp;left: 50%;<br>&emsp;}<br>&emsp;100% {<br>&emsp;&emsp;bottom: 0;<br>&emsp;&emsp;left: 20%;<br>&emsp;}<br>}</code>
+										<span class="code-comment">Создание анимации проходит в два этапа:</span>
+										<ul class="code-list">
+											<li><span class="code">@keyframes - </span><span class="code-comment_grey">смена стилей от начала до конца анимации.</span></li>
+											<li><span class="code">animation - </span><span class="code-comment_grey">установка параметров анимации:</span></li>
+										</ul>
+										<ul class="code__sublist">
+											<li class="code_circle"><span class="code">animation-name - </span><span class="code-comment_grey">имя анимации.</span></li>
+											<li class="code_circle"><span class="code">animation-duration - </span><span class="code-comment_grey">длительность анимации.</span></li>
+											<li class="code_circle"><span class="code">animation-timing-function - </span><span class="code-comment_grey">скорость анимации.</span></li>
+											<li class="code_circle"><span class="code">animation-iteration-count - </span><span class="code-comment_grey">сколько раз должна быть воспроизведена.</span></li>
+										</ul>	
+									</div>
+									<div class="query__example">
+										<div class="animation-wrap">
+											<img class="query__example_animation" src="img/sun.svg" alt="The Sun">
+										</div>
+									</div>
+								</div><hr>
+								<h3 class="main-subtitle" id="advanced-link_twelfth">Медиа-запросы</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="code">span {<br>&emsp;color: purple;<br>}</code><br>
+										<code class="code">@media (max-width: 700px) {<br>&emsp;span {<br>&emsp;&emsp;color: orange;<br>&emsp;}<br>}</code><br>
+										<p class="code-comment">Изменение стилей в зависимости от ширины экрана</p>
+										<ul class="code-list">
+											<li><span class="code">max-width: 500px - </span><span class="code-comment_grey">применение стилей до 500px.</span></li>
+											<li><span class="code">min-width: 500px - </span><span class="code-comment_grey">применение стилей от 500px и выше</span></li>
+										</ul>
+									</div>
+									<div class="query__example">
+										<span class="query__example_media">Какой у текста цвет: фиолетовый или оранжевый?</span>
+									</div>
+								</div>
+							</div>	
 						</section>
 						<section id="files-table" class="hidden">
 							<div class="files-table-tab">

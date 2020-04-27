@@ -3,49 +3,61 @@ function changeTabs() {
 	let tabs = {
 		htmlTable: document.getElementById('html-table'),
 		cssTable: document.getElementById('css-table'),
+		advancedTable: document.getElementById('advanced-table'),
 		filesTable: document.getElementById('files-table'),
-		showHideTabs(show, hideFirst, hideSecond) {
+		showHideTabs(show, hideFirst, hideSecond, hideThird) {
 			show.style.display = 'block';
 			hideFirst.style.display = 'none';
 			hideSecond.style.display = 'none';
+			hideThird.style.display = 'none';
 		},
 	};
 	let sidebar = {
 		htmlSide: document.querySelector('.sidebar__item_html'),
 		cssSide: document.querySelector('.sidebar__item_css'),
+		advancedSide: document.querySelector('.sidebar__item_advanced'),
 		filesSide: document.querySelector('.sidebar__item_files'),
-		changeSidebar(selected, unselectedFirst, unselectedSecond) {
+		changeSidebar(selected, unselectedFirst, unselectedSecond, unselectedThird) {
 			selected.classList.add('sidebar__item_selected');
 			unselectedFirst.classList.remove('sidebar__item_selected');
 			unselectedSecond.classList.remove('sidebar__item_selected');
+			unselectedThird.classList.remove('sidebar__item_selected');
 			unselectedFirst.classList.add('sidebar__item');
 			unselectedSecond.classList.add('sidebar__item');
+			unselectedThird.classList.add('sidebar__item');
 		},
 	};
 	let links = {
 		htmlLink: document.querySelector('.tutorial-html'),
 		cssLink: document.querySelector('.tutorial-css'),
+		advancedLink: document.querySelector('.tutorial-advanced'),
 		filesLink: document.querySelector('.tutorial-files'),
-		showHideLinks(show, hideFirst, hideSecond) {
+		showHideLinks(show, hideFirst, hideSecond, hideThird) {
 			show.style.display = 'block';
 			hideFirst.style.display = 'none';
 			hideSecond.style.display = 'none';
+			hideThird.style.display = 'none';
 		},
 	};
 	sidebar.htmlSide.onclick = function() {
-		tabs.showHideTabs(tabs.htmlTable, tabs.cssTable, tabs.filesTable);
-		sidebar.changeSidebar(sidebar.htmlSide, sidebar.cssSide, sidebar.filesSide);
-		links.showHideLinks(links.htmlLink, links.cssLink, links.filesLink);
+		tabs.showHideTabs(tabs.htmlTable, tabs.cssTable, tabs.advancedTable, tabs.filesTable);
+		sidebar.changeSidebar(sidebar.htmlSide, sidebar.cssSide, sidebar.advancedSide, sidebar.filesSide);
+		links.showHideLinks(links.htmlLink, links.cssLink, links.advancedLink, links.filesLink);
 	}
 	sidebar.cssSide.onclick = function() {
-		tabs.showHideTabs(tabs.cssTable, tabs.htmlTable, tabs.filesTable);
-		sidebar.changeSidebar(sidebar.cssSide, sidebar.htmlSide, sidebar.filesSide);
-		links.showHideLinks(links.cssLink, links.htmlLink, links.filesLink);
+		tabs.showHideTabs(tabs.cssTable, tabs.htmlTable, tabs.advancedTable, tabs.filesTable);
+		sidebar.changeSidebar(sidebar.cssSide, sidebar.htmlSide, sidebar.advancedSide, sidebar.filesSide);
+		links.showHideLinks(links.cssLink, links.htmlLink, links.advancedLink, links.filesLink);
+	}
+	sidebar.advancedSide.onclick = function() {
+		tabs.showHideTabs(tabs.advancedTable, tabs.htmlTable, tabs.cssTable, tabs.filesTable);
+		sidebar.changeSidebar(sidebar.advancedSide, sidebar.htmlSide, sidebar.cssSide, sidebar.filesSide);
+		links.showHideLinks(links.advancedLink, links.htmlLink, links.cssLink, links.filesLink);
 	}
 	sidebar.filesSide.onclick = function() {
-		tabs.showHideTabs(tabs.filesTable, tabs.htmlTable, tabs.cssTable);
-		sidebar.changeSidebar(sidebar.filesSide, sidebar.htmlSide, sidebar.cssSide);
-		links.showHideLinks(links.filesLink, links.htmlLink, links.cssLink);
+		tabs.showHideTabs(tabs.filesTable, tabs.htmlTable, tabs.cssTable, tabs.advancedTable);
+		sidebar.changeSidebar(sidebar.filesSide, sidebar.htmlSide, sidebar.cssSide, sidebar.advancedSide);
+		links.showHideLinks(links.filesLink, links.htmlLink, links.cssLink, links.advancedLink);
 	}
 }
 

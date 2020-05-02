@@ -307,6 +307,9 @@ tr:nth-child(1) {
 .table_inner .table-tasks__name {
 	margin-top: 0;
 }
+.hometask-list .hometask-item_ordered {
+	font-family: Arial, Helvetica, sans-serif;
+}	
 .hometask-item {
 	position: relative;
 	padding-left: 20px;

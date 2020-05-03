@@ -56,8 +56,8 @@
 					<h2 class="title contacts__title">Обратная связь</h2>
 					<form class="contacts__form" method="POST">
 						<div class="contacts-message-wrap">
-							<input class="contacts__input" type="text" name="user-name" placeholder="Ваше имя">
-							<span class="error-message hidden">Пожалуйста, введите имя</span>
+							<input class="contacts__input contacts__name" type="text" name="user-name" placeholder="Ваше имя" maxlength="12">
+							<span class="error-message error-message_name"></span>
 						</div>
 						<div class="contacts-radio-wrap">
 							<label class="contacts-radio">
@@ -77,8 +77,8 @@
 							</label>
 						</div>
 						<div class="contacts-message-wrap">
-							<textarea class="contacts__input contacts__comment" placeholder="Ваш комментарий"></textarea>
-							<span class="error-message hidden">Пожалуйста, введите текст</span>
+							<textarea class="contacts__input contacts__comment" placeholder="Ваш комментарий" maxlength="500"></textarea>
+							<span class="error-message error-message_comment"></span>
 						</div>
 						<button class="button contacts__btn">Отправить</button>
 					</form>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Телевизор твоей мечты</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="header-main">
+		<div class="container">
+			<div class="header">
+				<h1 class="header__title">ТВ-плазма</h1>
+				<a href="#contacts" class="button header__btn">Написать нам</a>
+			</div>
+			<nav>
+				<ul class="header__list">
+					<li class="header__item header__item__selected"><a href="#">Главная</a></li>
+					<li class="header__item"><a href="#catalog">Каталог</a></li>
+					<li class="header__item"><a href="#contacts">Обратная связь</a></li>
+				</ul>
+			</nav>
+			<div class="banner">
+				<p class="banner__text">Узнать больше</p>
+				<a href="#catalog" class="button banner__btn"></a>
+			</div>
+		</div>	
+	</header>
+	<main>
+		<section id="catalog">
+			<div class="container">
+				<h2 class="title">Каталог</h2>
+				<div class="catalog-wrap">
+					<div class="catalog-block">
+						<img class="catalog__img" src="img/tv-past.jpg" alt="#">
+						<span class="catalog__text">Past</span>
+					</div>
+					<div class="catalog-block">
+						<img class="catalog__img" src="img/tv-present.jpg" alt="#">
+						<span class="catalog__text">Present</span>
+					</div>
+					<div class="catalog-block">
+						<img class="catalog__img" src="img/tv-future.jpg" alt="#">
+						<span class="catalog__text">Future</span>
+					</div>
+				</div>
+				<a href="#contacts" class="button catalog__btn">Написать нам</a>
+			</div>
+		</section>
+		<section id="contacts">
+			<div class="container">
+				<div class="contacts-wrap">
+					<h2 class="title contacts__title">Обратная связь</h2>
+					<form class="contacts__form" method="POST">
+						<div class="contacts-message-wrap">
+							<input class="contacts__input" type="text" name="user-name" placeholder="Ваше имя">
+							<span class="error-message hidden">Пожалуйста, введите имя</span>
+						</div>
+						<fieldset class="contacts-radio-wrap">
+							<label class="contacts-radio">
+								<input type="radio" name="tv-type" value="past">
+								<span class="contacts-radio_circle"></span>
+								<span class="contacts-radio__text">Past</span>
+							</label>
+							<label class="contacts-radio">
+								<input type="radio" name="tv-type" value="present" checked>
+								<span class="contacts-radio_circle"></span>
+								<span class="contacts-radio__text">Present</span>
+							</label>
+							<label class="contacts-radio">
+								<input type="radio" name="tv-type" value="future">
+								<span class="contacts-radio_circle"></span>
+								<span class="contacts-radio__text">Future</span>
+							</label>
+						</fieldset>
+						<div class="contacts-message-wrap">
+							<textarea class="contacts__input contacts__comment" placeholder="Ваш комментарий"></textarea>
+							<span class="error-message hidden">Пожалуйста, введите текст</span>
+						</div>
+						<button class="button contacts__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div class="overlay hidden">
+		<div class="modal">
+			<p class="modal__text">Пожалуйста, введите Ваше имя</p>
+			<button class="button modal__btn">Ок</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

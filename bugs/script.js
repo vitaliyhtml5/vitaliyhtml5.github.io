@@ -39,20 +39,21 @@ function showError() {
     event.preventDefault();
     if (messageComment.value == '' && messageName.value == '') {
       openOverlay(event);
-      modalText.innerText = 'Пожалуйста, введите имя и комментарий';
+      modalText.innerText = 'Пожалуйста, введите комментарий';
       RegEx(/.+/,messageName.value,messageTextName,"Пожалуйста, введите имя");
       RegEx(/.+/,messageComment.value,messageTextComment,"Пожалуйста, добавьте комментарий");
     }
     else if (messageComment.value == '') {
       openOverlay(event);
       modalText.innerText = 'Пожалуйста, добавьте комментарий';
-      RegEx(/.+/,messageComment.value,messageTextComment,"Пожалуйста, добавьте комментарий");
+      RegEx(/.+/,messageComment.value,messageTextComment,"");
     }
     
     else if(messageName.value == '') {
       openOverlay(event);
       modalText.innerText = 'Пожалуйста, введите имя';
       RegEx(/.+/,messageName.value,messageTextName,"Пожалуйста, введите имя");
+      messageComment.value = '';
     }
     else {
       openOverlay(event);
@@ -83,7 +84,7 @@ function showError() {
   window.addEventListener('keyup', function (e) {
     e.preventDefault();
     overlay.classList.remove('block-transition');
-      if (e.keyCode === 13 || e.keyCode === 27 || e.keyCode === 32) {
+      if (e.keyCode === 13 || e.keyCode === 32) {
         overlay.classList.add('none-transition');
       }
   });

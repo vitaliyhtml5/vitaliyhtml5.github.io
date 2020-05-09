@@ -507,13 +507,15 @@ a {
 .files-download,
 .files-site,
 .files-home,
-.files-video {
+.files-video,
+.quiz-site {
 	position: relative;
 }
 .files-download::before,
 .files-site::before,
 .files-home::before,
-.files-video::before {
+.files-video::before,
+.quiz-site::before {
 	position: absolute;
 	content: "";
 	top: 6px;
@@ -531,6 +533,12 @@ a {
 }
 .files-site::before {
 	background: url(img/example.svg) no-repeat;
+}
+.quiz-site::before {
+	top: 5px;
+	width: 14px;
+	height: 14px;
+	background: url(img/pen.svg) no-repeat;
 }
 .files-video::before {
 	top: 6px;

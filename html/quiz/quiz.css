@@ -411,6 +411,9 @@ a {
 		width: 180px;
 		margin: 0 auto 10px;
 	}
+	.footer {
+		padding: 5px;
+	}
 	.modal {
 		width: 300px;
 		font-size: 15px;

@@ -307,7 +307,9 @@ tr:nth-child(1) {
 .table_inner .table-tasks__name {
 	margin-top: 0;
 }
-.hometask-list .hometask-item_ordered {
+.hometask-list .hometask-item_ordered,
+.hometask-pen,
+.hometask-video {
 	font-family: Arial, Helvetica, sans-serif;
 }	
 .hometask-item {
@@ -317,7 +319,10 @@ tr:nth-child(1) {
 	font-size: 16px;
 	transition: 0.4s;
 }
-.hometask-item::before {
+.hometask-item::before,
+.hometask-home::before,
+.hometask-pen::before,
+.hometask-video::before {
 	position: absolute;
 	content: "";
 	top: 4px;
@@ -325,6 +330,25 @@ tr:nth-child(1) {
 	width: 30px;
 	height: 30px;
 	background: url(img/download.svg) no-repeat;
+}
+.hometask-home::before {
+	top: 2px;
+	left: -4px;
+	width: 18px;
+	height: 18px;
+	background: url(img/house.svg) no-repeat;
+}
+.hometask-pen::before {
+	top: 5px;
+	width: 14px;
+	height: 14px;
+	background: url(img/pen.svg) no-repeat;
+}
+.hometask-video::before {
+	top: 6px;
+	width: 16px;
+	height: 18px;
+	background: url(img/video.svg) no-repeat;
 }
 .hometask-item_ordered {
 	margin-left: 15px;

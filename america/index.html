@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Моя Америка</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="main">
+		<header class="header-wrap">
+			<div class="container">
+				<div class="header-main">
+					<div class="header-logo">
+						<img class="header-logo__img" src="img/logo.png" alt="Логотип Моя Америка">
+						<h1 class="header-logo__title">Моя Америка</h1>
+					</div>
+					<span class="header-tel">+00 (000) 000-00-00</span>
+					<button class="button header-btn modal-update">Обратный звонок</button>
+				</div>
+			</div>
+		</header>
+		<section class="tour-section">
+			<div class="container">
+				<h2 class="title-section">Список туров</h2>
+				<div class="tour-wrap">
+					<div class="tour">
+						<a class="tour-link modal-update" href="#">
+							<div class="tour__img tour__img_first"></div>
+							<span class="tour__text">Горы Аляски</span>
+						</a>
+					</div>
+					<div class="tour">
+						<a class="tour-link modal-update" href="#">
+							<div class="tour__img tour__img_second"></div>
+							<span class="tour__text">Пляж Калифорнии</span>
+						</a>
+					</div>
+					<div class="tour">
+						<a class="tour-link modal-update" href="#">
+							<div class="tour__img tour__img_third"></div>
+							<span class="tour__text">Ниагарский водопад</span>
+						</a>
+					</div>
+				</div>
+				<a class="button contacts-link modal-update" href="#">Написать нам</a>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<p class="footer__text">&#169; Все права защищены<br>2020</p>
+			</div>
+		</footer>
+	</div>
+	<div class="overlay" hidden>
+		<div class="modal">
+			<p class="modal__text">Сайт в процессе обновления<br>Попробуйте позже</p>
+			<button class="button modal__btn">ок</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

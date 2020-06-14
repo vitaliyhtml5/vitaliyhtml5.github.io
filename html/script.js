@@ -112,6 +112,7 @@ function showHideFiles() {
 	let btnFiles = [
 			document.querySelector('.files-mockup_first'),
 			document.querySelector('.files-mockup_second'),
+			document.querySelector('.files-mockup_third'),
 			document.querySelector('.files-site_first'),
 			document.querySelector('.files-site_second'),
 			document.querySelector('.files-site_third'),
@@ -119,6 +120,7 @@ function showHideFiles() {
 	let listFiles = [
 			document.querySelector('.show-mockup_first'),
 			document.querySelector('.show-mockup_second'),
+			document.querySelector('.show-mockup_third'),
 			document.querySelector('.show-site_first'),
 			document.querySelector('.show-site_second'),
 			document.querySelector('.show-site_third'),
@@ -154,6 +156,11 @@ function showHideFiles() {
 	btnFiles[4].onclick = function () {
 		toggleAnsw(listFiles[4]);
 		arrow[4].classList.toggle('arrow-up');
+		this.classList.toggle('color-orange');
+	}
+	btnFiles[5].onclick = function () {
+		toggleAnsw(listFiles[5]);
+		arrow[5].classList.toggle('arrow-up');
 		this.classList.toggle('color-orange');
 	}
 }

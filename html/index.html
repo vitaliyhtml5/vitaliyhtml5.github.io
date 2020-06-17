@@ -23,10 +23,10 @@
 				<p class="header-text">Данный сайт содержит основные элементы <span class="code-item_orange">HTML</span> и стили <span class="code-item_orange">CSS</span>.<br>Если ваш сайт не отображается должным образом, всегда можно сравнить ваш код с примерами ниже</p>
 				<nav class="sidebar">
 					<ul class="sidebar__list">
-						<li class="sidebar__item sidebar__item_html sidebar__item_selected">HTML</li>
-						<li class="sidebar__item sidebar__item_css">CSS</li>
-						<li class="sidebar__item sidebar__item_advanced">Продвинутый CSS</li>
-						<li class="sidebar__item sidebar__item_files">Материалы</li>
+						<li class="sidebar__item sidebar__item_selected">HTML</li>
+						<li class="sidebar__item">CSS</li>
+						<li class="sidebar__item">Продвинутый CSS</li>
+						<li class="sidebar__item">Материалы</li>
 					</ul>
 				</nav>
 			</div>
@@ -38,7 +38,7 @@
 				<div class="main-wrap">
 					<aside class="tutorial">
 						<h2 class="tutorial__title">Быстрый переход</h2>
-						<div class="tutorial-html">
+						<div class="tutorial-section">
 							<ul class="tutorial__list">
 								<li class="tutorial__item"><a href="#html-link_first" class="tutorial__link">Заголовок</a></li>
 								<li class="tutorial__item"><a href="#html-link_second" class="tutorial__link">Параграф</a></li>
@@ -50,7 +50,7 @@
 								<li class="tutorial__item"><a href="#html-link_eighth" class="tutorial__link">label</a></li>
 							</ul>
 						</div>
-						<div class="tutorial-css hidden">
+						<div class="tutorial-section" hidden>
 							<ul class="tutorial__list">
 								<li class="tutorial__item"><a href="#css-link_first" class="tutorial__link">Подключение CSS</a></li>
 								<li class="tutorial__item"><a href="#css-link_second" class="tutorial__link">Ширина и высота</a></li>
@@ -67,7 +67,7 @@
 								<li class="tutorial__item"><a href="#css-link_thirteenth" class="tutorial__link">Классы и идентификаторы</a></li>
 							</ul>
 						</div>
-						<div class="tutorial-advanced hidden">
+						<div class="tutorial-section" hidden>
 							<ul class="tutorial__list">
 								<li class="tutorial__item"><a href="#advanced-link_first" class="tutorial__link">Элементы HTML 5</a></li>
 								<li class="tutorial__item"><a href="#advanced-link_second" class="tutorial__link">Flexbox</a></li>
@@ -83,7 +83,7 @@
 								<li class="tutorial__item"><a href="#advanced-link_twelfth" class="tutorial__link">Медиа-запросы</a></li>	
 							</ul>
 						</div>
-						<div class="tutorial-files hidden">
+						<div class="tutorial-section" hidden>
 							<ul class="tutorial__list">
 								<li class="tutorial__item"><a href="#files-link_first" class="tutorial__link">HTML-код базовый</a></li>
 								<li class="tutorial__item"><a href="#files-link_second" class="tutorial__link">HTML-код:  таблица+форма</a></li>
@@ -102,7 +102,7 @@
 					</aside>
 					<div class="content">
 						<a href="#header-main" class="btnup btnup-smdev btnup-create"></a>
-						<section id="html-table">
+						<section id="html-table" class="section-tab">
 							<div class="html-tab">
 								<h2 class="main-title">Основные html элементы</h2>
 								<h3 class="main-subtitle" id="html-link_first">Заголовок</h3>
@@ -257,7 +257,7 @@
 								</div>
 							</div>
 						</section>
-						<section id="css-table" class="hidden">
+						<section id="css-table" class="section-tab" hidden>
 							<div class="css-table-tab">
 								<h2 class="main-title">Основные свойства и значения CSS</h2>
 								<h3 class="main-subtitle" id="css-link_first">Подключение внешнего файла CSS</h3>
@@ -465,7 +465,7 @@
 								</div>
 							</div>
 						</section>
-						<section id="advanced-table" class="hidden">
+						<section id="advanced-table" class="section-tab" hidden>
 							<div class="advanced-tab">
 								<h2 class="main-title">HTML и CSS высокого уровня</h2>
 								<h3 class="main-subtitle" id="advanced-link_first">Элементы <span class="code-font">HTML 5</span></h3>
@@ -681,7 +681,7 @@
 								</div>
 							</div>	
 						</section>
-						<section id="files-table" class="hidden">
+						<section id="files-table" class="section-tab" hidden>
 							<div class="files-table-tab">
 								<h3 class="main-subtitle" id="files-link_first">HTML-код без таблицы и формы</h3>
 								<div class="query">
@@ -728,22 +728,22 @@
 								<div class="query">
 									<ol>
 										<li class="files-list_ordered">
-											<p class="files-text files-mockup_first">1. Моё лето (легкий уровень)<span class="arrow-down"></span></p>
-											<ul class="files-all show-mockup_first hidden">
+											<p class="files-text">1. Моё лето (легкий уровень)<span class="arrow-down"></span></p>
+											<ul class="files-all hidden">
 												<li class="files-list files-download"><a href="download/mockup/easy_mockup.jpg" download>Макет сайта</a></li>
 												<li class="files-list files-download"><a href="download/mockup/easy.zip" download>Изображения и текст</a></li>
 											</ul>
 										</li>
 										<li class="files-list_ordered">
-											<p class="files-text files-mockup_second">2. Светофор (средний уровень)<span class="arrow-down"></span></p>
-											<ul class="files-all show-mockup_second hidden">
+											<p class="files-text">2. Светофор (средний уровень)<span class="arrow-down"></span></p>
+											<ul class="files-all hidden">
 												<li class="files-list files-download"><a href="download/mockup/medium_mockup.jpg" download>Макет сайта</a></li>
 												<li class="files-list files-download"><a href="download/mockup/medium.zip" download>Изображения и текст</a></li>
 											</ul>
 										</li>
 										<li class="files-list_ordered">
-											<p class="files-text files-mockup_third">3. Тур в Америку (тяжёлый уровень)<span class="arrow-down"></span></p>
-											<ul class="files-all show-mockup_third hidden">
+											<p class="files-text">3. Тур в Америку (тяжёлый уровень)<span class="arrow-down"></span></p>
+											<ul class="files-all hidden">
 												<li class="files-list files-download"><a href="download/mockup/hard_mockup.jpg" download>Макет сайта</a></li>
 												<li class="files-list files-download"><a href="download/mockup/hard.zip" download>Изображения и текст</a></li>
 											</ul>
@@ -761,22 +761,22 @@
 								<div class="query">
 									<ol>
 										<li class="files-list_ordered">
-											<p class="files-text files-site_first">1. Облегчённая версия<span class="arrow-down"></span></p>
-											<ul class="files-all show-site_first hidden">
+											<p class="files-text">1. Облегчённая версия<span class="arrow-down"></span></p>
+											<ul class="files-all hidden">
 												<li class="files-list files-site"><a href="https://vitaliyhtml5.github.io/lightelephant" target="_blank">lightelephant</a></li>
 												<li class="files-list files-download"><a href="download/examples/lightelephant.zip" download>Загрузить архив</a></li>
 											</ul>
 										</li>
 										<li class="files-list_ordered">
-											<p class="files-text files-site_second">2. Полная версия<span class="arrow-down"></span></p>
-											<ul class="files-all show-site_second hidden">
+											<p class="files-text">2. Полная версия<span class="arrow-down"></span></p>
+											<ul class="files-all hidden">
 												<li class="files-list files-site"><a href="https://vitaliyhtml5.github.io/elephant" target="_blank">elephant</a></li>
 												<li class="files-list files-download"><a href="download/examples/fullelephant.zip" download>Загрузить архив</a></li>
 											</ul>
 										</li>
 										<li class="files-list_ordered">
-											<p class="files-text files-site_third">3. Настоящий сайт<span class="arrow-down"></span></p>
-											<ul class="files-all show-site_third hidden">
+											<p class="files-text">3. Настоящий сайт<span class="arrow-down"></span></p>
+											<ul class="files-all hidden">
 												<li class="files-list files-site"><a href="https://vitaliyhtml5.github.io/africa" target="_blank">africa</a></li>
 												<li class="files-list files-download"><a href="download/examples/real_site.zip" download>Загрузить архив</a></li>
 											</ul>

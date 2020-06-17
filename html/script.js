@@ -1,63 +1,29 @@
 //TABS
-function changeTabs() {	
-	let tabs = {
-		htmlTable: document.getElementById('html-table'),
-		cssTable: document.getElementById('css-table'),
-		advancedTable: document.getElementById('advanced-table'),
-		filesTable: document.getElementById('files-table'),
-		showHideTabs(show, hideFirst, hideSecond, hideThird) {
-			show.style.display = 'block';
-			hideFirst.style.display = 'none';
-			hideSecond.style.display = 'none';
-			hideThird.style.display = 'none';
-		},
-	};
-	let sidebar = {
-		htmlSide: document.querySelector('.sidebar__item_html'),
-		cssSide: document.querySelector('.sidebar__item_css'),
-		advancedSide: document.querySelector('.sidebar__item_advanced'),
-		filesSide: document.querySelector('.sidebar__item_files'),
-		changeSidebar(selected, unselectedFirst, unselectedSecond, unselectedThird) {
-			selected.classList.add('sidebar__item_selected');
-			unselectedFirst.classList.remove('sidebar__item_selected');
-			unselectedSecond.classList.remove('sidebar__item_selected');
-			unselectedThird.classList.remove('sidebar__item_selected');
-			unselectedFirst.classList.add('sidebar__item');
-			unselectedSecond.classList.add('sidebar__item');
-			unselectedThird.classList.add('sidebar__item');
-		},
-	};
-	let links = {
-		htmlLink: document.querySelector('.tutorial-html'),
-		cssLink: document.querySelector('.tutorial-css'),
-		advancedLink: document.querySelector('.tutorial-advanced'),
-		filesLink: document.querySelector('.tutorial-files'),
-		showHideLinks(show, hideFirst, hideSecond, hideThird) {
-			show.style.display = 'block';
-			hideFirst.style.display = 'none';
-			hideSecond.style.display = 'none';
-			hideThird.style.display = 'none';
-		},
-	};
-	sidebar.htmlSide.onclick = function() {
-		tabs.showHideTabs(tabs.htmlTable, tabs.cssTable, tabs.advancedTable, tabs.filesTable);
-		sidebar.changeSidebar(sidebar.htmlSide, sidebar.cssSide, sidebar.advancedSide, sidebar.filesSide);
-		links.showHideLinks(links.htmlLink, links.cssLink, links.advancedLink, links.filesLink);
-	}
-	sidebar.cssSide.onclick = function() {
-		tabs.showHideTabs(tabs.cssTable, tabs.htmlTable, tabs.advancedTable, tabs.filesTable);
-		sidebar.changeSidebar(sidebar.cssSide, sidebar.htmlSide, sidebar.advancedSide, sidebar.filesSide);
-		links.showHideLinks(links.cssLink, links.htmlLink, links.advancedLink, links.filesLink);
-	}
-	sidebar.advancedSide.onclick = function() {
-		tabs.showHideTabs(tabs.advancedTable, tabs.htmlTable, tabs.cssTable, tabs.filesTable);
-		sidebar.changeSidebar(sidebar.advancedSide, sidebar.htmlSide, sidebar.cssSide, sidebar.filesSide);
-		links.showHideLinks(links.advancedLink, links.htmlLink, links.cssLink, links.filesLink);
-	}
-	sidebar.filesSide.onclick = function() {
-		tabs.showHideTabs(tabs.filesTable, tabs.htmlTable, tabs.cssTable, tabs.advancedTable);
-		sidebar.changeSidebar(sidebar.filesSide, sidebar.htmlSide, sidebar.cssSide, sidebar.advancedSide);
-		links.showHideLinks(links.filesLink, links.htmlLink, links.cssLink, links.advancedLink);
+function changeTabs() {
+	let tab = document.querySelectorAll('.section-tab');
+	let aside = document.querySelectorAll('.tutorial-section');
+	let tabLink = document.querySelectorAll('.sidebar__item');
+
+	tabLink[0].onclick = () => selectTabs(0,1,2,3);
+	tabLink[1].onclick = () => selectTabs(1,2,3,0);
+	tabLink[2].onclick = () => selectTabs(2,0,1,3);
+	tabLink[3].onclick = () => selectTabs(3,0,1,2);
+
+	function selectTabs(a, b, c, d) {
+		tab[a].hidden = false;
+		tab[b].hidden = true;
+		tab[c].hidden = true;
+		tab[d].hidden = true;
+
+		aside[a].hidden = false;
+		aside[b].hidden = true;
+		aside[c].hidden = true;
+		aside[d].hidden = true;
+
+		tabLink[a].classList.add('sidebar__item_selected');
+		tabLink[b].classList.remove('sidebar__item_selected');
+		tabLink[c].classList.remove('sidebar__item_selected');
+		tabLink[d].classList.remove('sidebar__item_selected');
 	}
 }
 
@@ -109,61 +75,23 @@ function openCloseBurger() {
 
 // FILES
 function showHideFiles() {
-	let btnFiles = [
-			document.querySelector('.files-mockup_first'),
-			document.querySelector('.files-mockup_second'),
-			document.querySelector('.files-mockup_third'),
-			document.querySelector('.files-site_first'),
-			document.querySelector('.files-site_second'),
-			document.querySelector('.files-site_third'),
-	];
-	let listFiles = [
-			document.querySelector('.show-mockup_first'),
-			document.querySelector('.show-mockup_second'),
-			document.querySelector('.show-mockup_third'),
-			document.querySelector('.show-site_first'),
-			document.querySelector('.show-site_second'),
-			document.querySelector('.show-site_third'),
-		];
+	let file = document.querySelectorAll('.files-text');
+	let dropdown = document.querySelectorAll('.files-all');
 	let arrow = document.querySelectorAll('.arrow-down');
 
-	let toggleAnsw = answ => {
-		answ.classList.toggle('show-file');
-		for (let i=0; i<arrow.length; i++) {
-		}
-	}
+	file[0].onclick = () => openDropdown(0);
+	file[1].onclick = () => openDropdown(1);
+	file[2].onclick = () => openDropdown(2);
+	file[3].onclick = () => openDropdown(3);
+	file[4].onclick = () => openDropdown(4);
+	file[5].onclick = () => openDropdown(5);
 
-	btnFiles[0].onclick = function () {
-		toggleAnsw(listFiles[0]);
-		arrow[0].classList.toggle('arrow-up');
-		this.classList.toggle('color-orange');
+	function openDropdown(index) {
+		dropdown[index].classList.toggle('show-file');
+		file[index].classList.toggle('color-orange');
+		arrow[index].classList.toggle('arrow-up');
 	}
-	btnFiles[1].onclick = function () {
-		toggleAnsw(listFiles[1]);
-		arrow[1].classList.toggle('arrow-up');
-		this.classList.toggle('color-orange');
-	}
-	btnFiles[2].onclick = function () {
-		toggleAnsw(listFiles[2]);
-		arrow[2].classList.toggle('arrow-up');
-		this.classList.toggle('color-orange');
-	}
-	btnFiles[3].onclick = function () {
-		toggleAnsw(listFiles[3]);
-		arrow[3].classList.toggle('arrow-up');
-		this.classList.toggle('color-orange');
-	}
-	btnFiles[4].onclick = function () {
-		toggleAnsw(listFiles[4]);
-		arrow[4].classList.toggle('arrow-up');
-		this.classList.toggle('color-orange');
-	}
-	btnFiles[5].onclick = function () {
-		toggleAnsw(listFiles[5]);
-		arrow[5].classList.toggle('arrow-up');
-		this.classList.toggle('color-orange');
-	}
-}
+}	
 
 changeTabs();
 openCloseBurger();

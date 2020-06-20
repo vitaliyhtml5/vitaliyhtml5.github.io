@@ -229,12 +229,7 @@ a {
 	margin-bottom: 5px;
 	font-style: normal;
 }
-.show-answer_first,
-.show-answer_second,
-.show-answer_third,
-.show-answer_forth,
-.show-answer_fifth,
-.show-answer_sixth {
+.dropdown-answer {
 	display: none;
 }
 .show-answer {

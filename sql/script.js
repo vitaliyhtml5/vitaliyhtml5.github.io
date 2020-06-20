@@ -1,77 +1,35 @@
 //TABS
 function changeTabs() {	
-	let tabs = {
-		createTable: document.getElementById('create-table'),
-		selectTable: document.getElementById('choose-table'),
-		changeTable: document.getElementById('change-table'),
-		joinTable: document.getElementById('join-table'),
-		tasks: document.getElementById('tasks'),
-		showHideTabs(show, hideFirst, hideSecond, hideThird, hideForth) {
-			show.style.display = 'block';
-			hideFirst.style.display = 'none';
-			hideSecond.style.display = 'none';
-			hideThird.style.display = 'none';
-			hideForth.style.display = 'none';
-		},
-	};
-	let sidebar = {
-		createSide: document.querySelector('.sidebar__item_create'),
-		selectSide: document.querySelector('.sidebar__item_choose'),
-		changeSide: document.querySelector('.sidebar__item_change'),
-		joinSide: document.querySelector('.sidebar__item_join'),
-		tasksSide: document.querySelector('.sidebar__item_tasks'),
-		changeSidebar(selected, unselectedFirst, unselectedSecond, unselectedThird, unselectedForth) {
-			selected.classList.add('sidebar__item_selected');
-			unselectedFirst.classList.remove('sidebar__item_selected');
-			unselectedSecond.classList.remove('sidebar__item_selected');
-			unselectedThird.classList.remove('sidebar__item_selected');
-			unselectedForth.classList.remove('sidebar__item_selected');
-			unselectedFirst.classList.add('sidebar__item');
-			unselectedSecond.classList.add('sidebar__item');
-			unselectedThird.classList.add('sidebar__item');
-			unselectedForth.classList.add('sidebar__item');
-		},
-	};
-	let links = {
-		createLink: document.querySelector('.tutorial-create'),
-		selectLink: document.querySelector('.tutorial-select'),
-		changeLink: document.querySelector('.tutorial-change'),
-		joinLink: document.querySelector('.tutorial-join'),
-		tasksLink: document.querySelector('.tutorial-task'),
-		showHideLinks(show, hideFirst, hideSecond, hideThird, hideForth) {
-			show.style.display = 'block';
-			hideFirst.style.display = 'none';
-			hideSecond.style.display = 'none';
-			hideThird.style.display = 'none';
-			hideForth.style.display = 'none';
-		},
-	};
-	sidebar.createSide.onclick = function() {
-		tabs.showHideTabs(tabs.createTable, tabs.selectTable, tabs.changeTable, tabs.joinTable, tabs.tasks);
-		sidebar.changeSidebar(sidebar.createSide, sidebar.selectSide, sidebar.changeSide, sidebar.joinSide, sidebar.tasksSide);
-		links.showHideLinks(links.createLink, links.selectLink, links.changeLink, links.joinLink, links.tasksLink);
+	let tab = document.querySelectorAll('.tab-section');
+	let sidebarItem = document.querySelectorAll('.sidebar__item');
+	let aside = document.querySelectorAll('.tutorial-aside');
+
+	sidebarItem[0].onclick = () => selecteTabs(0,1,2,3,4);
+	sidebarItem[1].onclick = () => selecteTabs(1,0,2,3,4);
+	sidebarItem[2].onclick = () => selecteTabs(2,1,0,3,4);
+	sidebarItem[3].onclick = () => selecteTabs(3,1,2,0,4);
+	sidebarItem[4].onclick = () => selecteTabs(4,1,2,3,0);
+
+	function selecteTabs(a,b,c,d,e) {
+		tab[a].hidden = false;
+		tab[b].hidden = true;
+		tab[c].hidden = true;
+		tab[d].hidden = true;
+		tab[e].hidden = true;
+
+		sidebarItem[a].classList.add('sidebar__item_selected');
+		sidebarItem[b].classList.remove('sidebar__item_selected');
+		sidebarItem[c].classList.remove('sidebar__item_selected');
+		sidebarItem[d].classList.remove('sidebar__item_selected');
+		sidebarItem[e].classList.remove('sidebar__item_selected');
+
+		aside[a].hidden = false;
+		aside[b].hidden = true;
+		aside[c].hidden = true;
+		aside[d].hidden = true;
+		aside[e].hidden = true;
 	}
-	sidebar.selectSide.onclick = function() {
-		tabs.showHideTabs(tabs.selectTable, tabs.createTable, tabs.changeTable, tabs.joinTable, tabs.tasks);
-		sidebar.changeSidebar(sidebar.selectSide, sidebar.createSide, sidebar.changeSide, sidebar.joinSide, sidebar.tasksSide);
-		links.showHideLinks(links.selectLink, links.createLink, links.changeLink, links.joinLink, links.tasksLink);
-	}
-	sidebar.changeSide.onclick = function() {
-		tabs.showHideTabs(tabs.changeTable, tabs.createTable, tabs.selectTable, tabs.joinTable, tabs.tasks);
-		sidebar.changeSidebar(sidebar.changeSide, sidebar.selectSide, sidebar.createSide, sidebar.joinSide, sidebar.tasksSide);
-		links.showHideLinks(links.changeLink, links.createLink, links.selectLink, links.joinLink, links.tasksLink);
-	}
-	sidebar.joinSide.onclick = function() {
-		tabs.showHideTabs(tabs.joinTable, tabs.createTable, tabs.selectTable, tabs.changeTable, tabs.tasks);
-		sidebar.changeSidebar(sidebar.joinSide, sidebar.selectSide, sidebar.createSide, sidebar.changeSide, sidebar.tasksSide);
-		links.showHideLinks(links.joinLink, links.createLink, links.selectLink, links.changeLink, links.tasksLink);
-	}
-	sidebar.tasksSide.onclick = function() {
-		tabs.showHideTabs(tabs.tasks, tabs.createTable, tabs.selectTable, tabs.changeTable, tabs.joinTable);
-		sidebar.changeSidebar(sidebar.tasksSide, sidebar.selectSide, sidebar.createSide, sidebar.changeSide, sidebar.joinSide);
-		links.showHideLinks(links.tasksLink, links.createLink, links.selectLink, links.changeLink, links.joinLink);
-	}
-}
+}	
 
 //HAMBURGER
 function openCloseBurger() {
@@ -121,66 +79,23 @@ function openCloseBurger() {
 
 //TASKS
 function showHideAnsw() {
-	let btnTasks = [
-		document.querySelector('.task-answer_first'),
-		document.querySelector('.task-answer_second'),
-		document.querySelector('.task-answer_third'),
-		document.querySelector('.task-answer_forth'),
-		document.querySelector('.task-answer_fifth'),
-		document.querySelector('.task-answer_sixth'),
-	];
-	let answTasks = [
-		document.querySelector('.show-answer_first'),
-		document.querySelector('.show-answer_second'),
-		document.querySelector('.show-answer_third'),
-		document.querySelector('.show-answer_forth'),
-		document.querySelector('.show-answer_fifth'),
-		document.querySelector('.show-answer_sixth'),
-	];
-	
+	let answer = document.querySelectorAll('.task-answer');
+	let dropdown = document.querySelectorAll('.dropdown-answer');
 	let arrow = document.querySelectorAll('.arrow-down');
-	let toggleAnsw = answ => {
-		answ.classList.toggle('show-answer');
-		for (let i=0; i<arrow.length; i++) {
-		}
-	}
 
-	btnTasks[0].onclick = function () {
-		toggleAnsw(answTasks[0]);
-		arrow[0].classList.toggle('arrow-up');
-	}
-	btnTasks[1].onclick = function () {
-		toggleAnsw(answTasks[1]);
-		arrow[1].classList.toggle('arrow-up');
-	}
-	btnTasks[2].onclick = function () {
-		toggleAnsw(answTasks[2]);
-		arrow[2].classList.toggle('arrow-up');
-	}
-	btnTasks[3].onclick = function () {
-		toggleAnsw(answTasks[3]);
-		arrow[3].classList.toggle('arrow-up');
-	}
-	btnTasks[4].onclick = function () {
-		toggleAnsw(answTasks[4]);
-		arrow[4].classList.toggle('arrow-up');
-	}
-	btnTasks[5].onclick = function () {
-		toggleAnsw(answTasks[5]);
-		arrow[5].classList.toggle('arrow-up');
-	}
-}
+	answer[0].onclick = () => openDropdown(0);
+	answer[1].onclick = () => openDropdown(1);
+	answer[2].onclick = () => openDropdown(2);
+	answer[3].onclick = () => openDropdown(3);
+	answer[4].onclick = () => openDropdown(4);
+	answer[5].onclick = () => openDropdown(5);
 
-//ADVERTASING
-// function showAdvertising() {
-// 	let advertasing = document.querySelector('.advertise');
-	
-// 	setTimeout( () => advertasing.classList.add('show-advertising'), 10000);
-// 	document.querySelector('.advertise__btn').onclick = () => advertasing.style.display = 'none';
-// }
-
+	function openDropdown(index) {
+		dropdown[index].classList.toggle('show-answer');
+		arrow[index].classList.toggle('arrow-up');
+	}
+}	
 
 changeTabs();
 openCloseBurger();
 showHideAnsw();
-// showAdvertising();

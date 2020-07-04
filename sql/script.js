@@ -3,33 +3,23 @@ function changeTabs() {
 	let tab = document.querySelectorAll('.tab-section');
 	let sidebarItem = document.querySelectorAll('.sidebar__item');
 	let aside = document.querySelectorAll('.tutorial-aside');
+	let currentTab = 0;
 
-	sidebarItem[0].onclick = () => selecteTabs(0,1,2,3,4);
-	sidebarItem[1].onclick = () => selecteTabs(1,0,2,3,4);
-	sidebarItem[2].onclick = () => selecteTabs(2,1,0,3,4);
-	sidebarItem[3].onclick = () => selecteTabs(3,1,2,0,4);
-	sidebarItem[4].onclick = () => selecteTabs(4,1,2,3,0);
+	sidebarItem.forEach((element, arr) => {
+		element.onclick = () => {
+			tab[currentTab].hidden = true;
+			sidebarItem[currentTab].classList.remove('sidebar__item_selected');
+			aside[currentTab].hidden = true;
 
-	function selecteTabs(a,b,c,d,e) {
-		tab[a].hidden = false;
-		tab[b].hidden = true;
-		tab[c].hidden = true;
-		tab[d].hidden = true;
-		tab[e].hidden = true;
+			tab[arr].hidden = false;
+			sidebarItem[arr].classList.add('sidebar__item_selected');
+			aside[arr].hidden = false;
 
-		sidebarItem[a].classList.add('sidebar__item_selected');
-		sidebarItem[b].classList.remove('sidebar__item_selected');
-		sidebarItem[c].classList.remove('sidebar__item_selected');
-		sidebarItem[d].classList.remove('sidebar__item_selected');
-		sidebarItem[e].classList.remove('sidebar__item_selected');
-
-		aside[a].hidden = false;
-		aside[b].hidden = true;
-		aside[c].hidden = true;
-		aside[d].hidden = true;
-		aside[e].hidden = true;
-	}
-}	
+			currentTab = arr;
+		}
+	});
+}
+changeTabs();	
 
 //HAMBURGER
 function openCloseBurger() {
@@ -76,6 +66,7 @@ function openCloseBurger() {
 		},
 	};
 }
+openCloseBurger();
 
 //TASKS
 function showHideAnsw() {
@@ -83,19 +74,11 @@ function showHideAnsw() {
 	let dropdown = document.querySelectorAll('.dropdown-answer');
 	let arrow = document.querySelectorAll('.arrow-down');
 
-	answer[0].onclick = () => openDropdown(0);
-	answer[1].onclick = () => openDropdown(1);
-	answer[2].onclick = () => openDropdown(2);
-	answer[3].onclick = () => openDropdown(3);
-	answer[4].onclick = () => openDropdown(4);
-	answer[5].onclick = () => openDropdown(5);
-
-	function openDropdown(index) {
-		dropdown[index].classList.toggle('show-answer');
-		arrow[index].classList.toggle('arrow-up');
-	}
+	answer.forEach((element, arr) => {
+		element.onclick = () => {
+			dropdown[arr].classList.toggle('show-answer');
+			arrow[arr].classList.toggle('arrow-up');
+		}
+	});
 }	
-
-changeTabs();
-openCloseBurger();
 showHideAnsw();

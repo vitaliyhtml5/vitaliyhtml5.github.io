@@ -23,48 +23,30 @@ changeTabs();
 
 //HAMBURGER
 function openCloseBurger() {
-	document.querySelector('.hamburger-open').onclick = function () {
-		burger.openBurger();
-	}
-	document.querySelector('.hamburger-close').onclick = function () {
-		burger.closeBurger();
-	}
+	let list = document.querySelector('.sidebar__list');
+	let listItem = document.querySelectorAll('.sidebar__item');
+	let hamburgerOpen = document.querySelector('.hamburger-open'); 
+	let hamburgerClose = document.querySelector('.hamburger-close'); 
 	
-	let burger = {
-		open: document.querySelector('.hamburger-open').style,
-		close: document.querySelector('.hamburger-close').style,
-		list: document.querySelector('.sidebar__list'),
-		items: document.querySelectorAll( ".sidebar__item" ),
-		openBurger: function() {
-			if (burger.open.zIndex = 12) {
-				burger.close.display = 'block';
-				burger.list.classList.remove('sidebar-disappear');
-				burger.list.classList.add('sidebar-appear');
-				burger.open.zIndex = -5;
-				burger.close.zIndex = 12;
-				burger.open.display = 'none';
-				
-				burger.list.onmousedown = function () {
-  					for( let i = 0; i < burger.items.length; i++){ 
-    					burger.items[i].onmouseup = function() {
-    						burger.closeBurger();
-    					}
-	  				}
-	  				window.scrollTo(0,0);		
-				}
-			}	
-		},
-		closeBurger: function() {
-			if (burger.close.zIndex = 12) {
-				burger.open.display = 'block';
-				burger.list.classList.remove('sidebar-appear');
-				burger.list.classList.add('sidebar-disappear');
-				burger.open.zIndex = 12;
-				burger.close.zIndex = -5;
-				burger.close.display = 'none';
-			}
-		},
-	};
+	hamburgerOpen.onclick = () => {
+		list.classList.remove('sidebar-disappear');
+		list.classList.add('sidebar-appear');
+		hamburgerOpen.classList.add('hamburger-close');
+		hamburgerClose.classList.remove('hamburger-close');
+	}
+
+	hamburgerClose.onclick = closeHamburger;
+	function closeHamburger() {
+		list.classList.remove('sidebar-appear');
+		list.classList.add('sidebar-disappear');
+		hamburgerClose.classList.add('hamburger-close');
+		hamburgerOpen.classList.remove('hamburger-close');
+	}
+
+	listItem.forEach((element) => {
+		element.onmouseup = () => closeHamburger();
+		element.onmousedown = () => window.scrollTo(0,0);
+	});
 }
 openCloseBurger();
 

@@ -111,6 +111,21 @@ a {
 	position: relative;
 	cursor: default;
 }
+.sidebar__item::after {
+	position: absolute;
+	content: '';
+	top: 28px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	opacity: 0;
+	background-color: #d9541e;
+	border-radius: 10px;
+	transition: 0.4s linear;
+}
+.sidebar__item:hover::after {
+	opacity: 1;
+}
 .sidebar__item_selected::after,
 .sidebar__item:hover::after {
 	position: absolute;
@@ -119,6 +134,7 @@ a {
 	left: 0;
 	width: 100%;
 	height: 3px;
+	opacity: 1;
 	background-color: #d9541e;
 	border-radius: 10px;
 }

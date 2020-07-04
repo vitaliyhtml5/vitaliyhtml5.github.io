@@ -3,29 +3,23 @@ function changeTabs() {
 	let tab = document.querySelectorAll('.section-tab');
 	let aside = document.querySelectorAll('.tutorial-section');
 	let tabLink = document.querySelectorAll('.sidebar__item');
+	let currentTab = 0;
 
-	tabLink[0].onclick = () => selectTabs(0,1,2,3);
-	tabLink[1].onclick = () => selectTabs(1,2,3,0);
-	tabLink[2].onclick = () => selectTabs(2,0,1,3);
-	tabLink[3].onclick = () => selectTabs(3,0,1,2);
+	tabLink.forEach((element, arr) => {		
+		element.onclick = () => {
+			tab[currentTab].hidden = true;
+			aside[currentTab].hidden = true;
+			tabLink[currentTab].classList.remove('sidebar__item_selected');
 
-	function selectTabs(a, b, c, d) {
-		tab[a].hidden = false;
-		tab[b].hidden = true;
-		tab[c].hidden = true;
-		tab[d].hidden = true;
+			tab[arr].hidden = false;
+			aside[arr].hidden = false;
+			tabLink[arr].classList.add('sidebar__item_selected');
 
-		aside[a].hidden = false;
-		aside[b].hidden = true;
-		aside[c].hidden = true;
-		aside[d].hidden = true;
-
-		tabLink[a].classList.add('sidebar__item_selected');
-		tabLink[b].classList.remove('sidebar__item_selected');
-		tabLink[c].classList.remove('sidebar__item_selected');
-		tabLink[d].classList.remove('sidebar__item_selected');
-	}
+			currentTab = arr;
+		}
+	});
 }
+changeTabs();
 
 //HAMBURGER
 function openCloseBurger() {
@@ -72,6 +66,7 @@ function openCloseBurger() {
 		},
 	};
 }
+openCloseBurger();
 
 // FILES
 function showHideFiles() {
@@ -79,20 +74,12 @@ function showHideFiles() {
 	let dropdown = document.querySelectorAll('.files-all');
 	let arrow = document.querySelectorAll('.arrow-down');
 
-	file[0].onclick = () => openDropdown(0);
-	file[1].onclick = () => openDropdown(1);
-	file[2].onclick = () => openDropdown(2);
-	file[3].onclick = () => openDropdown(3);
-	file[4].onclick = () => openDropdown(4);
-	file[5].onclick = () => openDropdown(5);
-
-	function openDropdown(index) {
-		dropdown[index].classList.toggle('show-file');
-		file[index].classList.toggle('color-orange');
-		arrow[index].classList.toggle('arrow-up');
-	}
-}	
-
-changeTabs();
-openCloseBurger();
+	file.forEach((element,arr) => {
+		element.onclick = () => {
+			dropdown[arr].classList.toggle('show-file');
+			file[arr].classList.toggle('color-orange');
+			arrow[arr].classList.toggle('arrow-up');
+		}
+	});
+}
 showHideFiles();

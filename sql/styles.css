@@ -623,6 +623,11 @@ tr:nth-child(1) {
 		padding: 5px;
 	}
 }
+@media (max-width: 515px) {
+	.sidebar__item {
+	    margin-right: 15px;
+	}
+}
 @media (max-width: 480px) {
 	.header-logo {
 		position: fixed;

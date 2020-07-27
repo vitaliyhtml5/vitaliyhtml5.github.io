@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Weather</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body {
+		font-family: 'Poppins', Arial, sans-serif;
+		background-color: #edb8ff8a;
+	}
+	ul li {
+		list-style: none;
+	}
+	.weather-widget {
+		width: 320px;
+		margin: 20px auto;
+		padding: 10px 20px;
+		border: 2px solid #5959f9;
+		border-radius: 8px;
+	}
+	.city-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.city {
+		font-size: 32px;
+		font-weight: 700;
+		text-align: left;
+		color: #9c269c;
+	}
+	.icon-weather {
+		width: 60px;
+		height: 60px;
+	}
+	.weather-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 5px;
+	}
+	.others-item {
+		position: relative;
+		width: 120px;
+		font-size: 14px;
+		color: #2e2e2e;
+		text-transform: lowercase;
+	}
+	.others-item > span {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		color: #9c269c;
+		transform: translateY(-50%);
+	}
+	.weather-temp {
+		color: #5959f9;
+		font-size: 48px;
+		font-weight: 700;
+	}
+	.weather-temp_grade {
+		font-size: 28px;
+	}
+	hr {
+		border: 0.5px solid #9c269c;
+	}
+	.sun-wrap {
+		display: flex;
+		justify-content: space-between;
+		width: 75%;
+		padding-left: 35px;
+		margin: 10px auto 0;
+		color: #2e2e2e;
+		font-size: 14px;
+		line-height: 28px;
+	}
+	.sun-wrap > span {
+		position: relative;
+	}
+	.sun-rise::before,
+	.sun-set::before {
+		position: absolute;
+		content: "";
+		top: 50%;
+		left: -35px;
+		width: 20px;
+		height: 20px;
+		background: url(img/sun.svg) no-repeat;
+		transform: translateY(-50%);
+	}
+	.sun-set::before {
+		background: url(img/moon.svg) no-repeat;
+	}
+	</style>
+</head>
+<body>
+	<div class="weather-widget">
+		<div class="city-wrap">
+			<h2 class="city"></h2>
+			<span class="icon-weather"></span>
+		</div>
+		<div class="weather-wrap">
+			<div class="others-wrap">
+				<ul>
+					<li class="others-item">Humidity: 
+						<span class="weather-humidity">75%</span>
+					</li>
+					<li class="others-item">Wind: 
+						<span class="weather-wind">12m/s</span>
+					</li>
+				</ul>
+			</div>
+			<span class="weather-temp"></span>
+		</div><hr>
+		<div class="sun-wrap">
+			<span class="sun-rise"></span>
+			<span class="sun-set"></span>
+		</div>
+	</div>
+	<script type="text/javascript">
+		fetch('http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=bfc01abb9d07f1618283f28a3e24c038')
+			.then(function(resp) {return resp.json();})
+			.then(function(data) {console.log(data);
+				let city = document.querySelector('.city');
+				let iconBg = document.querySelector('.icon-weather').style;
+				let icon = data.weather[0]['description'];
+				let temperature = document.querySelector('.weather-temp');
+				let humidity = document.querySelector('.weather-humidity');
+				let wind = document.querySelector('.weather-wind');
+				let sunRise = document.querySelector('.sun-rise');
+				let sunSet = document.querySelector('.sun-set');
+
+				city.innerText = data.name;
+				temperature.innerHTML = Math.round(data.main.temp - 273) + '<span class="weather-temp_grade">&#8451;</span>';
+				humidity.innerText = `${data.main.humidity}  %`;
+				wind.innerText = `${data.wind.speed}  m/s`;
+				sunRise.innerText = convertTime(data.sys.sunrise);
+				sunSet.innerText = convertTime(data.sys.sunset);
+
+				if (icon == 'clear sky') {
+					iconBg.backgroundImage = 'url(img/sunny.svg)';
+				}
+				else if (icon == 'scattered clouds' || icon == 'broken clouds' || icon == 'mist') {
+					iconBg.backgroundImage = 'url(img/cloudy.svg)';
+				}	
+				else if (icon == 'rain' || icon == 'shower rain' || icon == 'thunderstorm' ) {
+					iconBg.backgroundImage = 'url(img/rainy.svg)';
+				}
+				else if (icon == 'snow') {
+					iconBg.backgroundImage = 'url(img/snowy.svg)';
+				}
+				else {
+					iconBg.backgroundImage = 'url(img/partly-cloudy.svg)';
+				}
+
+				function convertTime(sendTime) {
+					let timezone = data.timezone - 10800;
+
+					let date = new Date( (sendTime + timezone) * 1000);
+					let hours = date.getHours();
+					let minutes = "0" + date.getMinutes();
+					let getTime = hours + ':' + minutes.substr(-2);
+					return getTime;
+				}
+			})
+			.catch(function() {
+				console.log('error');
+			});
+	</script>
+</body>
+</html>

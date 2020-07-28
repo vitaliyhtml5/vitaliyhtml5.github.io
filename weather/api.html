@@ -91,11 +91,11 @@
 		left: -35px;
 		width: 20px;
 		height: 20px;
-		background: url(img/sun.svg) no-repeat;
+		background: url(https://vitaliyhtml5.github.io/weather/img/sun.svg) no-repeat;
 		transform: translateY(-50%);
 	}
 	.sun-set::before {
-		background: url(img/moon.svg) no-repeat;
+		background: url(https://vitaliyhtml5.github.io/weather/img/moon.svg) no-repeat;
 	}
 	</style>
 </head>
@@ -144,19 +144,19 @@
 				sunSet.innerText = convertTime(data.sys.sunset);
 
 				if (icon == 'clear sky') {
-					iconBg.backgroundImage = 'url(img/sunny.svg)';
+					iconBg.backgroundImage = 'url(https://vitaliyhtml5.github.io/weather/img/sunny.svg)';
 				}
 				else if (icon == 'scattered clouds' || icon == 'broken clouds' || icon == 'mist') {
-					iconBg.backgroundImage = 'url(img/cloudy.svg)';
+					iconBg.backgroundImage = 'url(https://vitaliyhtml5.github.io/weather/img/cloudy.svg)';
 				}	
-				else if (icon == 'rain' || icon == 'shower rain' || icon == 'thunderstorm' ) {
-					iconBg.backgroundImage = 'url(img/rainy.svg)';
+				else if (icon == 'rain' || icon == 'shower rain' || icon == 'thunderstorm' || icon == 'thunderstorm with light rain') {
+					iconBg.backgroundImage = 'url(https://vitaliyhtml5.github.io/weather/img/rainy.svg)';
 				}
 				else if (icon == 'snow') {
-					iconBg.backgroundImage = 'url(img/snowy.svg)';
+					iconBg.backgroundImage = 'url(https://vitaliyhtml5.github.io/weather/img/snowy.svg)';
 				}
 				else {
-					iconBg.backgroundImage = 'url(img/partly-cloudy.svg)';
+					iconBg.backgroundImage = 'url(https://vitaliyhtml5.github.io/weather/img/partly-cloudy.svg)';
 				}
 
 				function convertTime(sendTime) {

@@ -139,7 +139,7 @@
 				city.innerText = data.name;
 				temperature.innerHTML = Math.round(data.main.temp - 273) + '<span class="weather-temp_grade">&#8451;</span>';
 				humidity.innerText = `${data.main.humidity}  %`;
-				wind.innerText = `${data.wind.speed}  m/s`;
+				wind.innerText = `${Math.round(data.wind.speed)}  m/s`;
 				sunRise.innerText = convertTime(data.sys.sunrise);
 				sunSet.innerText = convertTime(data.sys.sunset);
 

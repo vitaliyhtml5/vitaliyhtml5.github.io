@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Практика SQL</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="practice.css">
+</head>
+<body>
+	<header id="header-main">
+		<div class="header">
+			<div class="container">
+				<div class="header-wrap">
+					<div class="header-logo">
+						<img class="header-logo__img" src="img/logo.svg" alt="Лого MySql">
+						<h1 class="header-logo__title"><span class="hidden">MySQL</span>Tutorial</h1>
+					</div>
+					<a href="../index.html" class="button header__link">Главная</a>
+				</div>
+				<p class="header-text">Здесь можно выполнить задания по <span class="sea-color">SQL</span><br>Успешным считается результат от <span class="sea-color">80%</span> и выше</p>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="main-wrap">
+			<span class="progress"></span>
+			<span class="result sea-color"></span>
+			<div class="practice">
+				<div class="question-wrap">
+					<p class="question">Сделайте выборку значений столбца value в таблице country</p>
+					<p class="answer-field"><span class="answer-field_empty"></span> value &#160;<span class="answer-field_empty"></span> country;<span class="sign-answer sign-field" hidden=""></span></p>
+					<div class="btn-wrap btn-fields">
+						<button class="button button-answer button-answer_left btn_clear">Очистить</button>
+						<button class="button button-answer button-answer_right btn_clear">Проверить</button>
+					</div>
+					<div class="answer-wrap answer-show"></div>
+					<div class="table-answer" hidden></div>
+					<div class="parts-wrap">
+						<hr>
+						<div class="parts operators-block">
+							<h2 class="parts-title parts-title">Операторы</h2>
+							<span class="parts__answer operators">SELECT</span>
+							<span class="parts__answer operators">UPDATE</span>
+							<span class="parts__answer operators">FROM</span>
+							<span class="parts__answer operators">WHERE</span>
+							<span class="parts__answer operators">AND</span>
+							<span class="parts__answer operators">OR</span>
+							<span class="parts__answer operators">DISTINCT</span>
+							<span class="parts__answer operators">ORDER BY</span>
+							<span class="parts__answer operators">SET</span>
+							<span class="parts__answer operators">DESC</span>
+							<span class="parts__answer operators">LIKE</span>
+							<span class="parts__answer operators">AVG</span>
+							<span class="parts__answer operators">MAX</span>
+							<span class="parts__answer operators">GROUP BY</span>
+							<span class="parts__answer operators">HAVING</span>
+							<span class="parts__answer operators">JOIN</span>
+							<span class="parts__answer operators">LEFT JOIN</span>
+							<span class="parts__answer operators">ON</span>
+						</div>
+						<div class="parts signs-block">
+							<h2 class="parts-title signs-title">Знаки сравнения</h2>
+							<span class="parts__answer signs"> = </span>
+							<span class="parts__answer signs"> < </span>
+							<span class="parts__answer signs"> > </span>
+							<span class="parts__answer signs"> <= </span>
+							<span class="parts__answer signs"> >= </span>
+							<span class="parts__answer signs"> != </span>
+						</div>
+						<div class="parts columns-block">
+							<h2 class="parts-title columns-title">Названия столбцов</h2>
+							<span class="parts__answer columns">id</span>
+							<span class="parts__answer columns">name</span>
+							<span class="parts__answer columns">age</span>
+							<span class="parts__answer columns">value</span>
+							<span class="parts__answer columns">id_singer</span>
+						</div>
+					</div>
+				</div>
+				<div class="table-wrap">
+					<div>
+						<table class="table_main table-small">
+							<caption class="table-name">singer</caption>
+							<tr>
+								<th class="column_bold">id</th>
+								<th>name</th>
+								<th>age</th>
+							</tr>
+							<tr>
+								<td class="column_bold">1</td>
+								<td>Iglesias</td>
+								<td>77</td>
+							</tr>
+							<tr>
+								<td class="column_bold">2</td>
+								<td>Chelentano</td>
+								<td>82</td>
+							</tr>
+							<tr>
+								<td class="column_bold">3</td>
+								<td>Sheeran</td>
+								<td>29</td>
+							</tr>
+							<tr>
+								<td class="column_bold">4</td>
+								<td>Dion</td>
+								<td>52</td>
+							</tr>
+							<tr>
+								<td class="column_bold">5</td>
+								<td>Zibrov</td>
+								<td>63</td>
+							</tr>
+							<tr>
+								<td class="column_bold">6</td>
+								<td>Iglesias</td>
+								<td>45</td>
+							</tr>
+						</table>	
+					</div>	
+					<div>
+						<table class="table_main table-small">
+							<caption class="table-name">country</caption>
+							<tr>
+								<th>id</th>
+								<th>value</th>
+								<th>id_singer</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Italy</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>USA</td>
+								<td>NULL</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Ukraine</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Spain</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>England</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Canada</td>
+								<td>4</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>		
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<p class="footer__text">Данный сайт создан исключительно в образовательных целях<br>Вопросы и предложения по работе сайта можно отправить на e-mail: <span class="footer__text_email">vitaliyhtml5@gmail.com</span></p>
+			</div>
+		</div>
+	</footer>
+	<div class="overlay hidden">
+		<div class="modal">
+			<p class="modal__text modal__text_top modal__text_animation"><p>
+			<p class="modal__text modal__text_bottom">Ваш результат: <span class="sea-color modal__number"></span></p>
+			<button class="button modal__btn">Пройти ещё раз</button>
+		</div>
+	</div>
+	<script src="practice2.js"></script>
+</body>
+</html>

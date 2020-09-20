@@ -153,6 +153,24 @@ tr:nth-child(1) {
 	position: relative;
 	padding: 15px 0;
 }
+.answer-field {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 20px 0;
+	padding-right: 32px;
+}
+.answer-field_empty {
+	display: inline-block;
+	min-width: 50px;
+	height: 25px;
+	margin: 0 5px -4px 0;
+	border: 1.5px solid #269cc0;
+	border-radius: 4px;
+	color: #136882;
+	font-size: 18px;
+	font-weight: 700;
+}
 .answer {
 	display: block;
 	width: 78%;
@@ -171,6 +189,17 @@ tr:nth-child(1) {
 	color: #36b536;
 	font-weight: 600;
 }
+.answer-correct_light {
+	min-width: 20px;
+	color: #36b536;
+	font-weight: 600;
+}
+.answer-show {
+	margin: 10px 0;
+	padding: 0;
+	color: #136882;
+	font-weight: 600;
+}
 .textarea-correct {
 	border: 0.5px solid #36b536;
 }
@@ -180,18 +209,25 @@ tr:nth-child(1) {
 textarea:disabled {
 	background-color: transparent;
 }
-.sign-answer {
+.sign-answer,
+.sign-field {
 	position: absolute;
 	top: 25px;
 	right: 23%;
 	width: 25px;
 	height: 25px;
 }
-.sign-correct {
+.sign-field {
+	top: 0;
+	right: 5px;
+}
+.sign-correct,
+.sign-field-correct {
 	background: url(img/checked.svg) 0% 50% no-repeat;
 	background-size: 20px 20px;
 }
-.sign-incorrect {
+.sign-incorrect,
+.sign-field-incorrect {
 	background: url(img/unchecked.svg) 0% 50% no-repeat;
 	background-size: 20px 20px;
 }
@@ -201,6 +237,11 @@ textarea:disabled {
 	padding-left: 5px;
 	color: #ff4a4a;
 	font-size: 12px;
+}
+.error-answer_light {
+	min-width: 20px;
+	color: #ff4a4a;
+	font-weight: 600;
 }
 .btn-wrap {
 	display: flex;
@@ -213,6 +254,56 @@ textarea:disabled {
 }
 .button-answer_left {
 	margin-right: 10px;
+}
+.btn_clear {
+	opacity: 0.6;
+	cursor: default;
+}
+.btn_clear:hover {
+	box-shadow: none;
+}
+hr {
+	margin-bottom: 7px;
+	color: #919191;
+}
+.parts-wrap {
+	margin-bottom: 15px;
+}
+.parts-block {
+	margin-bottom: 20px;
+}
+.parts__answer {
+	padding-right: 5px;
+	color: #136882;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 32px;
+	cursor: pointer;
+	transition: .4s;
+}
+.parts__answer:hover {
+	color: #3f3f3f;
+}
+.parts__answer_opacity {
+	opacity: 0.7;
+}
+.parts__answer_opacity:hover {
+	opacity: 0.7;
+	color: #136882;
+	cursor: default;
+}
+.parts-title{
+	padding: 10px 0;
+	color: #515151;
+}
+.signs-block > span,
+.columns-block > span {
+	padding-right: 8px;
+	font-size: 20px;
+}
+.signs-block > span {
+	padding-right: 22px;
+	font-size: 22px;
 }
 .footer {
 	padding: 10px;
@@ -324,6 +415,23 @@ textarea:disabled {
 }
 
 @media (max-width: 600px) {
+	.parts-title {
+		font-size: 22px;
+	}
+	.parts__answer, {
+		font-size: 16px;
+	}
+	.signs-block > span, 
+	.columns-block > span {
+		padding-right: 12px;
+		font-size: 20px;
+	}
+	.signs-block > span {
+		padding-right: 20px;
+	}
+	.answer-field {
+		margin: 10px 0;
+	}
 	.table_main {
 		margin: 10px 0;
 		font-size: 14px;
@@ -395,6 +503,9 @@ textarea:disabled {
 		top: 12px;
 		right: 1%;
 	}
+	.sign-field {
+		top: 0;
+	}
 	.error-answer {
 		margin-top: -5px;
 	}
@@ -403,6 +514,22 @@ textarea:disabled {
 	}
 	.button-answer {
 		padding: 12px 16px;
+	}
+	.answer-show {
+		margin: 0;
+	}
+	.parts-title {
+		padding: 5px 0;
+	}
+	.btn-fields {
+		width: 100%;
+		margin: 5px 0;
+	}
+	.btn-fields > button {
+		width: 50%;
+	}
+	.parts-wrap {
+		margin-bottom: 5px;
 	}
 	.table-wrap {
 		width: 100%;
@@ -431,6 +558,9 @@ textarea:disabled {
 	}
 	.main-wrap {
 		padding: 5px;
+	}
+	.parts-title {
+		font-size: 20px;
 	}
 	.footer {
 		padding: 5px;

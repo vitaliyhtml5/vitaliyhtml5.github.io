@@ -114,6 +114,12 @@ a {
 .question-wrap {
 	width: 58%;
 }
+.question-field-wrap {
+	position: relative;
+}
+.question-field {
+	padding-right: 34px;
+}
 .table-wrap {
 	width: 40%;
 }

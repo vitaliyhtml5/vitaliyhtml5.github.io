@@ -97,6 +97,12 @@ a {
 	font-size: 20px;
 	font-weight: 600;
 }
+.previous-result {
+	position: absolute;
+	top: 15px;
+	right: 30px;
+	display: none;
+}
 .question-list {
 	margin: 0 0 40px 20px;
 }
@@ -319,6 +325,9 @@ a {
 	.answer__text {
 		display: inline-block;
 		max-width: 450px;
+	}
+	.previous-result {
+		display: none !important;
 	}
 }
 @media (max-width: 600px) {

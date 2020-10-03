@@ -7,6 +7,9 @@ const modal = document.querySelector('.modal');
 let modalText = document.querySelector('.modal__text');
 const modalBtn = document.querySelector('.modal__btn');
 
+let previousResultRow = document.querySelector('.previous-result');
+let previousResult = document.querySelector('.previous-result__value');
+
 function chooseCorrect(element, name1, item) {
 	if (element.value === item && element.name === name1 && element.checked === true) {
 		element.previousElementSibling.style.background = "url(img/checked.svg) no-repeat";
@@ -61,6 +64,10 @@ function openOverlay(event, overlay,modal) {
 
 	showResult(document.querySelector('.modal__text_top'));
 	testResult.innerText = count * 10 + '%';
+
+	previousResult.innerText = testResult.innerText;
+	previousResultRow.style.display = 'block';
+	localStorage.setItem('previous-result2', previousResult.innerText);
 
 	  if (overlay) {
 	    overlay.classList.add('block-transition');
@@ -132,5 +139,14 @@ document.querySelector('.header__link').onclick = () => {
 		    overlayBack.classList.add('none-transition');
 		  }
 	});		
+}
+
+// Previous result from Local Storage
+if (localStorage.getItem('previous-result2')) {
+	previousResultRow.style.display = 'block';
+	previousResult.innerText = localStorage.getItem('previous-result2');
+}
+else {
+	previousResultRow.style.display = 'none';
 }
 

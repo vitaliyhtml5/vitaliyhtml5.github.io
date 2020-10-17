@@ -23,17 +23,14 @@ function chooseCorrect(element, name1, item) {
 }
 
 function calculateTotal() {
-	for (let key in testAnswer) {
-		chooseCorrect(testAnswer[key], 'question-1', 'b');
-		chooseCorrect(testAnswer[key], 'question-2', 'a');
-		chooseCorrect(testAnswer[key], 'question-3', 'a');
-		chooseCorrect(testAnswer[key], 'question-4', 'c');
-		chooseCorrect(testAnswer[key], 'question-5', 'a');
-		chooseCorrect(testAnswer[key], 'question-6', 'c');
-		chooseCorrect(testAnswer[key], 'question-7', 'a');
-		chooseCorrect(testAnswer[key], 'question-8', 'c');
-		chooseCorrect(testAnswer[key], 'question-9', 'b');
-		chooseCorrect(testAnswer[key], 'question-10', 'c');
+	let i = -1;
+	let j = 0;
+
+	while (j < 10 || i < 29) {
+		i++;
+		if (i%3 == 0) j++;
+		if(i == 30) break;
+		chooseCorrect(testAnswer[i], `question-${j}`, quizAnswers[testNumber].answers[j-1]);	
 	}
 }
 
@@ -67,7 +64,7 @@ function openOverlay(event, overlay,modal) {
 
 	previousResult.innerText = testResult.innerText;
 	previousResultRow.style.display = 'block';
-	localStorage.setItem('previous-result', previousResult.innerText);
+	localStorage.setItem(`previous-result${testNumber}`, previousResult.innerText);
 
 	  if (overlay) {
 	    overlay.classList.add('block-transition');
@@ -142,9 +139,9 @@ document.querySelector('.header__link').onclick = () => {
 }
 
 // Previous result from Local Storage
-if (localStorage.getItem('previous-result')) {
+if (localStorage.getItem(`previous-result${testNumber}`)) {
 	previousResultRow.style.display = 'block';
-	previousResult.innerText = localStorage.getItem('previous-result');
+	previousResult.innerText = localStorage.getItem(`previous-result${testNumber}`);
 }
 else {
 	previousResultRow.style.display = 'none';

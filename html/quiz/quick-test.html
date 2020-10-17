@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Тест HTML/CSS</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+	<header id="header-main">
+		<div class="header">
+			<div class="container">
+				<div class="header-wrap">
+					<div class="header-logo">
+						<img class="header-logo__img" src="img/html-logo.svg" alt="Лого html">
+						<img class="header-logo__img" src="img/css-logo.svg" alt="Лого css">
+						<h1 class="header-logo__title"><span class="hidden">HTML и CSS</span>Tutorial</h1>
+					</div>
+					<a href="../index.html" class="button header__link">Главная</a>
+				</div>
+				<p class="header-text">Здесь можно пройти тест на знание <span class="code-item_orange">HTML</span>&nbsp;и&nbsp;<span class="code-item_orange">CSS</span><br>Успешным считается результат от <span class="code-item_orange">80%</span> и выше</p>
+			</div>
+		</div>
+	</header>
+	<main>
+	<div class="container question-main">
+		<div class="main-wrap">
+			<div class="question-start">
+				<h2 class="question-start__title">Выберите категорию и время</h2>
+				<div class="category-wrap">
+					<div class="category-box category-box_left">
+						<span class="category-box__bg"></span>
+						<h3 class="category-box__name">html</h3>
+					</div>
+					<div class="category-box category-box_right">
+						<span class="category-box__bg"></span>
+						<h3 class="category-box__name">10 секунд</h3>
+					</div>
+				</div>
+				<button class="button question-start__btn">Начать</button>
+				<ul class="category-list hidden">
+					<li class="category-item"></li>
+					<li class="category-item"></li>
+					<li class="category-item"></li>
+				</ul>
+			</div>
+			<div class="question-wrap hidden">
+				<span class="question-time"><span class="question-time_counter">10</span></span>
+				<span class="progress-counter">1 / 10</span>
+				<p class="question-text"></p>
+				<hr class="question-line">
+				<ul class="question-list">
+					<li class="question-item">
+						<span class="question-item_answer">text-align</span>
+					</li>
+					<li class="question-item">
+						<span class="question-item_answer">margin</span>
+					</li>
+					<li class="question-item">
+						<span class="question-item_answer">line-height</span>
+					</li>
+				</ul>
+				<button class="button question-btn">Выберите вариант</button>
+			</div>	
+		</div>	
+	</div>
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<p class="footer__text">Данный сайт создан исключительно в образовательных целях<br>Вопросы и предложения по работе сайта можно отправить на e-mail: <span class="footer__text_email">vitaliyhtml5@gmail.com</span></p>
+			</div>
+		</div>
+	</footer>
+	<div class="overlay hidden">
+		<div class="modal">
+			<p class="modal__text modal__text_top modal__text_animation"><p>
+			<p class="modal__text modal__text_bottom">Ваш результат: <span class="code-item_orange modal__number"> </span></p>
+			<button class="button modal__btn modal-question__btn">Пройти ещё раз</button>
+		</div>
+	</div>
+	<script src="answers.js"></script>
+	<script src="quick-test.js"></script>
+</body>
+</html>

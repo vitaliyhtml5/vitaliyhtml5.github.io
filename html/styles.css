@@ -42,6 +42,7 @@ a {
 	padding: 0 10px;
 }
 .header {
+	position: relative;
 	padding: 10px 0 15px;
 }
 .hamburger,
@@ -552,7 +553,7 @@ a {
 	background: url(img/example.svg) no-repeat;
 }
 .quiz-site::before {
-	top: 5px;
+	top: 6px;
 	width: 14px;
 	height: 14px;
 	background: url(img/pen.svg) no-repeat;
@@ -649,6 +650,61 @@ a {
 	transform: rotate(-180deg);
 	transform-origin: 50% 35%;
 }
+.new-tooltip {
+	position: absolute;
+	z-index: 5; 
+	top: 5px;
+	right: 10px;
+	width: 320px;
+	padding: 0 10px;
+	border: 1px solid #d9541e;
+	border-radius: 4px;
+	background-color: #fde5dd;
+	animation: newtooltip 3s;
+}
+.new-tooltip-btn-wrap {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	margin: 2px auto 7px;
+	text-align: center;
+	font-weight: 700;
+}
+.new-tooltip__link {
+	width: 45%;
+	padding: 2px 5px;
+	border-radius: 5px;
+	color: #fff;
+	background: linear-gradient(180deg, #ff916e, #ffa689);
+	cursor: pointer;
+	transition: 0.4s;
+}
+.new-tooltip__link:hover {
+	box-shadow: 0 0 10px 2px rgba(253,113,57,0.3);
+}
+.new-tooltip__btn {
+	width: 40%;
+	padding-bottom: 2px;
+	border: none;
+	font: 600 15px/26px Raleway, Arial, Helvetica, sans-serif;
+	color: #3f3f3f;
+	background: none;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.new-tooltip__btn:hover {
+	color: #d9541e;
+}
+@keyframes newtooltip {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+}
 @media (max-width: 997px) {
 	.hamburger,
 	.hamburger-open {
@@ -744,7 +800,8 @@ a {
 @media (max-width: 700px) {
 	.tutorial,
 	.hamburger,
-	.hamburger-open {
+	.hamburger-open,
+	.new-tooltip {
 		display: none;
 	}
 	.btnup-smdev {

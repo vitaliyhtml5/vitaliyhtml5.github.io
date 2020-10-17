@@ -65,3 +65,18 @@ function showHideFiles() {
 	});
 }
 showHideFiles();
+
+// New tooltip
+function showNewTooltip() {
+	const newTooltipBtn = document.querySelectorAll('.new-tooltip__storage');
+	const newTooltip = document.querySelector('.new-tooltip');
+	if (localStorage.getItem('newTooltip')) newTooltip.style.display = 'none';
+
+	newTooltipBtn.forEach(element => {
+		element.onclick = () => {
+			localStorage.setItem('newTooltip', 'shown'); 
+			newTooltip.style.display = 'none';
+		}
+	});
+}
+showNewTooltip();

@@ -64,7 +64,7 @@ function openOverlay(event, overlay, modal) {
 
 	previousResult.innerText = testResult.innerText;
 	previousResultRow.style.display = 'block';
-	localStorage.setItem(`previous-result${testNumber}`, previousResult.innerText);
+	localStorage.setItem(`html-test${testNumber}`, previousResult.innerText);
 	showMainProgress();
 
 	if (overlay) {
@@ -115,9 +115,9 @@ document.querySelector('.result__btn_right').onclick = () => {
 }
 
 // Previous result from Local Storage
-if (localStorage.getItem(`previous-result${testNumber}`)) {
+if (localStorage.getItem(`html-test${testNumber}`)) {
 	previousResultRow.style.display = 'block';
-	previousResult.innerText = localStorage.getItem(`previous-result${testNumber}`);
+	previousResult.innerText = localStorage.getItem(`html-test${testNumber}`);
 }
 else {
 	previousResultRow.style.display = 'none';
@@ -127,9 +127,9 @@ else {
 function showMainProgress() {
 	const progressBar = document.querySelector('.progress-main__bar');
 	progressBar.value = 5;
-	let previousResult0 = parseInt(localStorage.getItem("previous-result0"));
-	let previousResult1 = parseInt(localStorage.getItem("previous-result1"));
-	let previousResult2 = parseInt(localStorage.getItem("previous-result2"));
+	let previousResult0 = parseInt(localStorage.getItem("html-test0"));
+	let previousResult1 = parseInt(localStorage.getItem("html-test1"));
+	let previousResult2 = parseInt(localStorage.getItem("html-test2"));
 
 	checkprogress(previousResult0);
 	checkprogress(previousResult1);
@@ -150,8 +150,8 @@ function showStatistic() {
 		const statisticTable = document.querySelector('.progress-table');
 		openProgressOverlay(event, statisticOverlay, statisticWrap);
 		statisticTable.innerHTML = `<tr><th>Название</th><th>Последний результат</th></tr><tr><td>Тест - 1 (теория)</td>
-		<td class="progress-table__result">${localStorage.getItem("previous-result0")}</td></tr><tr><td>Тест - 2 (теория)</td><td class="progress-table__result">${localStorage.getItem("previous-result1")}</td>
-		</tr><tr><td>Тест на время</td><td class="progress-table__result">${localStorage.getItem("previous-result2")}</td></tr>`;
+		<td class="progress-table__result">${localStorage.getItem("html-test0")}</td></tr><tr><td>Тест - 2 (теория)</td><td class="progress-table__result">${localStorage.getItem("html-test1")}</td>
+		</tr><tr><td>Тест на время</td><td class="progress-table__result">${localStorage.getItem("html-test2")}</td></tr>`;
 		let progressResult = document.querySelectorAll('.progress-table__result');
 		nullResult(progressResult[0]);
 		nullResult(progressResult[1]);

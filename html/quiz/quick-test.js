@@ -197,7 +197,7 @@ function showoverlay() {
 	testResult.innerText = `${countResult} %`;
 
 	if (overlay) overlay.classList.add('block-transition');
-	localStorage.setItem('previous-result2', `${countResult}%`);
+	localStorage.setItem('html-test2', `${countResult}%`);
 	showMainProgress(); 
 }
 
@@ -222,9 +222,9 @@ document.querySelector('.modal__btn').onclick = () => window.location.reload(tru
 function showMainProgress() {
 	const progressBar = document.querySelector('.progress-main__bar');
 	progressBar.value = 5;
-	let previousResult0 = parseInt(localStorage.getItem("previous-result0"));
-	let previousResult1 = parseInt(localStorage.getItem("previous-result1"));
-	let previousResult2 = parseInt(localStorage.getItem("previous-result2"));
+	let previousResult0 = parseInt(localStorage.getItem("html-test0"));
+	let previousResult1 = parseInt(localStorage.getItem("html-test1"));
+	let previousResult2 = parseInt(localStorage.getItem("html-test2"));
 
 	checkprogress(previousResult0);
 	checkprogress(previousResult1);
@@ -246,8 +246,8 @@ function showStatistic() {
 		openOverlay(event, statisticOverlay, statisticWrap);
 		
 		statisticTable.innerHTML = `<tr><th>Название</th><th>Последний результат</th></tr><tr><td>Тест - 1 (теория)</td>
-		<td class="progress-table__result">${localStorage.getItem("previous-result0")}</td></tr><tr><td>Тест - 2 (теория)</td><td class="progress-table__result">${localStorage.getItem("previous-result1")}</td>
-		</tr><tr><td>Тест на время</td><td class="progress-table__result">${localStorage.getItem("previous-result2")}</td></tr>`;
+		<td class="progress-table__result">${localStorage.getItem("html-test0")}</td></tr><tr><td>Тест - 2 (теория)</td><td class="progress-table__result">${localStorage.getItem("html-test1")}</td>
+		</tr><tr><td>Тест на время</td><td class="progress-table__result">${localStorage.getItem("html-test2")}</td></tr>`;
 		let progressResult = document.querySelectorAll('.progress-table__result');
 		nullResult(progressResult[0]);
 		nullResult(progressResult[1]);

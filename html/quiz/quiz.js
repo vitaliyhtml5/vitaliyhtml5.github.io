@@ -114,31 +114,6 @@ document.querySelector('.result__btn_right').onclick = () => {
 	10);
 }
 
-// BACK TO MAIN
-
-document.querySelector('.header__link').onclick = () => {
-	const overlayBack = document.querySelector('.overlay-back');
-	const modalBack = document.querySelector('.modal-back');
-	const btnBack = document.querySelector('.btn-back__right');
-	
-	for (let key in testAnswer) {
-		if (testAnswer[key].checked === true) {
-			event.preventDefault();
-			openOverlay(event, overlayBack, modalBack);
-		}	
-	}
-	overlayBack.onclick = () => closeOverlay(overlayBack);
-	btnBack.onclick = () => closeOverlay(overlayBack);
-	
-	window.addEventListener('keyup', function (e) {
-		e.preventDefault();
-		overlayBack.classList.remove('block-transition');
-		  if (e.keyCode === 27) {
-		    overlayBack.classList.add('none-transition');
-		  }
-	});		
-}
-
 // Previous result from Local Storage
 if (localStorage.getItem(`previous-result${testNumber}`)) {
 	previousResultRow.style.display = 'block';
@@ -173,7 +148,7 @@ function showStatistic() {
 	
 	progress.onclick = () => {
 		const statisticTable = document.querySelector('.progress-table');
-		openOverlay(event, statisticOverlay, statisticWrap);
+		openProgressOverlay(event, statisticOverlay, statisticWrap);
 		statisticTable.innerHTML = `<tr><th>Название</th><th>Последний результат</th></tr><tr><td>Тест - 1 (теория)</td>
 		<td class="progress-table__result">${localStorage.getItem("previous-result0")}</td></tr><tr><td>Тест - 2 (теория)</td><td class="progress-table__result">${localStorage.getItem("previous-result1")}</td>
 		</tr><tr><td>Тест на время</td><td class="progress-table__result">${localStorage.getItem("previous-result2")}</td></tr>`;
@@ -185,6 +160,15 @@ function showStatistic() {
 
 	function nullResult(item) {
 		if (item.innerText == 'null') item.innerText = '-';
+	}
+
+	function openProgressOverlay(event, overlay, modal) {
+		event.preventDefault();
+		modal.onclick = (e) => e.stopPropagation();
+
+		overlay.classList.remove('none-transition');
+		overlay.style.display = 'block';
+		if (overlay) overlay.classList.add('block-transition');
 	}
 
 	statisticBtn.onclick = () => closeOverlay(statisticOverlay);

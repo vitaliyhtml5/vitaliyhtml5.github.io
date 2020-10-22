@@ -549,13 +549,28 @@ a {
 }
 @media (max-width: 767px) {
 	.previous-result,
-	.header__link/*,
-	.progress-main,
-	.progress-table-wrap*/ {
+	.header__link {
 		display: none !important;
 	}
 	.category-wrap {
 		width: 100%;
+	}
+	.progress-main {
+		top: 7px;
+		right: 7px;
+		transform: translateX(0);
+	}
+	.progress-overlay {
+		z-index: 100;
+	}
+	.progress-table-wrap {
+		top: 0;
+		width: 100%;
+		min-height: 100vh;
+		padding: 40px 0 0;
+	}
+	.progress-table {
+		width: 90%;
 	}
 }
 @media (max-width: 480px) {
@@ -605,6 +620,9 @@ a {
 	.footer {
 		font-size: 10px;
 		line-height: 12px;
+	}
+	.overlay {
+		z-index: 20;
 	}
 	.modal {
 		margin-top: 20%;
@@ -673,6 +691,15 @@ a {
 		margin: 25px auto 10px;
 		font-size: 17px;
 	}
+	.progress-main {
+		position: fixed;
+		z-index: 12;
+		width: 130px;
+		font-size: 14px;
+	}
+	.progress-table th {
+		line-height: 24px;
+	}
 }
 @media (max-width: 400px) {
 	.container {
@@ -731,34 +758,12 @@ a {
 		padding: 5px;
 		font-size: 14px;
 	}
-}
-
-
-@media (max-width: 400px) {
 	.progress-main {
-		position: fixed;
-		z-index: 50;
-		top: 7px;
 		right: 2px;
 		width: 120px;
-		font-size: 14px;
-		transform: translateX(0);
-	}
-	.progress-overlay {
-		z-index: 100;
-	}
-	.progress-table-wrap {
-		width: 100%;
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.progress-table {
-		width: 300px;
 	}
 	.progress-table th {
-		line-height: 22px;
+		font-size: 17px;
+		line-height: 20px;
 	}
 }
-
-	
-	

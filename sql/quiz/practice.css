@@ -726,4 +726,7 @@ hr {
 	.progress-table__btn {
 		margin: 20px auto 15px;
 	}
+	.question-start__title {
+		margin: 15px auto;
+	}
 }	

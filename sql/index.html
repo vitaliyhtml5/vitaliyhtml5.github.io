@@ -12,6 +12,26 @@
 <body>
 	<header id="header-main">
 		<div class="header">
+			<div class="new-tooltip">
+				<p class="new-tooltip__text">Пройдите все тесты и получите награду</p>
+				<div class="new-tooltip-btn-wrap">
+					<button class="button new-tooltip__link new-tooltip__storage">Подробнее</button>
+					<button class="new-tooltip__btn new-tooltip__storage">Позже</button>
+				</div>
+			</div>
+			<div class="test-summary" hidden>
+				<div class="test-summary__modal">
+					<p class="test-summary__text">За результатами теста теперь можно следить в меню <span class="sea-color">"Ваш прогресс"</span></p>
+					<img class="test-summary__img" src="img/progress-example.png" alt='Меню "Ваш прогресс"'>
+					<p class="test-summary__text">При сдачи теста на 80% и выше Вы получаете за него медаль.</p>
+					<img class="test-summary__img" src="img/progress-example2.png" alt='Меню "Ваш прогресс"'>
+					<p class="test-summary__text">Если все тесты сданы на 100%, Вам выдаётся Суперприз!</p>
+					<div class="test-summary-btn-wrap">
+						<a class="new-tooltip__link test-summary__btn" href="quiz/test1.html">Перейти к тестам</a>
+						<button class="new-tooltip__link test-summary__btn">Отмена</button>
+					</div>
+				</div>
+			</div>
 			<div class="container">
 				<div class="header-logo">
 					<img class="header-logo__img" src="img/logo.svg" alt="Лого MySql">
@@ -1793,11 +1813,12 @@
 										<li class="hometask-item"><a target="_blank" href="download/phones.sql" download>phones.sql</a></li>
 									</ol>
 								</div><hr> -->
-								<h3 class="main-subtitle" id="task-link_tenth">Тесты  <sup class="beta_red"> new</sup></h3>
+								<h3 class="main-subtitle" id="task-link_tenth">Тесты</h3>
 								<div class="table_inner">
 									<ol class="hometask-list">
 										<li class="hometask-item hometask-pen"><a href="quiz/test1.html">Вариант - 1</a></li>
 										<li class="hometask-item hometask-pen"><a href="quiz/test2.html">Вариант - 2</a></li>
+										<li class="hometask-item hometask-pen"><a href="quiz/quick-test.html">Тест на время</a></li>
 										<li class="hometask-item hometask-pen"><a href="quiz/practice2.html">Практические задания (лёгкий уровень)</a></li>
 										<li class="hometask-item hometask-pen"><a href="quiz/practice.html">Практические задания (сложный уровень)</a></li>
 									</ol>
@@ -1805,7 +1826,7 @@
 								<h3 class="main-subtitle" id="task-link_eleventh">Видеоуроки (ссылки на YouTube)</h3>
 								<div class="table_inner">
 									<ol class="hometask-list">
-										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/vuisTw450p4">Как работает База данных <sup class="beta_red">new</sup></a></li>
+										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/vuisTw450p4">Как работает База данных<!-- <sup class="beta_red">new</sup> --></a></li>
 										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/JYPWf_tcmtg">Знакомство с phpMyAdmin</a></li>
 										<li class="hometask-item hometask-video"><a target="_blank" href="https://www.youtube.com/watch?v=rP7J-SUT_ZE&t=187s">Создание таблицы в phpMyAdmin</a></li>
 										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/3Y69cVhowHU">Знакомство с MySQL Workbench</a></li>

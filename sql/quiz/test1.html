@@ -12,12 +12,24 @@
 <body>
 	<header id="header-main">
 		<div class="header">
+			<div class="progress-main">
+				<p class="progress-main_text">Ваш прогресс:</p>
+				<progress class="progress-main__bar" value="5" max="100">
+			</div>
+			<div class="progress-overlay hidden">
+				<div class="progress-table-wrap">
+					<h2 class="question-start__title">Статистика сдачи тестов</h2>
+					<span class="progress-table__award"></span>
+					<table class="progress-table"></table>
+					<button class="button progress-table__btn">Закрыть</button>
+				</div>
+			</div>
 			<div class="container">
 				<div class="header-wrap">
-					<div class="header-logo">
+					<a href="../index.html" class="header-logo">
 						<img class="header-logo__img" src="img/logo.svg" alt="Лого MySql">
 						<h1 class="header-logo__title"><span class="hidden">MySQL</span>Tutorial</h1>
-					</div>
+					</a>
 					<a href="../index.html" class="button header__link">Главная</a>
 				</div>
 				<p class="header-text">Здесь можно пройти тест на знание <span class="sea-color">SQL</span><br>Успешным считается результат от <span class="sea-color">80%</span> и выше</p>

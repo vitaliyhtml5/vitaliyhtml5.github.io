@@ -64,3 +64,35 @@ function showHideAnsw() {
 	});
 }	
 showHideAnsw();
+
+// New tooltip
+function showNewTooltip() {
+	const newTooltipBtn = document.querySelectorAll('.new-tooltip__storage');
+	const newTooltip = document.querySelector('.new-tooltip');
+	const summaryModal = document.querySelector('.test-summary');
+	const summaryBtn = document.querySelectorAll('.test-summary__btn');
+	if (localStorage.getItem('newTooltipSql')) newTooltip.style.display = 'none';
+
+	newTooltipBtn.forEach(element => {
+		element.onclick = () => {
+			localStorage.setItem('newTooltipSql', 'shown'); 
+			closeElement(newTooltip);
+		}
+	});
+	newTooltipBtn[0].addEventListener('click', () => {
+		summaryModal.hidden = false;
+		closeElement(newTooltip);
+	});
+
+	summaryBtn.forEach(element => {
+		element.onclick = () => {
+			closeElement(summaryModal);
+		}
+	});
+
+	function closeElement(item) {
+		item.style.animation = 'closetooltip 1s';
+		setTimeout(() => {item.hidden = true;},1000);
+	}
+}
+showNewTooltip();

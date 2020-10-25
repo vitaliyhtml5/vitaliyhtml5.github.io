@@ -562,7 +562,7 @@ function showStatistic() {
 			if (resultTest[0] == 100 && resultTest[1] == 100 && resultTest[2] == 100 && resultTest[3] == 100 && resultTest[4] == 100) {
 				statisticWrap.style.backgroundImage = 'url(img/cup.svg)';
 				awardText.style.display = 'block';
-				awardLink.href = 'https://youtu.be/vuisTw450p4';
+				awardLink.href = 'https://youtu.be/-bg8pBLQo5U';
 			}
 			else statisticWrap.style.backgroundImage = 'none';
 		}

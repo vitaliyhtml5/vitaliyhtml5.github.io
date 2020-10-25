@@ -561,6 +561,10 @@ a {
 	height: 30px;
 	background: url(img/medal.svg);
 }
+.progress-table__link {
+	display: none;
+	text-align: left;
+}
 @media (max-width: 767px) {
 	.previous-result,
 	.header__link {
@@ -587,6 +591,9 @@ a {
 	}
 	.progress-table {
 		width: 90%;
+	}
+	.progress-table__link {
+		padding-left: 3%;
 	}
 @media (max-width: 700px) {
 	.answer__text {

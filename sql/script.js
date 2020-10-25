@@ -82,6 +82,10 @@ function showNewTooltip() {
 	newTooltipBtn[0].addEventListener('click', () => {
 		summaryModal.hidden = false;
 		closeElement(newTooltip);
+			window.addEventListener('keyup', function (e) {
+			e.preventDefault();
+			if (e.keyCode === 27) closeElement(summaryModal);
+		});	
 	});
 
 	summaryBtn.forEach(element => {

@@ -50,6 +50,18 @@ a {
 	margin: 0 auto;
 	padding: 0 10px;
 }
+*::-webkit-scrollbar {
+    width: 8px;
+    background-color: #e1fafd;
+}
+*::-webkit-scrollbar-thumb {
+    background: #acacac;
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(19, 104, 130,0.5);
+}
 .header {
 	padding: 10px 0 15px;
 }
@@ -718,6 +730,9 @@ hr {
 	.progress-main {
 		right: 2px;
 		width: 120px;
+	}
+	.question-start__title {
+		margin: 10px 0 12px;
 	}
 	.progress-table th {
 		font-size: 17px;

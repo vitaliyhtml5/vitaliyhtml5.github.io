@@ -50,7 +50,7 @@ a {
 }
 *::-webkit-scrollbar {
     width: 8px;
-    background-color: #e1fafd;
+    background-color: transparent;
 }
 *::-webkit-scrollbar-thumb {
     background: #acacac;

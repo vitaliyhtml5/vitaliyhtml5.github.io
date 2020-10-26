@@ -52,7 +52,7 @@ a {
 }
 *::-webkit-scrollbar {
     width: 8px;
-    background-color: #e1fafd;
+    background-color: transparent;
 }
 *::-webkit-scrollbar-thumb {
     background: #acacac;
@@ -61,6 +61,9 @@ a {
 
 *::-webkit-scrollbar-thumb:hover {
     background: rgba(19, 104, 130,0.5);
+}
+.test-summary__modal::-webkit-scrollbar-thumb {
+	background: #acacac;
 }
 .header {
 	padding: 10px 0 15px;

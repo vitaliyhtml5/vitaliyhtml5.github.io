@@ -270,12 +270,12 @@ a {
 	position: absolute;
 	bottom: 30px;
 	width: 100%;
-	font-size: 24px;
+	font-size: 22px;
 }
 .question-start__btn {
 	width: 250px;
 	margin: 40px auto 20px;
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 700;
 	cursor: pointer;
 }
@@ -336,7 +336,7 @@ a {
 .question-text {
 	width: 50%;
 	margin: 20px auto;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
 }
 .question-line {
@@ -349,7 +349,7 @@ a {
 	margin: 20px auto;
 }
 .question-main .question-item {
-	font-size: 18px;
+	font-size: 16px;
 	cursor: pointer;
 	transition: 0.4s;
 }
@@ -366,7 +366,7 @@ a {
 	width: 220px;
 	margin: 30px auto 10px;
 	padding: 15px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 700;
 	cursor: pointer;
 }

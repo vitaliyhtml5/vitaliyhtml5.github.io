@@ -449,7 +449,7 @@ tr:nth-child(1) {
 	display: flex;
 	justify-content: center;
 	width: 70%;
-	margin: 2px auto 7px;
+	margin: 5px auto 7px;
 	text-align: center;
 	font-weight: 700;
 }
@@ -538,7 +538,7 @@ tr:nth-child(1) {
 	padding: 8px;
 	border: none;
 	text-align: center;
-	font: 700 15px/20px Raleway, Arial, Helvetica, sans-serif;
+	font: 700 14px/20px Raleway, Arial, Helvetica, sans-serif;
 }
 @media (max-width: 1150px) {
 	.hamburger {

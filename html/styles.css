@@ -13,6 +13,8 @@ body {
 	color: #3f3f3f;
 	font: 400 15px/26px Raleway, Arial, Helvetica, sans-serif;
 	background-color: #ffcfc0;
+	scrollbar-color: #acacac transparent;
+    scrollbar-width: thin;
 }
 img {
 	max-width: 100%;
@@ -40,6 +42,18 @@ a {
 	max-width: 1180px;
 	margin: 0 auto;
 	padding: 0 10px;
+}
+*::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background: #acacac;
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(253,100,57,0.5);
 }
 .header {
 	position: relative;

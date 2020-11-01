@@ -225,12 +225,14 @@ function showMainProgress() {
 	let previousResult0 = parseInt(localStorage.getItem("html-test0"));
 	let previousResult1 = parseInt(localStorage.getItem("html-test1"));
 	let previousResult2 = parseInt(localStorage.getItem("html-test2"));
+	let previousResult3 = parseInt(localStorage.getItem("html-test3"));
 
 	checkprogress(previousResult0);
 	checkprogress(previousResult1);
 	checkprogress(previousResult2);
+	checkprogress(previousResult3);
 	function checkprogress(item) {
-		if (item >= 80) progressBar.value += 33;
+		if (item >= 80) progressBar.value += 25;
 	}
 }
 showMainProgress();
@@ -251,6 +253,7 @@ function showStatistic() {
 		nullResult(progressResult[0]);
 		nullResult(progressResult[1]);
 		nullResult(progressResult[2]);
+		nullResult(progressResult[3]);
 	}
 
 	function nullResult(item) {

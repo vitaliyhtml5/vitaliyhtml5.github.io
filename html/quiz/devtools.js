@@ -132,7 +132,7 @@ function showMainProgress() {
 	checkprogress(previousResult2);
 	checkprogress(previousResult3);
 	function checkprogress(item) {
-		if (item >= 80) progressBar.value += 33;
+		if (item >= 80) progressBar.value += 25;
 	}
 }
 showMainProgress();

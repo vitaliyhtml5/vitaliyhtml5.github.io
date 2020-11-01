@@ -816,7 +816,8 @@ a {
 	.tutorial,
 	.hamburger,
 	.hamburger-open,
-	.new-tooltip {
+	.new-tooltip,
+	.quiz-site__devtools {
 		display: none;
 	}
 	.btnup-smdev {

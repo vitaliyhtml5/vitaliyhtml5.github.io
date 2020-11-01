@@ -373,7 +373,8 @@ a {
 }
 .overlay,
 .overlay-back,
-.progress-overlay {
+.progress-overlay,
+.devtools-wizard-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -555,11 +556,94 @@ a {
 	font-size: 18px;
 	background-color: #ff9978;
 }
+.progress-table td:nth-child(2n+1) {
+    line-height: 20px;
+}
 .progress-table__btn {
 	width: 150px;
 	margin: 40px auto 20px;
 	font-size: 17px;
 	cursor: pointer;
+}
+/*DevTools test*/
+
+.question-devtools .question-start__title {
+	padding-top: 20px;
+	font-size: 20px;
+}
+.question-devtools .question-btn {
+	margin-top: 0;
+}
+.question-devtools .main-wrap {
+	margin-bottom: 20px; 
+	padding: 25px 0;
+}
+.question-devtools-btn-wrap {
+	display: flex;
+	width: 50%;
+	margin: 50px auto 20px;
+}
+.question-devtools-btn-wrap > button {
+	width: 45%;
+	min-height: 50px;
+}
+.devtools-box {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	margin: 20px auto;
+}
+.show-mark {
+	position: absolute;
+	top: 20px;
+	right: 7%;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: 80% 80%;
+}
+.devtools-box > * {
+	cursor: default;
+}
+.devtools-box > div {
+	width: 180px;
+	height: 150px;
+	cursor: default;
+}
+.devtools-box > img {
+	width: 110px;
+	height: auto;
+}
+.devtools-box > p {
+	height: auto;
+	text-align: justify;
+}
+.devtools-wizard-overlay .progress-table__title {
+	margin: 0;
+	padding: 0;
+}
+.devtools-wizard__img {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 4px;
+}
+.devtools-wizard__btn {
+	width: 200px;
+	margin: 30px auto;
+	font: 700 15px/25px Raleway, Arial, Helvetica, sans-serif;
+	cursor: pointer;
+}
+.devtools-wizard__text {
+	width: 80%;
+	margin: 12px auto;
+}
+.devtools-wizard-overlay .progress-table-wrap {
+	z-index: 12;
+	max-height: 92vh;
+	overflow-y: auto;
+	scrollbar-color: #acacac transparent;
+	scrollbar-width: thin;
 }
 @media (max-width: 767px) {
 	.previous-result,
@@ -585,6 +669,12 @@ a {
 	}
 	.progress-table {
 		width: 90%;
+	}
+	.button:hover {
+		box-shadow: none;
+	}
+	.question-devtools-btn-wrap {
+		width: 100%;
 	}
 }
 @media (max-width: 480px) {

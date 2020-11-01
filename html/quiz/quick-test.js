@@ -250,6 +250,7 @@ function showStatistic() {
 		statisticTable.innerHTML = `<tr><th>Название</th><th>Последний результат</th></tr><tr><td>Тест - 1 (теория)</td>
 		<td class="progress-table__result">${localStorage.getItem("html-test0")}</td></tr><tr><td>Тест - 2 (теория)</td><td class="progress-table__result">${localStorage.getItem("html-test1")}</td>
 		</tr><tr><td>Тест на время</td><td class="progress-table__result">${localStorage.getItem("html-test2")}</td></tr><tr><td>Тест DevTools<br>(доступен на ПК)</td><td class="progress-table__result">${localStorage.getItem("html-test3")}</td></tr>`;
+		let progressResult = document.querySelectorAll('.progress-table__result');
 		nullResult(progressResult[0]);
 		nullResult(progressResult[1]);
 		nullResult(progressResult[2]);

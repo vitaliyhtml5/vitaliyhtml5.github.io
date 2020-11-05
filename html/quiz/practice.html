@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Тест на время</title>
+	<title>Практические задания</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,49 +32,42 @@
 					</a>
 					<a href="../index.html" class="button header__link">Главная</a>
 				</div>
-				<p class="header-text">Здесь можно пройти тест на знание <span class="code-item_orange">HTML</span>&nbsp;и&nbsp;<span class="code-item_orange">CSS</span><br>Успешным считается результат от <span class="code-item_orange">80%</span> и выше</p>
+				<p class="header-text">Здесь можно выполнить задания на знание <span class="code-item_orange">HTML</span>&nbsp;и&nbsp;<span class="code-item_orange">CSS</span><br>Успешным считается результат от <span class="code-item_orange">80%</span> и выше</p>
 			</div>
 		</div>
 	</header>
 	<main>
-		<div class="container question-main">
+		<div class="container question-main practice-main">
 			<div class="main-wrap">
 				<div class="question-start">
-					<h2 class="question-start__title">Выберите категорию и время</h2>
+					<h2 class="question-start__title">Выберите категорию</h2>
 					<div class="category-wrap">
 						<div class="category-box category-box_left">
 							<span class="category-box__bg"></span>
 							<h3 class="category-box__name">html</h3>
 						</div>
-						<div class="category-box category-box_right">
-							<span class="category-box__bg"></span>
-							<h3 class="category-box__name">10 секунд</h3>
-						</div>
 					</div>
 					<button class="button question-start__btn">Начать</button>
 					<ul class="category-list hidden">
-						<li class="category-item"></li>
-						<li class="category-item"></li>
-						<li class="category-item"></li>
+						<li class="category-item">html</li>
+						<li class="category-item">css</li>
+						<li class="category-item">all</li>
 					</ul>
 				</div>
-				<div class="question-wrap hidden">
-					<span class="question-time"><span class="question-time_counter">10</span></span>
-					<span class="progress-counter">1 / 10</span>
+				<div class="question-wrap" hidden>
+					<span class="progress-counter"></span>
+					<span class="show-mark"></span>
 					<p class="question-text"></p>
-					<hr class="question-line">
-					<ul class="question-list">
-						<li class="question-item">
-							<span class="question-item_answer">text-align</span>
-						</li>
-						<li class="question-item">
-							<span class="question-item_answer">margin</span>
-						</li>
-						<li class="question-item">
-							<span class="question-item_answer">line-height</span>
-						</li>
-					</ul>
-					<button class="button question-btn">Выберите вариант</button>
+					<div class="practice-box-wrap">
+						<div class="practice-box practice-box__left">
+							<span class="practice-answer"><<input type="text">><<input type="text">></span>
+							<span class="practice-correct"></span>
+						</div>
+						<div class="practice-box practice-box__right">
+							<span class="practice-example"></span>
+						</div>
+						<button class="button question-btn">Проверить</button>
+					</div>
 				</div>	
 			</div>	
 		</div>
@@ -95,6 +88,6 @@
 	</div>
 	<script src="progress.js"></script>
 	<script src="answers.js"></script>
-	<script src="quick-test.js"></script>
+	<script src="practice.js"></script>
 </body>
 </html>

@@ -64,14 +64,11 @@ function checkAnswer(answers, correct, exampleEnd) {
 			element.disabled = true;
 		});
 		if (answers.toString() == answersArr.toString()) {
-			console.log('yes');
 			questionMark.style.backgroundImage = 'url(img/checked.svg)';
 			countResult += 10;
 		}
 		else {
 			questionMark.style.backgroundImage = 'url(img/unchecked.svg)';
-			console.log(answersArr);
-			console.log(answers);
 		}	
 		answerCorrect.innerHTML = correct;
 		categoryBoxExample.style.display = 'block';

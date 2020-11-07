@@ -38,6 +38,24 @@ function showStatistic() {
 		nullResult(progressResult[2]);
 		nullResult(progressResult[3]);
 		nullResult(progressResult[4]);
+
+		let resultTest = [parseInt(progressResult[0].innerText),parseInt(progressResult[1].innerText),parseInt(progressResult[2].innerText),parseInt(progressResult[3].innerText),parseInt(progressResult[4].innerText)];
+		let awardMedal = document.querySelector('.progress-table__award');
+		let width = 0;
+		const awardText = document.querySelector('.progress-table__link');
+		const awardLink = document.querySelector('.progress-table__link a');
+		for (let i = 0; i < progressResult.length; i++) {
+			if (parseInt(progressResult[i].innerText) >= 80) {
+				width += 30;
+				awardMedal.style.width = `${width}px`;
+			}
+			if (resultTest[0] == 100 && resultTest[1] == 100 && resultTest[2] == 100 && resultTest[3] == 100 && resultTest[4] == 100) {
+				statisticWrap.style.backgroundImage = 'url(img/cup.svg)';
+				awardText.style.display = 'block';
+				awardLink.href = 'https://youtu.be/4c-BVXUdbmY';
+			}
+			else statisticWrap.style.backgroundImage = 'none';
+		}
 	}
 
 	function nullResult(item) {

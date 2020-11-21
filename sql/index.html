@@ -87,9 +87,11 @@
 						</div>
 						<div class="tutorial-aside tutorial-change" hidden>
 							<ul class="tutorial__list">
-								<li class="tutorial__item"><a href="#change-link_first" class="tutorial__link">Изменение данных в таблице</a></li>
-								<li class="tutorial__item"><a href="#change-link_second" class="tutorial__link">Изменение структуры таблицы</a></li>
-								<li class="tutorial__item"><a href="#change-link_third" class="tutorial__link">Удаление таблицы</a></li>
+								<li class="tutorial__item"><a href="#change-link_first" class="tutorial__link">Update (одна строка)</a></li>
+								<li class="tutorial__item"><a href="#change-link_second" class="tutorial__link">Update (несколько строк)</a></li>
+								<li class="tutorial__item"><a href="#change-link_third" class="tutorial__link">Изменение структуры таблицы</a></li>
+								<li class="tutorial__item"><a href="#change-link_fourth" class="tutorial__link">Удаление строки</a></li>
+								<li class="tutorial__item"><a href="#change-link_fifth" class="tutorial__link">Удаление таблицы</a></li>
 							</ul>
 						</div>
 						<div class="tutorial-aside tutorial-join" hidden>
@@ -820,7 +822,7 @@
 						<section id="change-table" class="tab-section" hidden>
 							<div class="change-table-tab">
 								<h2 class="main-title">Изменение таблицы</h2>
-								<h3 class="main-subtitle" id="change-link_first">Изменение данных в таблице</h3>
+								<h3 class="main-subtitle" id="change-link_first">Изменение данных в таблице (одна строка)</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">UPDATE friends<br>SET job = 'manager'<br>WHERE name = 'rachel';</code><span class="check-code">Просмотреть данные таблицы:<br> <code class="check-code_blue">SELECT * FROM friends WHERE name = 'rachel';</code></span>
@@ -842,7 +844,29 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="change-link_second">Изменение структуры таблицы</h3>
+								<h3 class="main-subtitle" id="change-link_second">Изменение данных в таблице (несколько строк)</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="sql-code">UPDATE friends<br>SET name = 'joe',<br>age = 27,<br>job = 'waiter'<br>WHERE id = 5;</code><span class="check-code">Просмотреть данные таблицы:<br> <code class="check-code_blue">SELECT * FROM friends WHERE id = 5;</code></span>
+									</div>
+									<table class="table_main">
+										<tr>
+											<th>id</th>
+											<th>name</th>
+											<th>age</th>
+											<th>birth</th>
+											<th>job</th>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>joe</td>
+											<td>27</td>
+											<td>1970-05-05</td>
+											<td>waiter</td>
+										</tr>
+									</table>
+								</div><hr>
+								<h3 class="main-subtitle" id="change-link_third">Изменение структуры таблицы</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">ALTER TABLE friends<br>ADD COLUMN email varchar(15); <span class="sql-code-comment">Можно использовать следующие команды:</span></code>
@@ -906,7 +930,57 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="change-link_third">Удаление таблицы</h3>
+								<h3 class="main-subtitle" id="change-link_fourth">Удаление строки</h3>
+								<div class="query">
+									<div class="query__code">
+										<code class="sql-code">DELETE FROM friends<br>WHERE id = 5;</code><span class="check-code">Просмотреть данные таблицы:<br> <code class="check-code_blue">SELECT * FROM friends;</code></span>
+									</div>
+									<table class="table_main table-small">
+										<tr>
+											<th>id</th>
+											<th>name</th>
+											<th>age</th>
+											<th>birth</th>
+											<th>job</th>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>ross</td>
+											<td>27</td>
+											<td>1967-10-18</td>
+											<td>paleontologist</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>monica</td>
+											<td>24</td>
+											<td>null</td>
+											<td>cook</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>rachel</td>
+											<td>24</td>
+											<td>1970-05-05</td>
+											<td>waitress</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>chandler</td>
+											<td>26</td>
+											<td>1968-04-08</td>
+											<td>copywriter</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>phoebe</td>
+											<td>28</td>
+											<td>null</td>
+											<td>musician</td>
+										</tr>
+									</table>
+								</div><hr>
+								<h3 class="main-subtitle" id="change-link_fifth">Удаление таблицы</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">DROP TABLE friends;<br><span class="sql-code-comment">Будьте осторожны с этой командой, так как вернуть таблицу уже будет невозможно</span></code>
@@ -1881,8 +1955,8 @@
 								<div class="table_inner">
 									<ol class="hometask-list">
 										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/vuisTw450p4">Как работает База данных<!-- <sup class="beta_red">new</sup> --></a></li>
+										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/e_UBAV82xLs">Установка XAMPP и phpMyAdmin</a></li>
 										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/JYPWf_tcmtg">Знакомство с phpMyAdmin</a></li>
-										<li class="hometask-item hometask-video"><a target="_blank" href="https://www.youtube.com/watch?v=rP7J-SUT_ZE&t=187s">Создание таблицы в phpMyAdmin</a></li>
 										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/3Y69cVhowHU">Знакомство с MySQL Workbench</a></li>
 										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/TO5NFxtxDXs">Операторы Rollback и Commit</a></li>
 									</ol>

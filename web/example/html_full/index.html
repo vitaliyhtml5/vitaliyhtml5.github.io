@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="сайт-шутка, слон, купи слона">
+	<meta name="description" content="Шуточный сайт о покупке слона">
+	<title>Купи слона</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Купи слона</h1>
+	<p>Слоны - самые гигантские сухопутные животные на Земле. Средняя масса их достигает пяти тонн, а длина туловища — 6-7 метров.</p>
+	<p>Слоны обычно общаются при помощи инфразвука, поэтому долгое время слоновий язык оставался неразгаданным.</p>
+	<h2>Преимущества покупки слона:</h2>
+	<ul>
+		 <li>Эмоциональная поддержка</li>
+		 <li>Физическая помощь</li>
+		 <li>Престижно</li>
+	</ul>
+	<img src="https://vitaliyhtml5.github.io/elephant/img/elephant.png" alt="Африканский слон"><br>
+	<a href="https://ru.wikipedia.org/wiki/Слоновые" target="_blank">Статья в Википедии</a>
+	<h2>Стоимость</h2>
+	<table>
+		<tr>
+			<th>Вид</th>
+			<th>Вес</th>
+			<th>Стоимость</th>
+		</tr>	
+		<tr>
+			<td>Африканский слон</td>
+			<td>6000 кг</td>
+			<td>€10000</td>
+		</tr>
+		<tr>
+			<td>Индийский слон</td>
+			<td>5000 кг</td>
+			<td>€8000</td>
+		</tr>
+		<tr>
+			<td>Лесной слон</td>
+			<td>2700 кг</td>
+			<td>€5000</td>
+		</tr>
+	</table>
+	<h2>Контакты</h2>
+	<form method="POST" action="file.php" >
+		<input type="text" name="name" placeholder="Введите имя"><br><br>
+		<input type="password" name="password" placeholder="Введите пароль">
+		<h3>Вид слона:</h3>
+		<label>
+			<input type="checkbox" name="type_elephant" value="african">
+			<span>Африканский</span>
+		</label>
+		<label>
+			<input type="checkbox" name="type_elephant" value="indian">
+			<span>Индийский</span>
+		</label>
+		<h3>Пол слона:</h3>
+		<label>
+			<input type="radio" name="gender_elephant" value="male">
+			<span>Он</span>
+		</label>
+		<label>
+			<input type="radio" name="gender_elephant" value="female">
+			<span>Она</span>
+		</label><br>
+		<textarea name="comment" placeholder="Оставьте комментарий"></textarea><br>
+		<input type="submit" value="Отправить">
+	</form>
+</body>
+</html>

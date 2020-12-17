@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="сайт-шутка, слон, купи слона">
+	<meta name="description" content="Шуточный сайт о покупке слона">
+	<title>Купи слона</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Купи слона</h1>
+	<div id="features">
+		<h2 class="header-center">Преимущества</h2>
+		<ul>
+			 <li>Эмоциональная поддержка</li>
+			 <li>Физическая помощь</li>
+			 <li>Престижно</li>
+		</ul>
+		<img src="https://vitaliyhtml5.github.io/elephant/img/elephant.png" alt="Африканский слон"><br>
+		<a href="https://ru.wikipedia.org/wiki/Слоновые" target="_blank">Статья в Википедии</a>
+	</div>
+	<div id="price">	
+		<h2 class="header-center">Стоимость</h2>
+		<table>
+			<tr>
+				<th>Вид</th>
+				<th>Вес</th>
+				<th>Стоимость</th>
+			</tr>	
+			<tr>
+				<td>Африканский слон</td>
+				<td>6000 кг</td>
+				<td>€10000</td>
+			</tr>
+			<tr>
+				<td>Индийский слон</td>
+				<td>5000 кг</td>
+				<td>€8000</td>
+			</tr>
+		</table>
+	</div>
+	<div id="contacts">	
+		<h2 class="header-center">Контакты</h2>
+		<form method="POST" action="#" >
+			<input class="input-text" type="text" name="name" placeholder="Введите имя"><br><br>
+			<input class="input-text" type="password" name="password" placeholder="Введите пароль">
+			<h3>Вид слона:</h3>
+			<label>
+				<input type="checkbox" name="type_elephant" value="african">
+				<span>Африканский</span>
+			</label>
+			<label>
+				<input type="checkbox" name="type_elephant" value="indian">
+				<span>Индийский</span>
+			</label>
+			<h3>Пол слона:</h3>
+			<label>
+				<input type="radio" name="gender_elephant" value="male">
+				<span>Он</span>
+			</label>
+			<label>
+				<input type="radio" name="gender_elephant" value="female">
+				<span>Она</span>
+			</label><br>
+			<textarea name="comment" placeholder="Оставьте комментарий"></textarea><br>
+			<input class="button" type="submit" value="Отправить">
+		</form>
+	</div>	
+</body>
+</html>

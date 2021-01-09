@@ -361,6 +361,12 @@ tr:nth-child(1) {
 	height: 18px;
 	background: url(img/house.svg) no-repeat;
 }
+.hometask-barbell::before {
+	top: 6px;
+	width: 16px;
+	height: 16px;
+	background: url(img/barbell.svg) no-repeat;
+}
 .hometask-pen::before {
 	top: 5px;
 	width: 14px;

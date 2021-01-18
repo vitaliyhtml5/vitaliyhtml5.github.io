@@ -87,8 +87,8 @@
 						</div>
 						<div class="tutorial-aside tutorial-change" hidden>
 							<ul class="tutorial__list">
-								<li class="tutorial__item"><a href="#change-link_first" class="tutorial__link">Update (одна строка)</a></li>
-								<li class="tutorial__item"><a href="#change-link_second" class="tutorial__link">Update (несколько строк)</a></li>
+								<li class="tutorial__item"><a href="#change-link_first" class="tutorial__link">Update (одно значение)</a></li>
+								<li class="tutorial__item"><a href="#change-link_second" class="tutorial__link">Update (несколько значений)</a></li>
 								<li class="tutorial__item"><a href="#change-link_third" class="tutorial__link">Изменение структуры таблицы</a></li>
 								<li class="tutorial__item"><a href="#change-link_fourth" class="tutorial__link">Удаление строки</a></li>
 								<li class="tutorial__item"><a href="#change-link_fifth" class="tutorial__link">Удаление таблицы</a></li>
@@ -822,7 +822,7 @@
 						<section id="change-table" class="tab-section" hidden>
 							<div class="change-table-tab">
 								<h2 class="main-title">Изменение таблицы</h2>
-								<h3 class="main-subtitle" id="change-link_first">Изменение данных в таблице (одна строка)</h3>
+								<h3 class="main-subtitle" id="change-link_first">Изменение данных в таблице (одно значение)</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">UPDATE friends<br>SET job = 'manager'<br>WHERE name = 'rachel';</code><span class="check-code">Просмотреть данные таблицы:<br> <code class="check-code_blue">SELECT * FROM friends WHERE name = 'rachel';</code></span>
@@ -844,7 +844,7 @@
 										</tr>
 									</table>
 								</div><hr>
-								<h3 class="main-subtitle" id="change-link_second">Изменение данных в таблице (несколько строк)</h3>
+								<h3 class="main-subtitle" id="change-link_second">Изменение данных в таблице (несколько значений)</h3>
 								<div class="query">
 									<div class="query__code">
 										<code class="sql-code">UPDATE friends<br>SET name = 'joe',<br>age = 27,<br>job = 'waiter'<br>WHERE id = 5;</code><span class="check-code">Просмотреть данные таблицы:<br> <code class="check-code_blue">SELECT * FROM friends WHERE id = 5;</code></span>

@@ -50,33 +50,32 @@ function openCloseBurger() {
 }
 openCloseBurger();
 
-// FILES
-function showHideFiles() {
-	let file = document.querySelectorAll('.files-text');
-	let dropdown = document.querySelectorAll('.files-all');
-	let arrow = document.querySelectorAll('.arrow-down');
+// Full site
+const overlayForget = document.querySelector('.test-summary');
+const modalForget = document.querySelector('.test-summary__modal');
 
-	file.forEach((element,arr) => {
-		element.onclick = () => {
-			dropdown[arr].classList.toggle('show-file');
-			file[arr].classList.toggle('color-orange');
-			arrow[arr].classList.toggle('arrow-up');
-		}
+document.querySelector('.full__btn').onclick = () => showOverlay(overlayForget, modalForget);
+document.querySelector('.sidebar__item_full').onclick = () => showOverlay(overlayForget, modalForget);
+
+document.querySelector('.new-tooltip__link').onclick = () => closeOverlay(overlayForget);
+
+function showOverlay(overlay, modal) {
+	overlay.classList.remove('overlay-close');
+	overlay.classList.add('overlay-show');
+	overlay.style.display = 'block';
+	modal.onclick = (e) => e.stopPropagation();
+	overlay.onclick = () => closeOverlay(overlay);
+
+	window.addEventListener('keyup', function (e) {
+		e.preventDefault();
+		if (e.keyCode === 27) closeOverlay(overlay);
 	});
 }
-showHideFiles();
 
-// New tooltip
-function showNewTooltip() {
-	const newTooltipBtn = document.querySelectorAll('.new-tooltip__storage');
-	const newTooltip = document.querySelector('.new-tooltip');
-	if (localStorage.getItem('newTooltip')) newTooltip.style.display = 'none';
-
-	newTooltipBtn.forEach(element => {
-		element.onclick = () => {
-			localStorage.setItem('newTooltip', 'shown'); 
-			newTooltip.style.display = 'none';
-		}
-	});
+function closeOverlay(overlay) {
+	event.preventDefault();
+	overlay.classList.add('overlay-close');
+	setTimeout(() => {
+		overlay.style.display = 'none';
+	}, 500);
 }
-showNewTooltip();

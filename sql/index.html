@@ -12,27 +12,8 @@
 <body>
 	<header id="header-main">
 		<div class="header">
-			<div class="new-tooltip">
-				<p class="new-tooltip__text">Пройдите все тесты и получите награду</p>
-				<div class="new-tooltip-btn-wrap">
-					<button class="button new-tooltip__link new-tooltip__storage">Подробнее</button>
-					<button class="new-tooltip__btn new-tooltip__storage">Позже</button>
-				</div>
-			</div>
-			<div class="test-summary" hidden>
-				<div class="test-summary__modal">
-					<p class="test-summary__text">За результатами теста теперь можно следить в меню <span class="sea-color">"Ваш прогресс"</span></p>
-					<img class="test-summary__img" src="img/progress-example.png" alt='Меню "Ваш прогресс"'>
-					<p class="test-summary__text">При сдачи теста на 80% и выше Вы получаете за него медаль.</p>
-					<img class="test-summary__img" src="img/progress-example2.png" alt='Меню "Ваш прогресс"'>
-					<p class="test-summary__text">Если все тесты сданы на 100%, Вам выдаётся Суперприз!</p>
-					<div class="test-summary-btn-wrap">
-						<a class="new-tooltip__link test-summary__btn" href="quiz/test1.html">Перейти к тестам</a>
-						<button class="new-tooltip__link test-summary__btn">Отмена</button>
-					</div>
-				</div>
-			</div>
 			<div class="container">
+				<button class="full__btn">Полная версия</button>
 				<div class="header-logo">
 					<img class="header-logo__img" src="img/logo.svg" alt="Лого MySql">
 					<h1 class="header-logo__title"><span class="hidden">MySQL</span>Tutorial</h1>
@@ -47,6 +28,7 @@
 						<li class="sidebar__item sidebar__item_change">Изменить</li>
 						<li class="sidebar__item sidebar__item_join">Соединить</li>
 						<li class="sidebar__item sidebar__item_tasks">Материалы</li>
+						<li class="sidebar__item sidebar__item_full hidden">Полная версия</li>
 					</ul>
 				</nav>
 			</div>
@@ -105,16 +87,8 @@
 						</div>
 						<div class="tutorial-aside tutorial-task" hidden>
 							<ul class="tutorial__list">
-								<li class="tutorial__item"><a href="#task-link_first" class="tutorial__link">Задача №1</a></li>
-								<li class="tutorial__item"><a href="#task-link_second" class="tutorial__link">Задача №2</a></li>
-								<li class="tutorial__item"><a href="#task-link_third" class="tutorial__link">Задача №3</a></li>
-								<li class="tutorial__item"><a href="#task-link_fourth" class="tutorial__link">Задача №4</a></li>
-								<li class="tutorial__item"><a href="#task-link_fifth" class="tutorial__link">Задача №5</a></li>
-								<li class="tutorial__item"><a href="#task-link_sixth" class="tutorial__link">Задача №6</a></li>
 								<li class="tutorial__item"><a href="#task-link_seventh" class="tutorial__link">Домашнее задание-1</a></li>
 								<li class="tutorial__item"><a href="#task-link_eighth" class="tutorial__link">Домашнее задание-2</a></li>
-								<li class="tutorial__item"><a href="#task-link_nineth" class="tutorial__link">Тренажёр</a></li>
-								<li class="tutorial__item"><a href="#task-link_tenth" class="tutorial__link">Тесты</a></li>
 								<li class="tutorial__item"><a href="#task-link_eleventh" class="tutorial__link">Видео</a></li>
 							</ul>
 						</div>
@@ -1478,451 +1452,11 @@
 						</section>
 						<section id="tasks" class="tab-section" hidden>
 							<div class="change-table-tab">
-								<h2 class="main-title">Задачи по всем темам</h2>
-								<h3 class="main-subtitle" id="task-link_first">Задание №1 (лёгкий уровень)</h3>
-								<table class="table_main table-tasks">
-									<caption class="table-tasks__name">billioners</caption>
-									<tr>
-										<th>id</th>
-										<th>name</th>
-										<th>position</th>
-										<th>net_worth</th>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>jeff bezos</td>
-										<td>1</td>
-										<td>$131b</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>bernard arnault</td>
-										<td>4</td>
-										<td>$76b</td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>bill gates</td>
-										<td>2</td>
-										<td>$96.51b</td>
-									</tr>
-									<tr>
-										<td>4</td>
-										<td>warren buffet</td>
-										<td>3</td>
-										<td>$82.5b</td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td>carlos slim</td>
-										<td>5</td>
-										<td>$64b</td>
-									</tr>
-								</table>
-								<p class="check-code check-code_gen">Сделайте выборку имени и дохода троих самых богатых людей мира в 2019 году по версии Forbes</p>
-								<h3 class="task-answer">Решение<span class="arrow-down"></span></h3>
-								<div class="query dropdown-answer hidden">	
-									<div class="query__code">
-										<code class="sql-code">SELECT name, net_worth FROM billioners <br>WHERE position <= 3;</code>
-									</div>
-									<table class="table_main">
-										<caption class="table-tasks__name">billioners</caption>
-										<tr>
-											<th>name</th>
-											<th>net_worth</th>
-										</tr>
-										<tr>
-											<td>jeff bezos</td>
-											<td>$131b</td>
-										</tr>
-										<tr>
-											<td>bill gates</td>
-											<td>$96.51b</td>
-										</tr>
-										<tr>
-											<td>warren buffet</td>
-											<td>$82.5b</td>
-										</tr>
-									</table>
-								</div><hr>
-								<h3 class="main-subtitle" id="task-link_second">Задание №2 (сложный уровень)</h3>
-								<table class="table_main table-tasks">
-									<caption class="table-tasks__name">football_players</caption>
-									<tr>
-										<th>id</th>
-										<th>winner</th>
-										<th>year</th>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>ronaldo</td>
-										<td>2016</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>messi</td>
-										<td>2019</td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>modrić</td>
-										<td>2018</td>
-									</tr>
-									<tr>
-										<td>4</td>
-										<td>messi</td>
-										<td>2015</td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td>ronaldo</td>
-										<td>2017</td>
-									</tr>
-									<tr>
-										<td>6</td>
-										<td>ronaldo</td>
-										<td>2014</td>
-									</tr>
-								</table>
-								<p class="check-code check-code_gen">Сделайте выборку данных среди победителей награды "Золотой мяч", которая выведет Месси и Роналду с 2015 по 2019 год</p>
-								<h3 class="task-answer">Решение<span class="arrow-down"></span></h3>
-								<div class="query dropdown-answer hidden">	
-									<div class="query__code">
-										<code class="sql-code">SELECT winner, year FROM football_players <br>WHERE winner IN ('messi', 'ronaldo')<br>AND year BETWEEN 2015 AND 2019<br>ORDER BY year;</code>
-									</div>
-									<table class="table_main table-tasks">
-									<caption class="table-tasks__name">football_players</caption>
-									<tr>
-										<th>winner</th>
-										<th>year</th>
-									</tr>
-									<tr>
-										<td>messi</td>
-										<td>2015</td>
-									</tr>
-									<tr>
-										<td>ronaldo</td>
-										<td>2016</td>
-									</tr>
-									<tr>
-										<td>ronaldo</td>
-										<td>2017</td>
-									</tr>
-									<tr>
-										<td>messi</td>
-										<td>2019</td>
-									</tr>
-								</table>
-								</div><hr>
-								<h3 class="main-subtitle" id="task-link_third">Задание №3 (лёгкий уровень)</h3>
-								<table class="table_main table-tasks">
-									<caption class="table-tasks__name">temperature</caption>
-									<tr>
-										<th>id</th>
-										<th>year</th>
-										<th>min</th>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>1982</td>
-										<td>-82.8</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>1983</td>
-										<td>-89.2</td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>2004</td>
-										<td>-91.2</td>
-									</tr>
-								</table>
-								<p class="check-code check-code_gen">Какая самая низкая температура была зафиксирована в Антарктиде?</p>
-								<h3 class="task-answer">Решение<span class="arrow-down"></span></h3>
-								<div class="query dropdown-answer hidden">	
-									<div class="query__code">
-										<code class="sql-code">SELECT MIN(min) FROM temperature;</code>
-									</div>
-									<table class="table_main table-tasks">
-										<caption class="table-tasks__name">temperature</caption>
-										<tr>
-											<th>MIN(min)</th>
-										</tr>
-										<tr>
-											<td>-91.2</td>
-										</tr>
-									</table>
-								</div><hr>
-								<h3 class="main-subtitle" id="task-link_fourth">Задание №4 (сложный уровень)</h3>
-								<table class="table_main table-tasks">
-									<caption class="table-tasks__name">swimmers</caption>
-									<tr>
-										<th>id</th>
-										<th>name</th>
-										<th>gold</th>
-										<th>silver</th>
-										<th>bronze</th>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>klochkova</td>
-										<td>1</td>
-										<td>0</td>
-										<td>0</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>sylantyev</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>klochkova</td>
-										<td>0</td>
-										<td>1</td>
-										<td>0</td>
-									</tr>
-									<tr>
-										<td>4</td>
-										<td>sylantyev</td>
-										<td>0</td>
-										<td>0</td>
-										<td>0</td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td>sylantyev</td>
-										<td>0</td>
-										<td>1</td>
-										<td>0</td>
-									</tr>
-									<tr>
-										<td>6</td>
-										<td>klochkova</td>
-										<td>1</td>
-										<td>0</td>
-										<td>0</td>
-									</tr>
-								</table>
-								<p class="check-code check-code_gen">Кто выиграл наибольшее количество золотых медалей среди плавцов Украины на олимпийских играх в Сиднее? Вывести имя и количество медалей через агрегатную функцию</p>
-								<h3 class="task-answer">Решение<span class="arrow-down"></span></h3>
-								<div class="query dropdown-answer hidden">	
-									<div class="query__code">
-										<code class="sql-code">SELECT name, SUM(gold) FROM swimmers<br>GROUP BY name<br>ORDER BY SUM(gold) DESC<br>LIMIT 1;</code>
-									</div>
-									<table class="table_main table-tasks">
-									<caption class="table-tasks__name">swimmers</caption>
-									<tr>
-										<th>name</th>
-										<th>SUM(gold)</th>
-									</tr>
-									<tr>
-										<td>klochkova</td>
-										<td>2</td>
-									</tr>
-								</table>
-								</div><hr>
-								<h3 class="main-subtitle" id="task-link_fifth">Задание №5 (средний уровень)</h3>
-								<div class="table_inner">
-									<table class="table_main table-small">
-										<caption class="table-tasks__name">staff</caption>
-										<tr>
-											<th>id</th>
-											<th>name</th>
-											<th class="column_bold">id_job</th>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>vasya</td>
-											<td class="column_bold">1</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>misha</td>
-											<td class="column_bold">2</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>lenya</td>
-											<td class="column_bold">2</td>
-										</tr>
-										<tr>
-											<td >4</td>
-											<td>lena</td>
-											<td class="column_bold">3</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>masha</td>
-											<td class="column_bold">3</td>
-										</tr>
-										<tr>
-											<td>6</td>
-											<td>zhora</td>
-											<td class="column_bold">4</td>
-										</tr>
-									</table>
-									<table class="table_main table-small">
-										<caption class="table-tasks__name">job</caption>
-										<tr>
-											<th class="column_bold">id</th>
-											<th>position</th>
-										</tr>
-										<tr>
-											<td class="column_bold">1</td>
-											<td>boss</td>
-										</tr>
-										<tr>
-											<td class="column_bold">2</td> 
-											<td>developer</td>
-										</tr>
-										<tr>
-											<td class="column_bold">3</td>
-											<td>qa</td>
-										</tr>
-										<tr>
-											<td class="column_bold">4</td>
-											<td>security</td>
-										</tr>
-									</table>
-								</div>
-								<p class="check-code check-code_gen">Выведите имена QA специалистов, которые работают в компании "Ilovesql", и их должность</p>
-								<h3 class="task-answer">Решение<span class="arrow-down"></span></h3>
-								<div class="query dropdown-answer hidden">	
-									<div class="query__code">
-										<code class="sql-code">SELECT staff.name, job.position<br> FROM staff <br>INNER JOIN job<br>ON staff.id_job = job.id<br>WHERE job.position = 'qa';</code>
-									</div>
-									<table class="table_main">
-										<tr>
-											<th>name</th>
-											<th>position</th>
-										</tr>
-										<tr>
-											<td>lena</td>
-											<td>qa</td>
-										</tr>
-										<tr>
-											<td>masha</td>
-											<td>qa</td>
-										</tr>
-									</table>
-								</div><hr>	
-								<h3 class="main-subtitle" id="task-link_sixth">Задание №6 (очень сложный уровень)</h3>
-								<div class="table_inner">
-									<table class="table_main table-small">
-										<caption class="table-tasks__name">movie</caption>
-										<tr>
-											<th>id</th>
-											<th>name</th>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>aviator</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>martian</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>snatch</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>firewalker</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>revenant</td>
-										</tr>
-									</table>
-									<table class="table_main table-small">
-										<caption class="table-tasks__name">characters</caption>
-										<tr>
-											<th>id</th>
-											<th>actor</th>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>pitt</td>
-										</tr>
-										<tr>
-											<td>2</td> 
-											<td>norris</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>dicaprio</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>damon</td>
-										</tr>
-									</table>
-									<table class="table_main table-small">
-										<caption class="table-tasks__name">key_list</caption>
-										<tr>
-											<th>id</th>
-											<th>id_movie</th>
-											<th>id_characters</th>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>4</td>
-											<td>2</td>
-										</tr>
-										<tr>
-											<td>2</td> 
-											<td>1</td>
-											<td>3</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>5</td>
-											<td>3</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>3</td>
-											<td>1</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>2</td>
-											<td>4</td>
-										</tr>
-									</table>
-								</div>
-								<p class="check-code check-code_gen">В каких фильмах снимался Леонардо Ди Каприо? Вывести имя актёра и название фильма</p>
-								<h3 class="task-answer">Решение<span class="arrow-down"></span></h3>
-								<div class="query dropdown-answer hidden">	
-									<div class="query__code">
-										<code class="sql-code">SELECT characters.actor, movie.name<br> FROM characters <br>INNER JOIN movie<br>INNER JOIN key_list<br>ON movie.id = key_list.id_movie<br>ON characters.id = key_list.id_characters<br>WHERE characters.actor = 'dicaprio';</code>
-									</div>
-									<table class="table_main">
-										<tr>
-											<th>actor</th>
-											<th>name</th>
-										</tr>
-										<tr>
-											<td>dicaprio</td>
-											<td>aviator</td>
-										</tr>
-										<tr>
-											<td>dicaprio</td>
-											<td>revenant</td>
-										</tr>
-									</table>
-								</div><hr>
 								<h3 class="main-subtitle" id="task-link_seventh">Домашнее задание - 1</h3>
 								<div class="table_inner">
 									<ol class="hometask-list">
 										<li class="hometask-item hometask-home"><a target="_blank" href="download/home_task_1.pdf" download>home_task_1.pdf</a></li>
 										<li class="hometask-item"><a target="_blank" href="download/continents.sql" download>continents.sql</a></li>
-										<li class="hometask-item hometask-video"><a target="_blank" href="https://youtu.be/lbmeRDpl55k">Видеоинструкция (ссылка на YouTube)</a></li>
 									</ol>
 								</div><hr>
 								<h3 class="main-subtitle" id="task-link_eighth">Домашнее задание - 2</h3>
@@ -1931,23 +1465,6 @@
 										<li class="hometask-item hometask-home"><a target="_blank" href="download/home_task_2.pdf" download>home_task_2.pdf</a></li>
 										<li class="hometask-item"><a target="_blank" href="download/film.sql" download>film.sql</a></li>
 										<li class="hometask-item"><a target="_blank" href="download/director.sql" download>director.sql</a></li>
-									</ol>
-								</div><hr>
-								<h3 class="main-subtitle" id="task-link_nineth">Тренажёр (ссылки на другой сайт)</h3>
-								<div class="table_inner">
-									<ol class="hometask-list">
-										<li class="hometask-item hometask-barbell"><a href="http://f934340c.beget.tech/index.html" target="_blank">Select - команды</a></li>
-										<li class="hometask-item hometask-barbell"><a href="http://f934340c.beget.tech/join.html" target="_blank">Join - команды</a></li>
-									</ol>
-								</div><hr>
-								<h3 class="main-subtitle" id="task-link_tenth">Тесты</h3>
-								<div class="table_inner">
-									<ol class="hometask-list">
-										<li class="hometask-item hometask-pen"><a href="quiz/test1.html">Вариант - 1</a></li>
-										<li class="hometask-item hometask-pen"><a href="quiz/test2.html">Вариант - 2</a></li>
-										<li class="hometask-item hometask-pen"><a href="quiz/quick-test.html">Тест на время</a></li>
-										<li class="hometask-item hometask-pen"><a href="quiz/practice2.html">Практические задания (лёгкий уровень)</a></li>
-										<li class="hometask-item hometask-pen"><a href="quiz/practice.html">Практические задания (сложный уровень)</a></li>
 									</ol>
 								</div><hr>
 								<h3 class="main-subtitle" id="task-link_eleventh">Видеоуроки (ссылки на YouTube)</h3>
@@ -1967,13 +1484,15 @@
 			</div>
 		</div>
 	</main>
-	<footer>
-		<div class="footer">
-			<div class="container">
-				<p class="footer__text">Данный Tutorial создан исключительно в образовательных целях<br>Вопросы и предложения по его работе можно отправить на e-mail: <span class="footer__text_email">vitaliyhtml5@gmail.com</span></p>
+	<div class="test-summary" hidden>
+		<div class="test-summary__modal">
+			<p class="test-summary__text">У меня появился свой сайт, где контент продолжает постоянно обновляться. На него можно перейти по <a href="https://vitaliyhtml5.netxi.in/sql/sql.php" target="_blank">ссылке </a></p>
+			<p class="test-summary__text">На сайте нужно будет пройти регистрацию, чтобы получить доступ ко всем материалам</p>
+			<p class="test-summary__text">Данный Tutorial (без обновлений) будет продолжать работать</p>
+			<button class="new-tooltip__link test-summary__btn">Отмена</button>
 			</div>
 		</div>
-	</footer>
+	</div>
 	<script src="script.js"></script>
 </body>
 </html>

@@ -50,53 +50,34 @@ function openCloseBurger() {
 }
 openCloseBurger();
 
-//TASKS
-function showHideAnsw() {
-	let answer = document.querySelectorAll('.task-answer');
-	let dropdown = document.querySelectorAll('.dropdown-answer');
-	let arrow = document.querySelectorAll('.arrow-down');
 
-	answer.forEach((element, arr) => {
-		element.onclick = () => {
-			dropdown[arr].classList.toggle('show-answer');
-			arrow[arr].classList.toggle('arrow-up');
-		}
+
+// Full site
+const overlayForget = document.querySelector('.test-summary');
+const modalForget = document.querySelector('.test-summary__modal');
+
+document.querySelector('.full__btn').onclick = () => showOverlay(overlayForget, modalForget);
+document.querySelector('.sidebar__item_full').onclick = () => showOverlay(overlayForget, modalForget);
+
+document.querySelector('.new-tooltip__link').onclick = () => closeOverlay(overlayForget);
+
+function showOverlay(overlay, modal) {
+	overlay.classList.remove('overlay-close');
+	overlay.classList.add('overlay-show');
+	overlay.style.display = 'block';
+	modal.onclick = (e) => e.stopPropagation();
+	overlay.onclick = () => closeOverlay(overlay);
+
+	window.addEventListener('keyup', function (e) {
+		e.preventDefault();
+		if (e.keyCode === 27) closeOverlay(overlay);
 	});
-}	
-showHideAnsw();
-
-// New tooltip
-function showNewTooltip() {
-	const newTooltipBtn = document.querySelectorAll('.new-tooltip__storage');
-	const newTooltip = document.querySelector('.new-tooltip');
-	const summaryModal = document.querySelector('.test-summary');
-	const summaryBtn = document.querySelectorAll('.test-summary__btn');
-	if (localStorage.getItem('newTooltipSql')) newTooltip.style.display = 'none';
-
-	newTooltipBtn.forEach(element => {
-		element.onclick = () => {
-			localStorage.setItem('newTooltipSql', 'shown'); 
-			closeElement(newTooltip);
-		}
-	});
-	newTooltipBtn[0].addEventListener('click', () => {
-		summaryModal.hidden = false;
-		closeElement(newTooltip);
-			window.addEventListener('keyup', function (e) {
-			e.preventDefault();
-			if (e.keyCode === 27) closeElement(summaryModal);
-		});	
-	});
-
-	summaryBtn.forEach(element => {
-		element.onclick = () => {
-			closeElement(summaryModal);
-		}
-	});
-
-	function closeElement(item) {
-		item.style.animation = 'closetooltip 1s';
-		setTimeout(() => {item.hidden = true;},1000);
-	}
 }
-showNewTooltip();
+
+function closeOverlay(overlay) {
+	event.preventDefault();
+	overlay.classList.add('overlay-close');
+	setTimeout(() => {
+		overlay.style.display = 'none';
+	}, 500);
+}

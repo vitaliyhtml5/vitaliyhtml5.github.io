@@ -448,6 +448,7 @@ tr:nth-child(1) {
 	border: none;
 	border-radius: 4px;
 	color: #fff;
+	font-size: 14px;
 	background: linear-gradient(180deg, #269cc0, #36bfea);
 	transition: 0.4s;
 	cursor: pointer;
@@ -867,6 +868,10 @@ tr:nth-child(1) {
 	}
 	.test-summary__modal {
 		width: 95%;
+	}
+	.test-summary__text {
+		margin-bottom: 5px;
+		line-height: 1.8;
 	}
 }
 @media (max-width: 350px) {

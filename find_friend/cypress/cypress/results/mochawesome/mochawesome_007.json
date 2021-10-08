@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-07T19:13:37.826Z",
+    "end": "2021-10-07T19:13:39.150Z",
+    "duration": 1324,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "10d5154a-a96e-4894-9e1c-d17746672100",
+      "title": "",
+      "fullFile": "cypress/integration/profile/navigate_profile.js",
+      "file": "cypress/integration/profile/navigate_profile.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "765bee90-0765-4a94-a22f-3286fc87abe1",
+          "title": "User navigates to profile page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User navigates to profile page from index",
+              "fullTitle": "User navigates to profile page User navigates to profile page from index",
+              "timedOut": null,
+              "duration": 787,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.header-profile a[href=\"/profile\"]').click();\ncy.url().should('include', 'profile');",
+              "err": {},
+              "uuid": "d8230bbf-26b6-40aa-afba-75b15d7785f9",
+              "parentUUID": "765bee90-0765-4a94-a22f-3286fc87abe1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User backs to index page from profile",
+              "fullTitle": "User navigates to profile page User backs to index page from profile",
+              "timedOut": null,
+              "duration": 479,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/profile');\ncy.get('.header-wrap a[href=\"/\"]').click();\ncy.url().should('not.include', 'profile');",
+              "err": {},
+              "uuid": "cd42d10f-7999-4f05-8ca4-7085051fbff2",
+              "parentUUID": "765bee90-0765-4a94-a22f-3286fc87abe1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d8230bbf-26b6-40aa-afba-75b15d7785f9",
+            "cd42d10f-7999-4f05-8ca4-7085051fbff2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1266,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

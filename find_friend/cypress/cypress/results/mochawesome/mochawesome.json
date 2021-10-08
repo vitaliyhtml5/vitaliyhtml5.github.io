@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-07T19:11:48.099Z",
+    "end": "2021-10-07T19:11:49.986Z",
+    "duration": 1887,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "28dcfd96-bf2f-4b96-8ec2-e03b0e101e19",
+      "title": "",
+      "fullFile": "cypress/integration/errors/errors.js",
+      "file": "cypress/integration/errors/errors.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d862ed55-8bd4-479a-a2ac-c4480ce74a92",
+          "title": "User gets error page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Unauthorized user gets 401 error after navigating to profile page",
+              "fullTitle": "User gets error page Unauthorized user gets 401 error after navigating to profile page",
+              "timedOut": null,
+              "duration": 1162,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('GET', 'http://127.0.0.1:3000/profile').as('getError');\ncy.visit('/profile', {\n  failOnStatusCode: false\n});\ncy.wait('@getError').then(res => {\n  expect(res.response.statusCode).eq(401);\n  cy.get('.error-page_btn[href=\"/login\"]').click();\n  cy.url().should('include', 'login');\n});",
+              "err": {},
+              "uuid": "0264e8a1-5667-4baf-90a9-f52d408512a7",
+              "parentUUID": "d862ed55-8bd4-479a-a2ac-c4480ce74a92",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Authorized user gets 403 error after navigating to admin page",
+              "fullTitle": "User gets error page Authorized user gets 403 error after navigating to admin page",
+              "timedOut": null,
+              "duration": 260,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('GET', 'http://127.0.0.1:3000/admin').as('getError');\ncy.getToken();\ncy.visit('/admin', {\n  failOnStatusCode: false\n});\ncy.wait('@getError').then(res => {\n  expect(res.response.statusCode).eq(403);\n});",
+              "err": {},
+              "uuid": "02e23574-fc8d-4fbc-8934-f3e1f567943a",
+              "parentUUID": "d862ed55-8bd4-479a-a2ac-c4480ce74a92",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User gets 403 error after navigating to admin page",
+              "fullTitle": "User gets error page User gets 403 error after navigating to admin page",
+              "timedOut": null,
+              "duration": 376,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let random = '';\nfor (let i = 0; i < 2; i++) {\n  random = random + Math.random().toString(36).substr(2, 3);\n}\ncy.intercept('GET', `http://127.0.0.1:3000/${random}`).as('getError');\ncy.visit(`/${random}`, {\n  failOnStatusCode: false\n});\ncy.wait('@getError').then(res => {\n  expect(res.response.statusCode).eq(404);\n});",
+              "err": {},
+              "uuid": "3a017042-daa4-42f1-b4ac-f8c103f05db1",
+              "parentUUID": "d862ed55-8bd4-479a-a2ac-c4480ce74a92",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0264e8a1-5667-4baf-90a9-f52d408512a7",
+            "02e23574-fc8d-4fbc-8934-f3e1f567943a",
+            "3a017042-daa4-42f1-b4ac-f8c103f05db1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1798,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

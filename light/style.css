@@ -9,7 +9,7 @@
 }
 html,
 body {
-    min-height: 100vh;
+    height: 100vh;
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 15px;
@@ -283,5 +283,9 @@ footer>p::before {
     }
     .info li {
         width: 160px;
+    }
+    footer>p::before {
+        top: 45%;
+        left: 15px;
     }
 }

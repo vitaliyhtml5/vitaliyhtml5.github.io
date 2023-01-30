@@ -52,12 +52,17 @@ function setIconLight() {
                 result = false;
                 break;
             }
-            
         }
-        if (result) {
+        
+        if (counter !== new Date().getDay()) {
+            img.style.visibility = 'hidden';
+        }
+        else if (result) {
+            img.style.visibility = 'visible';
             img.src = 'img/light.svg';
             img.title = 'Світло є';
         } else {
+            img.style.visibility = 'visible';
             img.src = 'img/no_light.svg';
             img.title = 'Світла немає';
         }

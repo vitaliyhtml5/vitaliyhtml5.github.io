@@ -1,117 +1,104 @@
-let query = 0;
-let counter = new Date().getDay();
-checkQuery();
+createContent();
 
-function checkQuery() {
-    if (!localStorage.getItem('lightQuery')) {
-        createModal(0);
-    } else {
-        query = localStorage.getItem('lightQuery');
+function createContent(query = 0) {
+    const today = new Date().getDay();
+    if (!localStorage.getItem('light')) showModal(query);
+    else query = localStorage.getItem('light');
+
+    document.querySelector('h2').textContent = `${queryArr[query]} очередь`;
+    createDay(today, query);
+    changeDay(today, query);
+
+    document.querySelector('main > button').onclick = () => showModal(query);
+}
+
+// Create day
+function createDay(day, query) {
+    document.querySelector('b').textContent = data[day].day;
+
+    const list = document.querySelector('ul');
+    list.innerHTML = '';
+    for (let el of data[day].time[query]) {
+        list.insertAdjacentHTML('beforeend', `<li>${el}</li>`);
     }
-    document.querySelector('h2').textContent = queryArr[query];
-    showData();
-    changeDates();
-    document.querySelector('main>button').onclick = () => createModal();
+
+    if (day === new Date().getDay()) {
+        setIconLight(data[day].time[query]);
+    } else  {
+        document.querySelector('header>img').src = '';
+    }
 }
 
-function showData() {
-    document.querySelector('.info b').textContent = data[counter].day;
-    document.querySelectorAll('.info li')[0].textContent = data[counter].time[query][0];
-    document.querySelectorAll('.info li')[1].textContent = data[counter].time[query][1];
-    setIconLight();
-}
-
-function changeDates() {
-    document.querySelectorAll('.info button').forEach((el, index) => {
+// Change day
+function changeDay(day, query) {
+    document.querySelectorAll('.info>button').forEach((el, index) => {
         el.onclick = () => {
-            (index === 0) ? counter-- : counter++;
+            (index === 0) ? day-- : day++;
 
-            if (counter === data.length && index === 1) {
-                counter = 0;
-            } else if (counter < 0 && index === 0) {
-                counter = 6;
-            }
+            if (day === -1) day = 6;
+            else if (day === 7) day = 0;
 
-            showData();
+            createDay(day, query);
         }
     });
 }
 
-function setIconLight() {
-    const time = document.querySelectorAll('.info li');
-    const img = document.querySelector('header>img');
-    const curHour = new Date().getHours();
-    let result = true;
-    checkLight(time[0]);
-    checkLight(time[1]);
+// Other
+function setIconLight(arr) {
+    const now = new Date().getHours();
+    let status = true;
 
-    function checkLight(el) {
-        const hour = +el.textContent.slice(0,2);
-        for (let i = 0; i < 4; i++) {
-            if (curHour === hour+i) {
-                result = false;
-                break;
-            }
-        }
-        
-        if (counter !== new Date().getDay()) {
-            img.style.visibility = 'hidden';
-        }
-        else if (result) {
-            img.style.visibility = 'visible';
-            img.src = 'img/light.svg';
-            img.title = 'Світло є';
-        } else {
-            img.style.visibility = 'visible';
-            img.src = 'img/no_light.svg';
-            img.title = 'Світла немає';
+    for (let el of arr) {
+        if (now >= el.slice(0, 2)
+            && now <= el.slice(-5, -3) - 1) {
+            status = false;
+            break;
         }
     }
+
+    document.querySelector('header>img').src = `
+    ${status ? 'img/lamp.svg' : 'img/candle.svg'}`;
 }
 
-function createModal() {
-    const overlay = document.createElement('div');
-    document.body.appendChild(overlay);
-    overlay.classList.add('overlay');
+//Modal
+function showModal(query) {
+    document.body.insertAdjacentHTML('beforeend', `
+    <div class="overlay">
+        <div class="modal">
+            <p>Пожалуйста, выберите очередь:</p>
+            <ul></ul>
+            <button>Подтвердить</button>
+        </div>
+    </div>`);
+    const list = document.querySelector('.modal ul');
 
-    overlay.innerHTML = `
-    <div class="modal">
-        <p>Будь ласка, оберіть чергу:</p>
-        <ul>
-            <li>I черга</li>
-            <li>II черга</li>
-            <li>III черга</li>
-        </ul>
-        <button>Підтвердити</button>
-    </div>`;
-    setRadio(document.querySelectorAll('.modal li'), query);
+    for (let i = 0; i < queryArr.length; i++) {
+        list.insertAdjacentHTML('beforeend', 
+        `<li ${(i == query) ? 'class="radio-checked"' : ''}>
+        ${queryArr[i]} очередь</li>`);
+    }
+    manageModal(list);
+}
 
-    document.querySelector('.modal').onclick = e => e.stopPropagation();
-    document.querySelector('.overlay').onclick = () => closeOverlay(overlay);
-    document.body.addEventListener('keydown', e => {
-		if (e.key === 'Escape') closeOverlay(overlay);
-	});
+function manageModal(list) {
+    const overlay = document.querySelector('.overlay');
+    overlay.children[0].onclick = e => e.stopPropagation();
+    overlay.onclick = () => overlay.remove();
+    document.onkeyup = e => (e.key === 'Escape') ? overlay.remove() : false;
+
+    list.onclick = e => {
+        if (e.target !== list || !document.querySelector('.radio-checked')) {
+            document.querySelector('.radio-checked').className = '';
+            e.target.className = 'radio-checked';
+        }
+    };
+
     document.querySelector('.modal button').onclick = () => {
-        const checkedQuery = document.querySelector('.btn-checked');
-        const index = Array.from(checkedQuery.parentNode.children).indexOf(checkedQuery);
-        localStorage.setItem('lightQuery', index);
-        query = index;
-        document.querySelector('h2').textContent = queryArr[query];
-        showData(query);
-        closeOverlay(overlay);
+        const query = Array.from(list.children)
+        .indexOf(document.querySelector('.radio-checked'));
+        
+        localStorage.setItem('light', query);
+        overlay.remove();
+        createContent(query);
     }
-}
-
-function setRadio(item, query) {
-    item[query].classList.add('btn-checked');
-    item.forEach(el => {
-        el.onclick = () => {
-            document.querySelector('.btn-checked').classList.remove('btn-checked');
-            el.classList.add('btn-checked');
-        }
-    });
-}
-
-function closeOverlay(overlay) {
-    overlay.remove();
 }

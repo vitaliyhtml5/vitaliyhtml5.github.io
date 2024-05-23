@@ -25,6 +25,7 @@ button {
 	display: block;
 	border: none;
 	font: inherit;
+    background-color: transparent;
 	transition: 0.4s;
 	cursor: pointer;
 }
@@ -34,6 +35,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 90px;
     padding: 20px 0;
 }
 .logo {
@@ -64,6 +66,7 @@ h2 {
     margin-bottom: 40px;
     border: 1px solid #EE8313;
     border-radius: 2px;
+    text-align: center;
 }
 .info button {
     position: absolute;
@@ -82,7 +85,6 @@ h2 {
 b {
     display: block;
     font-size: 1.4rem;
-    text-align: center;
 }
 .info p {
     margin: 30px 0;
@@ -102,46 +104,21 @@ b {
     border-radius: 6px;
     font-size: 1.2rem;
     background-color: #ee6b13;
-    text-align: center;
 }
 main>button {
-    width: 150px;
+    width: 180px;
     padding: 10px 0;
-    border: 1px solid #EE8313;
+    border: 1px solid #ee8313;
     border-radius: 2px;
-    color: #EE8313;
+    color: #ee8313;
     font-size: 1rem;
-    background-color: transparent;
 }
 main>button:hover {
     border-color: #ee6b13;
     color: #ee6b13;
 }
 
-/* Footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-footer>p {
-    position: relative;
-    width: 200px;
-    margin: 12px auto;
-    font-size: 0.9rem;
-    text-align: center;
-}
-footer>p::before {
-    position: absolute;
-    content: '';
-    top: 40%;
-    left: 7px;
-    width: 15px;
-    height: 15px;
-    background: url(img/flag.svg) 50%/100% no-repeat;
-    transform: translateY(-50%);
-}
+/* Modal */
 .overlay {
     position: fixed;
     top: 0;
@@ -157,7 +134,8 @@ footer>p::before {
     width: 400px;
     padding: 30px 40px;
     border-radius: 2px;
-    color: #1E1E1E;
+    color: #1e1e1e;
+    text-align: center;
     background-color: #fff;
     transform: translateX(-50%);
 }
@@ -169,11 +147,10 @@ footer>p::before {
     width: 100%;
     height: 1px;
     opacity: 0.1;
-    background-color: #1E1E1E;
+    background-color: #1e1e1e;
 }
 .modal p {
     font-size: 1.2rem;
-    text-align: center;
 }
 .modal ul {
     display: flex;
@@ -202,11 +179,11 @@ footer>p::before {
     border-radius: 50%;
     transform: translateY(-50%);
 }
-.btn-checked {
+.radio-checked {
     color: #ee6b13;
     cursor: default !important;
 }
-.btn-checked::after {
+.radio-checked::after {
     position: absolute;
     content: '';
     top: 45%;
@@ -281,9 +258,5 @@ footer>p::before {
     }
     .info li {
         width: 160px;
-    }
-    footer>p::before {
-        top: 45%;
-        left: 15px;
     }
 }

@@ -65,7 +65,7 @@ function showModal(query) {
     document.body.insertAdjacentHTML('beforeend', `
     <div class="overlay">
         <div class="modal">
-            <p>Пожалуйста, выберите очередь:</p>
+            <p>Выберите очередь:</p>
             <ul></ul>
             <button>Подтвердить</button>
         </div>
